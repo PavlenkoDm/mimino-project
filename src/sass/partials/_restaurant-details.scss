@@ -173,6 +173,7 @@
   }
 
   &__button {
+    @extend %link;
     @include buttonSize($section-button:true, $padding-top: 14px, $padding-bottom: 14px);
     @include buttonPlace($transparent-button: true);
   }

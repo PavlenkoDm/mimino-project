@@ -1,4 +1,6 @@
 .hotel-hero {
+  position: relative;
+
   @include backgroundImageRetina(
     $page: hero,
     $section: hotel,
