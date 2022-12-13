@@ -1,5 +1,5 @@
 .rest-hero {
-  width: 100%;
+  position: relative;
 
   @include backgroundImageRetina(
     $page: hero,
