@@ -1,180 +1,157 @@
 .restaurant-details {
-    position: relative;
-  
-    &__canvas {
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      z-index: -1;
-  
-      max-width: 414px;
-      @include backgroundImageRetina(
-        $page: home, 
-        $section: restaurant-details, 
-        $part: mobile, 
-        $file: background-mob, 
-        $webp-file: '../images/home/restaurant-details/desktop/background-desk.webp'
-        );
+  position: relative;
+}
+
+.restaurant-details__canvas {
+  @include backgroundImageRetina(
+    $page: home,
+    $section: restaurant-details,
+    $part: mobile,
+    $file: background-mob,
+    $webp-file: '../images/home/restaurant-details/desktop/background-desk.webp'
+  );
 
   @include respondTo('diapente') {
-     max-width: 1024px;
     @include backgroundImageRetina(
-      $gradient: linear-gradient(
-        rgba(0, 0, 0, 0.76), 
-        rgba(0, 0, 0, 0.76)), 
-      $page: home, 
-      $section: restaurant-details, 
-      $part: tablet, 
-      $file: background-tab, 
-      $webp-file: '../images/home/restaurant-details/desktop/background-desk.webp');
+      $gradient: linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.76)),
+      $page: home,
+      $section: restaurant-details,
+      $part: tablet,
+      $file: background-tab,
+      $webp-file:
+        '../images/home/restaurant-details/desktop/background-desk.webp'
+    );
   }
   @include respondTo('diapason') {
-    max-width: 1280px;
     @include backgroundImageRetina(
-      $gradient: linear-gradient(
-        rgba(0, 0, 0, 0.65), 
-        rgba(0, 0, 0, 0.65)), 
-      $page: home, 
-      $section: restaurant-details, 
-      $part: desktop, 
-      $file: background-desk, 
-      $webp-file: '../images/home/restaurant-details/desktop/background-desk.webp');
+      $gradient: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+      $page: home,
+      $section: restaurant-details,
+      $part: desktop,
+      $file: background-desk,
+      $webp-file:
+        '../images/home/restaurant-details/desktop/background-desk.webp'
+    );
   }
 }
 
-  &__container {
-    position: relative;
+.restaurant-details__container {
+  position: relative;
+}
+
+.restaurant-details__wrap-text {
+  position: relative;
+  left: 125px;
+  top: 0;
+
+  @include respondTo('diapente') {
+    left: 231px;
   }
 
-  &__wrap-text {
-    margin-left: 125px;
-
-    @include respondTo("diapente") {
-      margin-left: 231px;
-      width: 610px;
-    }
-
-    @include respondTo("diapason") {
-      margin-left: 264px;
-    }
+  @include respondTo('diapason') {
+    left: 253px;
   }
+}
 
+.restaurant-details__brand {
+  margin-bottom: 12px;
+  color: getColor('primary-inversed');
 
-  &__brand {
-    @extend %marginPaddingReset;
-    margin-bottom: 12px;
-    color: getColor("primary-inversed");
-
-    @include respondTo("diapente") {
-      margin-bottom: 16px;
-    }
-  }
-
-  &__title {
-    @extend %marginPaddingReset;
-    margin-bottom: 20px;
-    font-family: $text-font-stack;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: getColor("primary-inversed");
-
-    @include respondTo("diapente") {
-      margin-bottom: 8px;
-      font-size: 24px;
-      line-height: 1.208;
-    }
-  }
-
-  &__text {
-    margin-bottom: 48px;
-    color: scale-color(getColor("primary-inversed"), $blackness: 37%);
-
-    @include respondTo("diapente") {
-      margin-bottom: 40px;
-    }
-  }
-
-  &__wrap-flex {
-    z-index: 10;
-    @include respondTo("diapente") {
-      position: relative;
-      display: flex;
-      flex-direction: row-reverse;
-
-    }
-  }
-
-  &__wrap-swipe {
-    margin-left: 25px;
-    margin-bottom: 32px;
-    overflow: hidden;
-
-    @include respondTo("diapente") {
-      margin-bottom: 47px;
-      margin-left: 254px;
-    }
-
-    @include respondTo("diapason") {
-      margin-left: 257px;
-    }
-  }
-
-  &__list {
-    @extend %list;
-    display: flex;
-    column-gap: 30px; //прибрати це (в скрипті вже задана відстань
+  @include respondTo('diapente') {
     margin-bottom: 16px;
+  }
+}
 
-    @include respondTo("diapente") {
-      margin-bottom: 32px;
-    }
+.restaurant-details__title {
+  margin-bottom: 20px;
+
+  @include respondTo('diapente') {
+    margin-bottom: 8px;
+  }
+}
+
+.restaurant-details__text {
+  margin-bottom: 48px;
+  max-width: 259px;
+  color: scale-color(getColor('primary-inversed'), $blackness: 37%);
+
+  @include respondTo('diapente') {
+    margin-bottom: 198px;
+    max-width: 610px;
   }
 
-  &__img {
-    @extend %marginPaddingReset;
-    border-radius: 2px;
-    background-color: hsl(0, 0%, 85%);
+  @include respondTo('diapason') {
+    margin-bottom: 200px;
   }
+}
 
-  // &__icon {
-  //   @extend %icon;
-  //   display: inline;
-  //   margin-right: 30px;
-  //   fill: getColor("primary-inversed");
-  // }
+.restaurant-details__wrap-flex {
+  z-index: 10;
 
-  &__wrap-button {
-    @include respondTo("diapente") {
-      position: absolute;
-      top: 145px;
-      top: 145px;
-      left: 0px;
-    }
+  @include respondTo('tritonus') {
+    margin-bottom: 32px;
   }
-
-  &__button-list {
-    @extend %list;
+  
+  @include respondTo('diapente') {
+    position: relative;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+    flex-direction: row-reverse;
+  }
+}
 
-    @include respondTo("diapente") {
-      gap: 16px;
-    }
+.restaurant-details__wrap-swipe {
+  margin-left: 25px;
+  margin-bottom: 32px;
+  overflow: hidden;
+
+  @include respondTo('diapente') {
+    margin-bottom: 47px;
+    margin-left: 254px;
   }
 
-  &__button-item:not(:last-child) {
-    @include respondTo('tritonus') {
-      margin-bottom: 16px;
-    }
+  @include respondTo('diapason') {
+    margin-left: 257px;
+  }
+}
+
+.restaurant-details__list {
+  @extend %list;
+  display: flex;
+  column-gap: 30px; //прибрати це (в скрипті вже задана відстань
+  margin-bottom: 16px;
+
+  @include respondTo('diapente') {
+    margin-bottom: 32px;
+  }
+}
+
+.restaurant-details__img {
+  @extend %marginPaddingReset;
+  border-radius: 2px;
+  background-color: hsl(0, 0%, 85%);
+}
+
+// .restaurant-details__icon {
+//   @extend %icon;
+//   display: inline;
+//   margin-right: 30px;
+//   fill: getColor("primary-inversed");
+// }
+
+.restaurant-details__button {
+  @include buttonSize(
+    $section-button: true,
+    $padding-top: 14px,
+    $padding-bottom: 14px
+  );
+  @include buttonPlace($transparent-button: true);
+
+  & + & {
+    margin-top: 16px;
   }
 
-  &__button {
-    @extend %link;
-    @include buttonSize($section-button:true, $padding-top: 14px, $padding-bottom: 14px);
-    @include buttonPlace($transparent-button: true);
+  @include respondTo('tritonus') {
+    margin-right: auto;
+    margin-left: auto;
   }
 }

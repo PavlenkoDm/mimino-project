@@ -44,9 +44,19 @@
     margin-left: auto;
     padding-top: 24px;
     padding-bottom: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    max-width: 414px;
 
     @include respondTo('diapente') {
+      max-width: 1024px;
       padding-top: 48px;
+    }
+
+    @include respondTo('diapason') {
+      max-width: 1280px;
     }
   }
 

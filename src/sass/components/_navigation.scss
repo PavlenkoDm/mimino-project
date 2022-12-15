@@ -35,13 +35,6 @@
     align-items: center;
     gap: 16px;
     border-radius: 2px;
-    border: 1px solid mix(transparent, getColor('accent'), 30%);
-    @include transition(border);
-
-    &:hover,
-    &:focus {
-      border: 1px dashed getColor('primary-inversed');
-    }
   }
 }
 
@@ -55,7 +48,6 @@
 }
 
 .navigation__number {
-  display: none;
 
   @include respondTo('diapente') {
     padding: 11px 8px 12px 0;
@@ -75,7 +67,6 @@
 
 .navigation__icon {
   @extend %icon;
-  color: getColor('accent');
 
   @include respondTo('diapente') {
     margin-left: 8px;

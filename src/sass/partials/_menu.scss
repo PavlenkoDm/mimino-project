@@ -5,7 +5,7 @@
   padding-bottom: 32px;
 
   @include respondTo('diapente') {
-    background-color: getColor('background-menufood');
+    background-color: #F0ECD6;
     padding-top: 58px;
   }
 
@@ -162,10 +162,6 @@
   &__button {
     @include buttonSize($padding-top: 15px, $padding-bottom: 14px, $section-button: true);
     @include buttonPlace($menu-button: true);
-  }
-
-  &__link {
-    @extend %link;
   }
 
   &__wrapper {

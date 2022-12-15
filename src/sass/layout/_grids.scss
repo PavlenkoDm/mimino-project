@@ -1,12 +1,42 @@
-.grid-footer{
+.grid-footer {
+  display: grid;
+  grid-template-columns: 264px 150px;
+
+  @include respondTo('pre-unisonus') {
+    grid-template-columns: 63.769% 36.231%;
+  }
+
+  @include respondTo('diapente') {
+    grid-template-columns: 511px 239px 274px;
+  }
+
+  @include respondTo('diapason') {
+    grid-template-columns: 641px 320px 338px;
+  }
+}
+
+.grid-amenities {
+
+  @include respondTo('diapente') {
     display: grid;
-    grid-template-columns: 264px 150px;
-  
-    @include respondTo('diapente') {
-      grid-template-columns: 511px 239px 274px;
-    }
-  
-    @include respondTo('diapason') {
-      grid-template-columns: 641px 320px 338px;
+    grid-template-columns: 480px 450px;
+  }
+
+  @include respondTo('diapason') {
+    grid-template-columns: 559px 550px;
+  }
+
+  & > .text:not(:last-child) {
+    @include respondTo('tritonus') {
+        margin-bottom: 16px;
     }
   }
+}
+
+.grid-contacts {
+
+  @include respondTo('tritonus') {
+    display: grid;
+    grid-template-columns: 124px 260px;
+  }
+}

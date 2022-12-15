@@ -1,78 +1,85 @@
-<section class="room-luxe section section__booking" data-slider="slider">
-  <div class="container">
-    <div class="room-luxe__wrapper">
-      <h2 class="tagline room-luxe__tagline" lang="en">
-        Amet minim mollit non
-      </h2>
-      <p class="brand room-luxe__brand" lang="en">Mimiho</p>
-      <h3 class="room-luxe__title"><span>Двомісний номер</span> люкс</h3>
-      <p class="text text__main room-luxe__text" lang="en">
-        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-        sint. Velit officia consequat duis enim velit mollit. Exercitation
-        veniam consequat sunt nostrud amet.
-      </p>
-    </div>
+<section
+  class="room-luxe section section__booking"
+  data-slider="slider"
+  id="rooms"
+>
+  <span class="lines"></span>
+  <div class="container room-luxe__container">
+    <h2 class="tagline room-luxe__tagline" lang="en">Amet minim mollit non</h2>
+    <p class="brand room-luxe__brand" lang="en">Mimiho</p>
+    <h3
+      class="bookingroom-title bookingroom-title__hotel-page room-luxe__title"
+    >
+      Двомісний номер
+      <span class="room-luxe__title room-luxe__title--lowercase">люкс</span>
+    </h3>
+    <p class="text text__main room-luxe__text" lang="en">
+      Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+      Velit officia consequat duis enim velit mollit. Exercitation veniam
+      consequat sunt nostrud amet.
+    </p>
     <picture>
       <source
-        srcset="
-          ./images/hotel/room-desk.jpg   1x,
-          ./images/hotel/room-desk2x.jpg 2x
-        "
         media="(min-width: 1280px)"
+        srcset="
+          ./images/home/hotel-about/desktop/hotel-interior-desk.webp    1x,
+          ./images/home/hotel-about/desktop/hotel-interior-desk@2x.webp 2x,
+          ./images/home/hotel-about/desktop/hotel-interior-desk@3x.webp 3x
+        "
+        type="image/webp"
       />
       <source
+        media="(max-width: 1279px)"
         srcset="
-          ./images/hotel/room-tab.jpg   1x,
-          ./images/hotel/room-tab2x.jpg 2x
+          ./images/home/hotel-about/tablet/hotel-interior-tab.webp    1x,
+          ./images/home/hotel-about/tablet/hotel-interior-tab@2x.webp 2x,
+          ./images/home/hotel-about/tablet/hotel-interior-tab@3x.webp 3x
         "
-        media="(min-width: 1024px)"
+        type="image/webp"
       />
       <source
+        media="(max-width: 1023px)"
         srcset="
-          ./images/hotel/room-mob.jpg   1x,
-          ./images/hotel/room-mob2x.jpg 2x
+          ./images/home/hotel-about/mobile/hotel-interior-mob.webp    1x,
+          ./images/home/hotel-about/mobile/hotel-interior-mob@2x.webp 2x,
+          ./images/home/hotel-about/mobile/hotel-interior-mob@3x.webp 3x
         "
-        media="(min-width: 414px)"
+        type="image/webp"
+      />
+      <source
+        media="(min-width: 1280px)"
+        srcset="
+          ./images/home/hotel-about/desktop/hotel-interior-desk.jpg    1x,
+          ./images/home/hotel-about/desktop/hotel-interior-desk@2x.jpg 2x,
+          ./images/home/hotel-about/desktop/hotel-interior-desk@3x.jpg 3x
+        "
+      />
+      <source
+        media="(max-width: 1279px)"
+        srcset="
+          ./images/home/hotel-about/tablet/hotel-interior-tab.jpg    1x,
+          ./images/home/hotel-about/tablet/hotel-interior-tab@2x.jpg 2x,
+          ./images/home/hotel-about/tablet/hotel-interior-tab@3x.jpg 3x
+        "
+      />
+      <source
+        media="(max-width: 1023px)"
+        srcset="
+          ./images/home/hotel-about/mobile/hotel-interior-mob.jpg    1x,
+          ./images/home/hotel-about/mobile/hotel-interior-mob@2x.jpg 2x,
+          ./images/home/hotel-about/mobile/hotel-interior-mob@3x.jpg 3x
+        "
       />
       <img
-        class="picture room__picture"
+        class="room-luxe__interior"
         loading="lazy"
-        src="./images/hotel/room-desk.jpg"
-        alt="кімната з ліжком та диваном"
-      />
-    </picture>
-    <picture>
-      <source
-        srcset="
-          ./images/hotel/room-desk.jpg   1x,
-          ./images/hotel/room-desk2x.jpg 2x
-        "
-        media="(min-width: 1280px)"
-      />
-      <source
-        srcset="
-          ./images/hotel/room-tab.jpg   1x,
-          ./images/hotel/room-tab2x.jpg 2x
-        "
-        media="(min-width: 1024px)"
-      />
-      <source
-        srcset="
-          ./images/hotel/room-mob.jpg   1x,
-          ./images/hotel/room-mob2x.jpg 2x
-        "
-        media="(min-width: 414px)"
-      />
-      <img
-        class="picture room__picture"
-        loading="lazy"
-        src="./images/hotel/room-desk.jpg"
-        alt="кімната з ліжком та диваном"
+        src="./images/home/hotel-about/desktop/hotel-interior-desk.jpg"
+        alt="Комната з ліжком та диваном"
       />
     </picture>
     <div class="container-swiper container-swiper__left">
       <div class="button-wrapper">
-        <a class="button room-luxe__link" href="#">Детальніше</a>
+        <a class="button room-luxe__link" href="./room.html">Детальніше</a>
         <button
           class="button room-luxe__btn popup-link"
           type="button"
