@@ -2,91 +2,85 @@
   class="hotel-about item-scroll section section__content"
   data-slider="slider"
 >
-  <div class="vertical-lines"></div>
+  <span class="lines"></span>
+  <div class="hotel-about__container container">
+    <h2 class="visually-hidden">About our hotel</h2>
+    <p class="tagline hotel-about__tagline" lang="en">Amet minim mollit non</p>
+    <h3 class="brand hotel-about__brand" lang="en">MIMIHO</h3>
+    <p class="text text__main hotel-about__description">
+      Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+      Velit officia consequat duis enim velit mollit. Exercitation veniam
+      consequat sunt nostrud amet.
+    </p>
 
-  <div class="conteiner-hotel-about container">
-    <h2 class="visually-hidden">hotel-about</h2>
+    <div class="hotel-about__interior-first">
+      <picture>
+        <source
+          srcset="
+            ./images/home/hotel-about/desktop/modern-studio-interior-desk.webp    1x,
+            ./images/home/hotel-about/desktop/modern-studio-interior-desk@2x.webp 2x,
+            ./images/home/hotel-about/desktop/modern-studio-interior-desk@3x.webp 3x
+          "
+          type="image/webp"
+          media="(min-width: 1280px)"
+        />
+        <source
+          srcset="
+            ./images/home/hotel-about/tablet/modern-studio-interior-tab.webp    1x,
+            ./images/home/hotel-about/tablet/modern-studio-interior-tab@2x.webp 2x,
+            ./images/home/hotel-about/tablet/modern-studio-interior-tab@3x.webp 3x
+          "
+          type="image/webp"
+          media="(min-width: 1024px)"
+        />
+        <source
+          srcset="
+            ./images/home/hotel-about/mobile/modern-studio-interior-mob.webp    1x,
+            ./images/home/hotel-about/mobile/modern-studio-interior-mob@2x.webp 2x,
+            ./images/home/hotel-about/mobile/modern-studio-interior-mob@3x.webp 3x
+          "
+          type="image/webp"
+          media="(max-width: 1023px)"
+        />
+        <source
+          srcset="
+            ./images/home/hotel-about/desktop/modern-studio-interior-desk.jpg    1x,
+            ./images/home/hotel-about/desktop/modern-studio-interior-desk@2x.jpg 2x,
+            ./images/home/hotel-about/desktop/modern-studio-interior-desk@3x.jpg 3x
+          "
+          media="(min-width: 1280px)"
+        />
+        <source
+          srcset="
+            ./images/home/hotel-about/tablet/modern-studio-interior-tab.jpg    1x,
+            ./images/home/hotel-about/tablet/modern-studio-interior-tab@2x.jpg 2x,
+            ./images/home/hotel-about/tablet/modern-studio-interior-tab@3x.jpg 3x
+          "
+          media="(min-width: 1024px)"
+        />
+        <source
+          srcset="
+            ./images/home/hotel-about/mobile/modern-studio-interior-mob.jpg    1x,
+            ./images/home/hotel-about/mobile/modern-studio-interior-mob@2x.jpg 2x,
+            ./images/home/hotel-about/mobile/modern-studio-interior-mob@3x.jpg 3x
+          "
+          media="(max-width: 1023px)"
+        />
+        <img
+          src="./images/home/hotel-about/desktop/modern-studio-interior-desk.jpg"
+          alt="Кімната готелю з двоспальним ліжком"
+        />
+      </picture>
+    </div>
 
-    <h3 class="tagline hotel-about__title" lang="en">Amet minim mollit non</h3>
-
-    <span class="brand hotel-about__logo" lang="en">MIMIHO</span>
-
-    <article class="hotel-about-article-one">
-      <p class="text text__main hotel-about-article-one__description">
+    <div class="hotel-about__wrap">
+      <p class="text text__main hotel-about__descr-second">
         Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
         sint. Velit officia consequat duis enim velit mollit. Exercitation
         veniam consequat sunt nostrud amet.
       </p>
 
-      <div class="hotel-about-article-one__img">
-        <picture>
-          <source
-            srcset="
-              ./images/home/hotel-about/desktop/modern-studio-interior-desk.webp    1x,
-              ./images/home/hotel-about/desktop/modern-studio-interior-desk@2x.webp 2x,
-              ./images/home/hotel-about/desktop/modern-studio-interior-desk@3x.webp 3x
-            "
-            type="image/webp"
-            media="(min-width: 1280px)"
-          />
-          <source
-            srcset="
-              ./images/home/hotel-about/tablet/modern-studio-interior-tab.webp    1x,
-              ./images/home/hotel-about/tablet/modern-studio-interior-tab@2x.webp 2x,
-              ./images/home/hotel-about/tablet/modern-studio-interior-tab@3x.webp 3x
-            "
-            type="image/webp"
-            media="(min-width: 1024px)"
-          />
-          <source
-            srcset="
-              ./images/home/hotel-about/mobile/modern-studio-interior-mob.webp    1x,
-              ./images/home/hotel-about/mobile/modern-studio-interior-mob@2x.webp 2x,
-              ./images/home/hotel-about/mobile/modern-studio-interior-mob@3x.webp 3x
-            "
-            type="image/webp"
-            media="(max-width: 1023px)"
-          />
-          <source
-            srcset="
-              ./images/home/hotel-about/desktop/modern-studio-interior-desk.jpg    1x,
-              ./images/home/hotel-about/desktop/modern-studio-interior-desk@2x.jpg 2x,
-              ./images/home/hotel-about/desktop/modern-studio-interior-desk@3x.jpg 3x
-            "
-            media="(min-width: 1280px)"
-          />
-          <source
-            srcset="
-              ./images/home/hotel-about/tablet/modern-studio-interior-tab.jpg    1x,
-              ./images/home/hotel-about/tablet/modern-studio-interior-tab@2x.jpg 2x,
-              ./images/home/hotel-about/tablet/modern-studio-interior-tab@3x.jpg 3x
-            "
-            media="(min-width: 1024px)"
-          />
-          <source
-            srcset="
-              ./images/home/hotel-about/mobile/modern-studio-interior-mob.jpg    1x,
-              ./images/home/hotel-about/mobile/modern-studio-interior-mob@2x.jpg 2x,
-              ./images/home/hotel-about/mobile/modern-studio-interior-mob@3x.jpg 3x
-            "
-            media="(max-width: 1023px)"
-          />
-          <img
-            src="./images/home/hotel-about/desktop/modern-studio-interior-desk.jpg"
-            alt="Кімната готелю з двоспальним ліжком"
-          />
-        </picture>
-      </div>
-    </article>
-
-    <article class="hotel-about-article-two">
-      <p class="text text__main hotel-about-article-two__description">
-        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-        sint. Velit officia consequat duis enim velit mollit. Exercitation
-        veniam consequat sunt nostrud amet.
-      </p>
-
-      <div class="hotel-about-article-two__img">
+      <div class="hotel-about__interior-second">
         <picture>
           <source
             srcset="
@@ -145,7 +139,7 @@
           />
         </picture>
       </div>
-    </article>
+    </div>
 
     <div
       class="container-swiper container-swiper--right container-swiper--positioned"

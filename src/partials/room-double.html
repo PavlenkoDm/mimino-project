@@ -1,23 +1,76 @@
-<section class="room-two section section__booking" data-slider="slider">
-  <div class="container">
-    <h2 class="tagline room-two__title">Amet minim mollit non</h2>
-    <p class="brand room-two__brand" lang="en">Mimino</p>
-    <h3 class="room-two__name">Двомісний номер</h3>
-    <p class="text text__main room-two__text" lang="en">
+<section class="room-double section section__booking" data-slider="slider">
+  <span class="lines"></span>
+  <div class="container room-double__container">
+    <p class="tagline room-double__tagline">Amet minim mollit non</p>
+    <h3 class="brand room-double__brand" lang="en">Mimino</h3>
+    <h2 class="bookingroom-title bookingroom-title__hotel-page">
+      Двомісний номер
+    </h2>
+    <p class="text text__main room-double__text" lang="en">
       Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
       Velit officia consequat duis enim velit mollit. Exercitation veniam
       consequat sunt nostrud amet.
     </p>
 
-    <!-- <img
-      class="picture room-two__picture"
-      src="./images/room-two/room2_1.jpg"
-      srcset="
-        ./images/swiper/room-two/room2_1.jpg    1x,
-        ./images/swiper/room-two/room2_1@2x.jpg 2x
-      "
-      alt="кімната з ліжком та диваном"
-    /> -->
+    <picture>
+      <source
+        media="(min-width: 1280px)"
+        srcset="
+          ./images/home/hotel-about/desktop/hotel-interior-desk.webp    1x,
+          ./images/home/hotel-about/desktop/hotel-interior-desk@2x.webp 2x,
+          ./images/home/hotel-about/desktop/hotel-interior-desk@3x.webp 3x
+        "
+        type="image/webp"
+      />
+      <source
+        media="(max-width: 1279px)"
+        srcset="
+          ./images/home/hotel-about/tablet/hotel-interior-tab.webp    1x,
+          ./images/home/hotel-about/tablet/hotel-interior-tab@2x.webp 2x,
+          ./images/home/hotel-about/tablet/hotel-interior-tab@3x.webp 3x
+        "
+        type="image/webp"
+      />
+      <source
+        media="(max-width: 1023px)"
+        srcset="
+          ./images/home/hotel-about/mobile/hotel-interior-mob.webp    1x,
+          ./images/home/hotel-about/mobile/hotel-interior-mob@2x.webp 2x,
+          ./images/home/hotel-about/mobile/hotel-interior-mob@3x.webp 3x
+        "
+        type="image/webp"
+      />
+      <source
+        media="(min-width: 1280px)"
+        srcset="
+          ./images/home/hotel-about/desktop/hotel-interior-desk.jpg    1x,
+          ./images/home/hotel-about/desktop/hotel-interior-desk@2x.jpg 2x,
+          ./images/home/hotel-about/desktop/hotel-interior-desk@3x.jpg 3x
+        "
+      />
+      <source
+        media="(max-width: 1279px)"
+        srcset="
+          ./images/home/hotel-about/tablet/hotel-interior-tab.jpg    1x,
+          ./images/home/hotel-about/tablet/hotel-interior-tab@2x.jpg 2x,
+          ./images/home/hotel-about/tablet/hotel-interior-tab@3x.jpg 3x
+        "
+      />
+      <source
+        media="(max-width: 1023px)"
+        srcset="
+          ./images/home/hotel-about/mobile/hotel-interior-mob.jpg    1x,
+          ./images/home/hotel-about/mobile/hotel-interior-mob@2x.jpg 2x,
+          ./images/home/hotel-about/mobile/hotel-interior-mob@3x.jpg 3x
+        "
+      />
+      <img
+        class="room-double__interior"
+        loading="lazy"
+        src="./images/home/hotel-about/desktop/hotel-interior-desk.jpg"
+        alt="Комната з ліжком та диваном"
+      />
+    </picture>
 
     <div class="wrapper-swiper wrapper-swiper--reversed">
       <div class="container-swiper">
@@ -255,9 +308,9 @@
         </div>
       </div>
       <div class="button-wrapper">
-        <a class="button room-three__link" href="#">Детальніше</a>
+        <a class="button room-triple__link" href="#">Детальніше</a>
         <button
-          class="button room-three__btn popup-link"
+          class="button room-triple__btn popup-link"
           type="button"
           data-popup="popup22"
         >

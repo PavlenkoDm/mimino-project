@@ -2,12 +2,12 @@
   class="restaurant-details restaurant-details__canvas section section__details btn-up-visible"
   data-slider="details"
 >
+  <span class="lines"></span>
   <div class="container restaurant-details__container">
-    <span class="lines"></span>
     <div class="restaurant-details__wrap-text">
       <p class="brand restaurant-details__brand" lang="en">MIMIHO</p>
-      <h2 class="restaurant-details__title">Ресторан</h2>
-      <p class="restaurant-details__text text">
+      <h2 class="details-title restaurant-details__title">Ресторан</h2>
+      <p class="restaurant-details__text text text__main">
         Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
         sint. Velit officia consequat duis enim velit mollit.
       </p>
@@ -282,27 +282,22 @@
           <div class="swiper-button-next"></div>  -->
       </div>
     </div>
-    <div class="restaurant-details__wrap-button">
-      <ul class="restaurant-details__button-list">
-        <li class="restaurant-details__button-item">
-          <button
-            class="button restaurant-details__button popup-link"
-            type="button"
-            data-popup="popup3"
-          >
-            Забронювати столик
-          </button>
-        </li>
-        <li class="restaurant-details__button-item">
-          <a
-            type="button"
-            class="button restaurant-details__button"
-            href="./restaurant.html#menu"
-          >
-            Переглянути меню
-          </a>
-        </li>
-      </ul>
+    <div class="restaurant-details__buttons">
+      <button
+        class="button restaurant-details__button popup-link"
+        type="button"
+        data-popup="popup3"
+      >
+        Забронювати столик
+      </button>
+      <button
+        type="button"
+        target="_blank"
+        class="button restaurant-details__button"
+        href="./restaurant.html#menu"
+      >
+        Переглянути меню
+      </button>
     </div>
   </div>
 </section>

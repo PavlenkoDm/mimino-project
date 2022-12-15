@@ -1,145 +1,142 @@
 <section class="kitchen-about section section__content" data-slider="slider">
-  <div class="container">
-    <span class="lines lines--kitchen"></span>
+  <span class="lines"></span>
+  <div class="container kitchen-about__container">
     <h2 class="visually-hidden" lang="en">About our kitchen</h2>
-    <h3 class="tagline tagline--kitchen-about" lang="en">
+    <p class="tagline kitchen-about__tagline" lang="en">
       Amet minim mollit non
-    </h3>
-    <span class="brand" lang="en">MIMIHO</span>
-    <article class="kitchen-about__article">
-      <p class="text text__main kitchen-about__text" lang="en">
+    </p>
+    <h3 class="brand kitchen-about__brand" lang="en">MIMIHO</h3>
+    <p class="text text__main kitchen-about__description" lang="en">
+      Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+      Velit officia consequat duis enim velit mollit. Exercitation veniam
+      consequat sunt nostrud amet.
+    </p>
+    <div class="kitchen-about__interior-first">
+      <picture>
+        <source
+          srcset="
+            ./images/restaurant/kitchen-about/desktop/restaurant-interior-2-desk.webp    1x,
+            ./images/restaurant/kitchen-about/desktop/restaurant-interior-2-desk@2x.webp 2x,
+            ./images/restaurant/kitchen-about/desktop/restaurant-interior-2-desk@3x.webp 3x
+          "
+          type="image/webp"
+          media="(min-width: 1280px)"
+        />
+        <source
+          srcset="
+            ./images/restaurant/kitchen-about/mobile/restaurant-interior-2-mob.webp    1x,
+            ./images/restaurant/kitchen-about/mobile/restaurant-interior-2-mob@2x.webp 2x,
+            ./images/restaurant/kitchen-about/mobile/restaurant-interior-2-mob@3x.webp 3x
+          "
+          type="image/webp"
+          media="(max-width: 1023px)"
+        />
+        <source
+          srcset="
+            ./images/restaurant/kitchen-about/tablet/restaurant-interior-2-tab.webp    1x,
+            ./images/restaurant/kitchen-about/tablet/restaurant-interior-2-tab@2x.webp 2x,
+            ./images/restaurant/kitchen-about/tablet/restaurant-interior-2-tab@3x.webp 3x
+          "
+          type="image/webp"
+          media="(max-width: 1279px)"
+        />
+        <source
+          srcset="
+            ./images/restaurant/kitchen-about/desktop/restaurant-interior-2-desk.jpg    1x,
+            ./images/restaurant/kitchen-about/desktop/restaurant-interior-2-desk@2x.jpg 2x,
+            ./images/restaurant/kitchen-about/desktop/restaurant-interior-2-desk@3x.jpg 3x
+          "
+          media="(min-width: 1280px)"
+        />
+        <source
+          srcset="
+            ./images/restaurant/kitchen-about/mobile/restaurant-interior-2-mob.jpg    1x,
+            ./images/restaurant/kitchen-about/mobile/restaurant-interior-2-mob@2x.jpg 2x,
+            ./images/restaurant/kitchen-about/mobile/restaurant-interior-2-mob@3x.jpg 3x
+          "
+          media="(max-width: 1023px)"
+        />
+        <source
+          srcset="
+            ./images/restaurant/kitchen-about/tablet/restaurant-interior-2-tab.jpg    1x,
+            ./images/restaurant/kitchen-about/tablet/restaurant-interior-2-tab@2x.jpg 2x,
+            ./images/restaurant/kitchen-about/tablet/restaurant-interior-2-tab@3x.jpg 3x
+          "
+          media="(max-width: 1279px)"
+        />
+        <img
+          loading="lazy"
+          src="./images/restaurant/kitchen-about/desktop/restaurant-interior-2-desk.jpg"
+          alt="Frying in a pan"
+        />
+      </picture>
+    </div>
+    <div class="kitchen-about__wrap">
+      <picture>
+        <source
+          srcset="
+            ./images/restaurant/kitchen-about/desktop/cooking-meat-desk.webp    1x,
+            ./images/restaurant/kitchen-about/desktop/cooking-meat-desk@2x.webp 2x,
+            ./images/restaurant/kitchen-about/desktop/cooking-meat-desk@3x.webp 3x
+          "
+          type="image/webp"
+          media="(min-width: 1280px)"
+        />
+        <source
+          srcset="
+            ./images/restaurant/kitchen-about/mobile/cooking-meat-mob.webp    1x,
+            ./images/restaurant/kitchen-about/mobile/cooking-meat-mob@2x.webp 2x,
+            ./images/restaurant/kitchen-about/mobile/cooking-meat-mob@3x.webp 3x
+          "
+          type="image/webp"
+          media="(max-width: 1023px)"
+        />
+        <source
+          srcset="
+            ./images/restaurant/kitchen-about/tablet/cooking-meat-tab.webp    1x,
+            ./images/restaurant/kitchen-about/tablet/cooking-meat-tab@2x.webp 2x,
+            ./images/restaurant/kitchen-about/tablet/cooking-meat-tab@3x.webp 3x
+          "
+          type="image/webp"
+          media="(max-width: 1279px)"
+        />
+        <source
+          srcset="
+            ./images/restaurant/kitchen-about/desktop/cooking-meat-desk.jpg    1x,
+            ./images/restaurant/kitchen-about/desktop/cooking-meat-desk@2x.jpg 2x,
+            ./images/restaurant/kitchen-about/desktop/cooking-meat-desk@3x.jpg 3x
+          "
+          media="(min-width: 1280px)"
+        />
+        <source
+          srcset="
+            ./images/restaurant/kitchen-about/mobile/cooking-meat-mob.jpg    1x,
+            ./images/restaurant/kitchen-about/mobile/cooking-meat-mob@2x.jpg 2x,
+            ./images/restaurant/kitchen-about/mobile/cooking-meat-mob@3x.jpg 3x
+          "
+          media="(max-width: 1023px)"
+        />
+        <source
+          srcset="
+            ./images/restaurant/kitchen-about/tablet/cooking-meat-tab.jpg    1x,
+            ./images/restaurant/kitchen-about/tablet/cooking-meat-tab@2x.jpg 2x,
+            ./images/restaurant/kitchen-about/tablet/cooking-meat-tab@3x.jpg 3x
+          "
+          media="(max-width: 1279px)"
+        />
+        <img
+          class="kitchen-about__interior-second"
+          loading="lazy"
+          src="./images/restaurant/kitchen-about/desktop/cooking-meat-desk.jpg"
+          alt="Meat"
+        />
+      </picture>
+      <p class="text text__main kitchen-about__descr-second" lang="en">
         Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
         sint. Velit officia consequat duis enim velit mollit. Exercitation
         veniam consequat sunt nostrud amet.
       </p>
-      <div class="kitchen-about__article-img-one">
-        <picture>
-          <source
-            srcset="
-              ./images/restaurant/kitchen-about/desktop/restaurant-interior-2-desk.webp    1x,
-              ./images/restaurant/kitchen-about/desktop/restaurant-interior-2-desk@2x.webp 2x,
-              ./images/restaurant/kitchen-about/desktop/restaurant-interior-2-desk@3x.webp 3x
-            "
-            type="image/webp"
-            media="(min-width: 1280px)"
-          />
-          <source
-            srcset="
-              ./images/restaurant/kitchen-about/mobile/restaurant-interior-2-mob.webp    1x,
-              ./images/restaurant/kitchen-about/mobile/restaurant-interior-2-mob@2x.webp 2x,
-              ./images/restaurant/kitchen-about/mobile/restaurant-interior-2-mob@3x.webp 3x
-            "
-            type="image/webp"
-            media="(max-width: 1023px)"
-          />
-          <source
-            srcset="
-              ./images/restaurant/kitchen-about/tablet/restaurant-interior-2-tab.webp    1x,
-              ./images/restaurant/kitchen-about/tablet/restaurant-interior-2-tab@2x.webp 2x,
-              ./images/restaurant/kitchen-about/tablet/restaurant-interior-2-tab@3x.webp 3x
-            "
-            type="image/webp"
-            media="(max-width: 1279px)"
-          />
-          <source
-            srcset="
-              ./images/restaurant/kitchen-about/desktop/restaurant-interior-2-desk.jpg    1x,
-              ./images/restaurant/kitchen-about/desktop/restaurant-interior-2-desk@2x.jpg 2x,
-              ./images/restaurant/kitchen-about/desktop/restaurant-interior-2-desk@3x.jpg 3x
-            "
-            media="(min-width: 1280px)"
-          />
-          <source
-            srcset="
-              ./images/restaurant/kitchen-about/mobile/restaurant-interior-2-mob.jpg    1x,
-              ./images/restaurant/kitchen-about/mobile/restaurant-interior-2-mob@2x.jpg 2x,
-              ./images/restaurant/kitchen-about/mobile/restaurant-interior-2-mob@3x.jpg 3x
-            "
-            media="(max-width: 1023px)"
-          />
-          <source
-            srcset="
-              ./images/restaurant/kitchen-about/tablet/restaurant-interior-2-tab.jpg    1x,
-              ./images/restaurant/kitchen-about/tablet/restaurant-interior-2-tab@2x.jpg 2x,
-              ./images/restaurant/kitchen-about/tablet/restaurant-interior-2-tab@3x.jpg 3x
-            "
-            media="(max-width: 1279px)"
-          />
-          <img
-            loading="lazy"
-            src="./images/restaurant/kitchen-about/desktop/restaurant-interior-2-desk.jpg"
-            alt="Frying in a pan"
-          />
-        </picture>
-      </div>
-    </article>
-    <article class="kitchen-about__article-img-two">
-      <div class="kitchen-about__food">
-        <picture>
-          <source
-            srcset="
-              ./images/restaurant/kitchen-about/desktop/cooking-meat-desk.webp    1x,
-              ./images/restaurant/kitchen-about/desktop/cooking-meat-desk@2x.webp 2x,
-              ./images/restaurant/kitchen-about/desktop/cooking-meat-desk@3x.webp 3x
-            "
-            type="image/webp"
-            media="(min-width: 1280px)"
-          />
-          <source
-            srcset="
-              ./images/restaurant/kitchen-about/mobile/cooking-meat-mob.webp    1x,
-              ./images/restaurant/kitchen-about/mobile/cooking-meat-mob@2x.webp 2x,
-              ./images/restaurant/kitchen-about/mobile/cooking-meat-mob@3x.webp 3x
-            "
-            type="image/webp"
-            media="(max-width: 1023px)"
-          />
-          <source
-            srcset="
-              ./images/restaurant/kitchen-about/tablet/cooking-meat-tab.webp    1x,
-              ./images/restaurant/kitchen-about/tablet/cooking-meat-tab@2x.webp 2x,
-              ./images/restaurant/kitchen-about/tablet/cooking-meat-tab@3x.webp 3x
-            "
-            type="image/webp"
-            media="(max-width: 1279px)"
-          />
-          <source
-            srcset="
-              ./images/restaurant/kitchen-about/desktop/cooking-meat-desk.jpg    1x,
-              ./images/restaurant/kitchen-about/desktop/cooking-meat-desk@2x.jpg 2x,
-              ./images/restaurant/kitchen-about/desktop/cooking-meat-desk@3x.jpg 3x
-            "
-            media="(min-width: 1280px)"
-          />
-          <source
-            srcset="
-              ./images/restaurant/kitchen-about/mobile/cooking-meat-mob.jpg    1x,
-              ./images/restaurant/kitchen-about/mobile/cooking-meat-mob@2x.jpg 2x,
-              ./images/restaurant/kitchen-about/mobile/cooking-meat-mob@3x.jpg 3x
-            "
-            media="(max-width: 1023px)"
-          />
-          <source
-            srcset="
-              ./images/restaurant/kitchen-about/tablet/cooking-meat-tab.jpg    1x,
-              ./images/restaurant/kitchen-about/tablet/cooking-meat-tab@2x.jpg 2x,
-              ./images/restaurant/kitchen-about/tablet/cooking-meat-tab@3x.jpg 3x
-            "
-            media="(max-width: 1279px)"
-          />
-          <img
-            loading="lazy"
-            src="./images/restaurant/kitchen-about/desktop/cooking-meat-desk.jpg"
-            alt="Meat"
-          />
-        </picture>
-      </div>
-      <p class="text text__main kitchen-about__text-food">
-        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-        sint. Velit officia consequat duis enim velit mollit. Exercitation
-        veniam consequat sunt nostrud amet.
-      </p>
-    </article>
+    </div>
   </div>
   <div class="wrapper-swiper">
     <div class="container-swiper container-swiper--right">

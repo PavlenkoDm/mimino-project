@@ -75,7 +75,8 @@
   }
 
   @include respondTo('diapente') {
-    width: 144px;
+    max-width: 144px;
+    width: 100%;
   }
 }
 

@@ -55,6 +55,14 @@
   }
 }
 
+.amenities__description {
+  margin-bottom: 32px;
+
+  @include respondTo('diapente') {
+    margin-bottom: 40px;
+  }
+}
+
 .amenities-title {
   @extend %marginPaddingReset;
   font-family: $text-times-font;
@@ -62,68 +70,30 @@
   font-weight: 400;
   font-size: 32px;
   line-height: 1.16;
-}
-.amenities-titlel__descr {
-  @include respondTo('diapente') {
-    width: 757px;
-  }
-}
-
-.amenities__descr_bigest-width {
-  @include respondTo('diapente') {
-    width: 450px;
-  }
-  @include respondTo('diapason') {
-    width: 495px;
-  }
-}
-.amenities__descr_margin {
-  margin-bottom: 32px;
-}
-.amenities__descr_tablet-margin {
-  @include respondTo('diapente') {
-    margin-bottom: 40px;
-  }
-}
-.amenities-title_margin {
   margin-bottom: 16px;
 }
-.amenities-list_flex {
-  display: flex;
-  flex-direction: column;
-  row-gap: 16px;
+
+.amenities__article {
+
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.amenities__specification {
   margin-bottom: 32px;
-
   @include respondTo('diapente') {
-    flex-direction: row;
-    column-gap: 80px;
-  }
-
-  @include respondTo('diapason') {
-    column-gap: 159px;
-  }
-}
-.amenities-list_flex-gap {
-  @include respondTo('diapente') {
-    column-gap: 30px;
+    max-width: 757px;
   }
 }
 
-.amenities-list {
-  @extend %list;
-}
-
-.amenities-list__title {
-  @extend %marginPaddingReset;
-  font-family: $text-times-font;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 1.17;
+.amenities__subtitle {
+  margin-bottom: 16px;
 }
 
 $enable-rounded: true;
-.amenities-button {
+
+.amenities__button {
   @include buttonSize(
     $max-width: 434px,
     $padding-top: 18px,
@@ -133,58 +103,41 @@ $enable-rounded: true;
   @include buttonPlace;
   display: flex;
   justify-content: center;
-  @include respondTo('diapente') {
-    font-size: 24px;
-    line-height: 1.2;
-  }
-}
-
-.amenities-button_margin {
   margin-bottom: 20px;
+
   @include respondTo('diapente') {
-    margin-bottom: 0px;
+    margin-bottom: 32px;
+    margin-left: auto;
   }
 }
 
-.amenities-button-return {
-  @extend %icon;
-
+.amenities__return {
+  @extend %link;
   display: flex;
+  justify-content: center;
   align-items: center;
   column-gap: 12px;
 
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.25;
+  line-height: 1.219;
   letter-spacing: 0.02em;
-  cursor: pointer;
   color: getColor('accent-darker');
-  background-color: inherit;
-  border: none;
 
-  @include respondTo('tritonus') {
-    margin: 0 auto;
-  }
   @include respondTo('diapente') {
     font-size: 20px;
-    line-height: 1.2;
+    justify-content: flex-end;
   }
+
   &:focus,
-  &:hover {
+  &:hover,
+  &:active {
     color: getColor('accent');
     fill: transparent;
   }
   @include transition(fill, color);
 }
 
-.amenities-button-flex {
-  @include respondTo('diapente') {
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-    row-gap: 32px;
-  }
-  @include respondTo('diapason') {
-    margin-right: 110px;
-  }
+.amenities__icon {
+  @extend %icon;
 }

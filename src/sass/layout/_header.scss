@@ -40,8 +40,32 @@
   }
 }
 
+.header__navigation-wrap {
+  @include respondTo('diapente') {
+    border: 1px solid mix(transparent, getColor('accent'), 30%);
+    @include transition(border);
+  
+    &:hover,
+    &:focus,
+    &:active {
+      border: 1px dashed getColor('primary-inversed');
+    }
+  }
+}
+
 .header__navigation-link {
   @include respondTo('tritonus') {
     margin-right: 6px;
+  }
+}
+
+.header__navigation-icon {
+  color: getColor('accent');
+}
+
+.header__navigation-number {
+
+  @include respondTo('tritonus') {
+    display: none;
   }
 }

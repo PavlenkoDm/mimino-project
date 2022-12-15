@@ -205,6 +205,17 @@
 .room-hero__button-wrap {
   display: flex;
   align-items: center;
+
+  @include respondTo('diapente') {
+    position: absolute;
+    right: 47px;
+    bottom: 64px;
+  }
+
+  @include respondTo('diapason') {
+    right: 85px;
+    bottom: 66px;
+  }
 }
 
 .room-hero__button {
@@ -214,14 +225,4 @@
     $padding-bottom: 14px
   );
   @include buttonPlace($transparent-button: true);
-
-  @include respondTo('diapente') {
-    right: 47px;
-    bottom: 64px;
-  }
-
-  @include respondTo('diapason') {
-    right: 85px;
-    bottom: 66px;
-  }
 }
