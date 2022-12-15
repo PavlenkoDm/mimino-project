@@ -15,20 +15,41 @@
   position: relative;
   overflow: hidden;
   margin-right: -15px;
-  @include respondTo('diapente') {
-    margin-left: -60px;
-    margin-right: 0;
-    .wrapper-swiper--right & {
-      margin-left: 0;
+  padding: 60px;
+
+  .wrapper-swiper--right & {
+    margin-right: -15px;
+    @include respondTo('pre-unisonus') {
+      margin-left: -15px;
+    }
+    @include respondTo('diapente') {
       margin-right: -60px;
+      margin-left: 0;
+    }
+  }
+  .wrapper-swiper--left & {
+    margin-left: -15px;
+    @include respondTo('pre-unisonus') {
+      margin-right: -15px;
+    }
+    @include respondTo('diapente') {
+      margin-left: -60px;
+      margin-right: 0;
     }
   }
 }
 
 .swiper {
   overflow: visible;
-  width: 404px;
-  transform: translateX(34px);
+
+  @include respondTo('pre-unisonus') {
+    width: 192px;
+  }
+  @include respondTo('unisonus') {
+    width: 404px;
+    transform: translateX(34px);
+  }
+
   @include respondTo('diapente') {
     width: 428px;
     transform: translateX(0px);
@@ -38,12 +59,18 @@
     transform: translateX(0px);
   }
   &--large {
-    width: 506px;
+    @include respondTo('pre-unisonus') {
+      width: 245px;
+    }
+    @include respondTo('unisonus') {
+      width: 506px;
+    }
+
     @include respondTo('diapente') {
-      width: 404px;
+      width: 428px;
     }
     @include respondTo('diapason') {
-      width: 506px;
+      width: 530px;
     }
   }
   &-slide {
@@ -62,21 +89,33 @@
 }
 
 .swiper-slide-prev {
-  visibility: visible;
   .wrapper-swiper--right & {
     visibility: hidden;
   }
   @include respondTo('diapente') {
     visibility: hidden;
+  }
+
+  .wrapper-swiper--left & {
+    visibility: visible;
+    @include respondTo('diapente') {
+      visibility: hidden;
+    }
   }
 }
 .swiper-slide-next {
-  visibility: hidden;
-  .wrapper-swiper--right & {
-    visibility: visible;
+  .wrapper-swiper--left & {
+    visibility: hidden;
   }
   @include respondTo('diapente') {
     visibility: visible;
+  }
+
+  .wrapper-swiper--right & {
+    visibility: visible;
+    @include respondTo('diapente') {
+      visibility: visible;
+    }
   }
 }
 
@@ -149,15 +188,19 @@
   gap: 32px;
   position: absolute;
   bottom: 8px;
-  left: 0px;
+  left: 30px;
   right: unset;
   @include respondTo('diapente') {
-    right: 60px;
-    left: unset;
+    right: unset;
+    left: 60px;
   }
   .wrapper-swiper--right & {
-    left: 60px;
-    right: unset;
+    left: unset;
+    right: 32px;
+
+    @include respondTo('diapente') {
+      right: 56px;
+    }
   }
 }
 
