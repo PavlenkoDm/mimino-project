@@ -10,6 +10,10 @@
 
 .room-luxe__tagline {
   margin-bottom: 8px;
+
+  @include respondTo('diapente') {
+    margin-bottom: 4px;
+  }
 }
 
 .room-luxe__brand {
@@ -34,13 +38,16 @@
 .room-luxe__text {
   margin-bottom: 32px;
   max-width: 258px;
+  color: #5f5f5f;
 
   @include respondTo('diapente') {
     max-width: 439px;
-    margin-bottom: 174px;
+    margin-bottom: 176px;
   }
   @include respondTo('diapason') {
     margin-bottom: 188px;
+    color: #7a7a7a;
+    max-width: 400px;
   }
 }
 
@@ -58,70 +65,36 @@
   @include respondTo('diapente') {
     max-width: 400px;
     position: absolute;
-    top: -152px;
-    right: 65px;
+    top: -94px;
+    right: 112px;
     box-shadow: 5px 5px 70px 17px rgba(0, 0, 0, 0.25);
     border-radius: 0;
   }
   @include respondTo('diapason') {
-    top: -153px;
+    top: -95px;
+    right: 180px;
     max-width: 460px;
     border-radius: 2px;
   }
 }
 
 .button-wrapper {
-  @include respondTo('diapente') {
-    display: inline-block;
+  @include respondTo('tritonus') {
+    margin-top: 20px;
   }
 }
-.room-luxe__link {
-  display: inline-block;
+
+.room-luxe__btn {
+  margin-left: auto;
+  margin-right: auto;
   @include buttonSize(
     $padding-top: 14px,
     $padding-bottom: 14px,
     $section-button: true
   );
   @include buttonPlace($light-section-button: true);
-  @extend %link;
-  margin-top: 32px;
-  margin-bottom: 16px;
-  margin-left: 74px;
-  text-align: center;
-  @include respondTo('diapente') {
-    margin-left: 0;
-    margin-top: 0;
-  }
-  @include respondTo('diapason') {
-    margin-top: 63px;
-  }
-}
- .container-swiper__left{
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row-reverse;
- }
 
-.room-luxe__btn {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  padding-top: 14px;
-  padding-bottom: 14px;
-  width: 236px;
-  font-family: 'Montserrat';
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.25;
-  background-color: #000000;
-  text-align: center;
-  &:not(:last-child) {
-    margin-bottom: 16px;
-    @include respondTo('diapente') {
-      margin-top: 41px;
-      @include respondTo('diapason') {
-        margin-top: 71px;
-      }
-    }
+  & + & {
+    margin-top: 16px;
   }
 }

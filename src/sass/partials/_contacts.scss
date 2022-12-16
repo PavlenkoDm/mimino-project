@@ -16,12 +16,15 @@
 
 .contacts__wrapper {
     @include respondTo('diapente') {
-        display: flex;
-        gap: 101px;
+      display: grid;
+      grid-template-columns: 395px 535px;
+        // display: flex;
+        // gap: 101px;
     }
 
     @include respondTo('diapason') {
-        gap: 108px;
+      grid-template-columns: 476px 634px;
+        // gap: 108px;
     }
 }
 
@@ -203,33 +206,25 @@
     }
 }
 
-.contacts__box-map {
-    border: 1px solid #bababa;
-    box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
-    border-radius: 2px;
-    z-index: 1;
-  
-    @include respondTo('diapente') {
-      margin-top: 13px;
-    }
-
-    @include respondTo('diapason') {
-      margin-top: 8px;
-      margin-bottom: 1px;
-    }
-  }
-
 .contacts__map {
   max-width: 384px;
   max-height: 220px;
+  border: 1px solid #bababa;
+  box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  z-index: 1;
 
   @include respondTo('diapente') {
     max-width: 535px;
     max-height: 412px;
+    margin-top: 13px;
+    box-shadow: 5px 5px 70px 17px rgba(0, 0, 0, 0.25);
   }
 
   @include respondTo('diapason') {
     max-width: 634px;
     max-height: 412px;
+    margin-top: 8px;
+    margin-bottom: 1px;
   }
 }

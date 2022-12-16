@@ -55,12 +55,13 @@
     max-width: 400px;
     position: absolute;
     top: -152px;
-    right: 65px;
+    right: 112px;
     box-shadow: 5px 5px 70px 17px rgba(0, 0, 0, 0.25);
   }
 
   @include respondTo('diapason') {
     top: -153px;
+    right: 180px;
     max-width: 460px;
   }
 }
