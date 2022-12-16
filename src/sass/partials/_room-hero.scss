@@ -1,74 +1,23 @@
 .room-hero {
-  position: relative;
-  padding-top: 350px;
-  padding-bottom: 14px;
+  width: 100%;
   max-width: 414px;
+  height: 740px;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
   margin: 0 auto;
-
+  text-align: left;
   @include respondTo('diapente') {
-    padding-top: 340px;
-    padding-bottom: 24px;
-  }
-
-  @include respondTo('diapason') {
-    padding-top: 365px;
-    padding-bottom: 48px;
-  }
-
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  // background-image: url('../images/room-hero/room-hero.jpg'),
-  //   linear-gradient(#000000a6, #000000a6);
-
-
-  @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-    // background-image: url('../images/room-hero/room-hero-2x.jpg'),
-    //   linear-gradient(#000000a3, #000000a3);
-
-  }
-
-  @include respondTo('diapente') {
-    padding-top: 340px;
-    padding-bottom: 24px;
     max-width: 1024px;
-    background-image: linear-gradient(
-      rgba(0, 0, 0, 0.65), 
-      rgba(0, 0, 0, 0.65), 
-      url('../images/hero/room/room-hero-tablet.jpg'))
-      ;
-    @media screen and (min-device-pixel-ratio: 2),
-      screen and (min-resolution: 192dpi),
-      screen and (min-resolution: 2dppx) {
-      background-image: linear-gradient(
-        rgba(0, 0, 0, 0.65), 
-        rgba(0, 0, 0, 0.65), 
-        url('../images/hero/room/room-hero-tablet-2x.jpg'));
-    }
+    height: 720px;
   }
-
   @include respondTo('diapason') {
-    padding-top: 412px;
-    padding-bottom: 48px;
     max-width: 1280px;
-    background-image: linear-gradient(
-      rgba(0, 0, 0, 0.65), 
-      rgba(0, 0, 0, 0.65), 
-      url('../images/hero/room/room-hero-desktop.jpg'));
-
-    @media screen and (min-device-pixel-ratio: 2),
-      screen and (min-resolution: 192dpi),
-      screen and (min-resolution: 2dppx) {
-      background-image: linear-gradient(
-    rgba(0, 0, 0, 0.65), 
-    rgba(0, 0, 0, 0.65), 
-    url('../images/hero/room/room-hero-desktop-2x.jpg'));
-    }
   }
 }
-
+.room-hero__arrows {
+  @extend %list;
+}
 .room-hero__decor {
   &::before {
     content: '';
@@ -92,34 +41,6 @@
   }
 }
 
-.room-hero__swiper {
-  @extend %list;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 93px;
-
-  @include respondTo('diapente') {
-    margin-bottom: 88px;
-  }
-}
-
-.room-hero__swiper-button {
-  @extend %marginPaddingReset;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 40px;
-  height: 40px;
-
-  background-color: transparentize($color: getColor('primary'), $amount: 0.35);
-  fill: getColor('accent');
-  border: none;
-}
-
 .room-hero__title {
   @extend %marginPaddingReset;
   margin-bottom: 14px;
@@ -130,12 +51,10 @@
   line-height: 1.14;
   letter-spacing: 0.05em;
   color: getColor('primary-inversed');
-
   @include respondTo('diapente') {
     font-size: 36px;
     margin-bottom: 24px;
   }
-
   &--transform {
     text-transform: uppercase;
   }
@@ -156,36 +75,178 @@
   }
 }
 
-.room-hero__footer {
-  display: flex;
-  gap: 70px;
+.slide-hero {
+  padding-top: 471px;
+  padding-bottom: 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include respondTo('diapente') {
+    padding-top: 468px;
+  }
+  @include respondTo('diapason') {
+    padding-top: 524px;
+  }
 }
 
-.room-hero__wrap {
+.two {
+  @include backgroundImageRetina(
+    $gradient: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    $page: hero,
+    $section: hotel,
+    $part: mobile,
+    $file: hero-mob,
+    $webp-file: '../images/hero/hotel/desktop/hero-desk.webp'
+  );
+
   @include respondTo('diapente') {
-    display: flex;
-    gap: 40px;
+    @include backgroundImageRetina(
+      $gradient: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+      $page: hero,
+      $section: hotel,
+      $part: tablet,
+      $file: hero-tab,
+      $webp-file: '../images/hero/hotel/desktop/hero-desk.webp'
+    );
   }
 
+  @include respondTo('diapason') {
+    @include backgroundImageRetina(
+      $gradient: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+      $page: hero,
+      $section: hotel,
+      $part: desktop,
+      $file: hero-desk,
+      $webp-file: '../images/hero/hotel/desktop/hero-desk.webp'
+    );
+  }
+}
+
+.three {
+  @include backgroundImageRetina(
+    $gradient: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    $page: swiper,
+    $section: room,
+    $part: mobile,
+    $file: room-third-mob,
+    $webp-file: '../images/swiper/room/desktop/room-third-mob.webp'
+  );
+
+  @include respondTo('diapente') {
+    @include backgroundImageRetina(
+      $gradient: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+      $page: swiper,
+      $section: room,
+      $part: tablet,
+      $file: room-third-tab,
+      $webp-file: '../images/hero/hotel/desktop/room-third-tab.webp'
+    );
+  }
+
+  @include respondTo('diapason') {
+    @include backgroundImageRetina(
+      $gradient: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+      $page: swiper,
+      $section: room,
+      $part: desktop,
+      $file: room-third-desk,
+      $webp-file: '../images/hero/hotel/desktop/room-third-desk.webp'
+    );
+  }
+}
+
+.luxe {
+  @include backgroundImageRetina(
+    $gradient: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    $page: swiper,
+    $section: room,
+    $part: mobile,
+    $file: room-second-mob,
+    $webp-file: '../images/swiper/room/desktop/room-second-mob.webp'
+  );
+
+  @include respondTo('diapente') {
+    @include backgroundImageRetina(
+      $gradient: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+      $page: swiper,
+      $section: room,
+      $part: tablet,
+      $file: room-second-tab,
+      $webp-file: '../images/hero/hotel/desktop/room-second-tab.webp'
+    );
+  }
+
+  @include respondTo('diapason') {
+    @include backgroundImageRetina(
+      $gradient: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+      $page: swiper,
+      $section: room,
+      $part: desktop,
+      $file: room-second-desk,
+      $webp-file: '../images/hero/hotel/desktop/room-second-desk.webp'
+    );
+  }
+}
+
+.room-hero__swiper-button {
+  @extend %marginPaddingReset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: transparentize($color: getColor('primary'), $amount: 0.35);
+  fill: getColor('accent');
+  border: none;
+  @include transition(fill);
+
+  &:hover,
+  &:focus {
+    fill: transparentize($color: getColor('accent'), $amount: 0.3);
+  }
+}
+
+.room-hero--container {
+  display: flex;
+  flex-direction: column;
+}
+
+.room-hero__location {
+  position: absolute;
+  z-index: 10;
+
+  @include respondTo('tritonus') {
+    top: 64px;
+    right: 15px;
+  }
+
+  @include respondTo('diapente') {
+    bottom: 15px;
+    left: 47px;
+  }
   @include respondTo('diapason') {
     display: none;
   }
 }
 
-.room-hero__location {
-  @include respondTo('tritonus') {
-    position: absolute;
-    top: 64px;
-    right: 15px;
-  }
-}
-
 .room-hero__socials {
-  display: block;
+  z-index: 10;
+  position: absolute;
 
+  @include respondTo('tritonus') {
+    bottom: 15px;
+    left: 15px;
+    display: block;
+  }
   @include respondTo('diapente') {
+    bottom: 30px;
+    left: 374px;
     display: flex;
     gap: 20px;
+  }
+  @include respondTo('diapason') {
+    display: none;
   }
 }
 
@@ -198,16 +259,28 @@
   }
 }
 
+.room-hero__wrap {
+  display: flex;
+}
+
 .room-hero__icon {
   fill: transparentize($color: getColor('accent'), $amount: 0.3);
 }
 
 .room-hero__button-wrap {
+  position: absolute;
+  z-index: 10;
+  margin: 0 auto;
   display: flex;
   align-items: center;
 
+  @include respondTo('tritonus') {
+    bottom: 40px;
+    left: 54%;
+    transform: translateX(-50%);
+  }
+
   @include respondTo('diapente') {
-    position: absolute;
     right: 47px;
     bottom: 64px;
   }
@@ -218,11 +291,45 @@
   }
 }
 
-.room-hero__button {
-  @include buttonSize(
-    $price-button: true,
-    $padding-top: 14px,
-    $padding-bottom: 14px
-  );
-  @include buttonPlace($transparent-button: true);
+.room-hero__footer {
+  margin-top: auto;
 }
+
+// .room-hero {
+
+// .room-hero__footer {
+//   display: flex;
+//   gap: 70px;
+// }
+
+// .room-hero__icon {
+//   fill: transparentize($color: getColor('accent'), $amount: 0.3);
+// }
+
+// .room-hero__button-wrap {
+//   display: flex;
+//   align-items: center;
+// }
+
+// .room-hero__button {
+//   @include buttonSize(
+//     $price-button: true,
+//     $padding-top: 14px,
+//     $padding-bottom: 14px
+//   );
+//   @include buttonPlace($transparent-button: true);
+
+//   @include respondTo('diapente') {
+//     right: 47px;
+//     bottom: 64px;
+//   }
+
+//   @include respondTo('diapason') {
+//     right: 85px;
+//     bottom: 66px;
+//   }
+// }
+
+// .room-hero__arrows {
+//   @extend %list;
+// }
