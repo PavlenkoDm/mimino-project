@@ -15,17 +15,17 @@
 }
 
 .contacts__wrapper {
-    @include respondTo('diapente') {
-      display: grid;
-      grid-template-columns: 395px 535px;
-        // display: flex;
-        // gap: 101px;
-    }
+  @include respondTo('diapente') {
+    display: grid;
+    grid-template-columns: 395px 535px;
+    // display: flex;
+    // gap: 101px;
+  }
 
-    @include respondTo('diapason') {
-      grid-template-columns: 476px 634px;
-        // gap: 108px;
-    }
+  @include respondTo('diapason') {
+    grid-template-columns: 476px 634px;
+    // gap: 108px;
+  }
 }
 
 .contacts__brand {
@@ -109,8 +109,8 @@
 
   &--first {
     @include respondTo('tritonus') {
-        max-width: 145px; // +1px не віришена проблема вміщування контенту
-        width: 100%;
+      max-width: 145px; // +1px не віришена проблема вміщування контенту
+      width: 100%;
     }
   }
 }
@@ -157,7 +157,7 @@
   color: #494848;
   background-color: getColor('primary-inversed');
   border: 0.5px solid getColor('accent-darker');
-  @include transition(background-color);
+  @include transition(background-color, border);
 
   @include respondTo('diapente') {
     max-width: 285px;
@@ -168,7 +168,8 @@
   &:active {
     border: 0.5px solid getColor('primary-inversed');
     color: getColor('primary-inversed');
-    background-color: getColor('accent-darker');
+    background-color: getColor('accent');
+    border-radius: 10px;
   }
 }
 
@@ -178,6 +179,13 @@
   margin-right: 10px;
   width: 24px;
   height: 24px;
+  @include transition(fill);
+
+  .contacts__address:hover &,
+  .contacts__address:focus &,
+  .contacts__address:active & {
+    fill: getColor('primary-inversed');
+  }
 }
 
 .contacts__link {
@@ -186,6 +194,13 @@
   padding-bottom: 8px;
   font-size: 16px;
   color: #494848;
+  @include transition(color);
+
+  .contacts__address:hover &,
+  .contacts__address:focus &,
+  .contacts__address:active & {
+    color: getColor('primary-inversed');
+  }
 
   @include respondTo('diapente') {
     padding-top: 9px;
@@ -199,11 +214,11 @@
 }
 
 .contacts__gap {
-    display: none;
+  display: none;
 
-    @include respondTo('diapente') {
-        display: block;
-    }
+  @include respondTo('diapente') {
+    display: block;
+  }
 }
 
 .contacts__map {
