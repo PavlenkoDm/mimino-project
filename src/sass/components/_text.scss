@@ -4,7 +4,7 @@
   line-height: 1.219;
   letter-spacing: 0.02em;
 
-  &__main {
+  &--main {
     font-size: 12px;
     font-weight: 600;
 
@@ -13,7 +13,7 @@
     }
   }
 
-  &__room {
+  &--room {
     font-weight: 700;
     font-size: 16px;
     color: mix(white, getColor('primary'), 48%);

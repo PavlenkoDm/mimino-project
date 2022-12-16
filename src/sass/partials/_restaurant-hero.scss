@@ -1,4 +1,4 @@
-.rest-hero {
+.restaurant-hero {
   position: relative;
 
   @include backgroundImageRetina(
@@ -30,7 +30,7 @@
   }
 }
 
-.rest-hero__title {
+.restaurant-hero__title {
   margin-bottom: 20px;
 
   @include respondTo('diapente') {
@@ -42,7 +42,7 @@
   }
 }
 
-.rest-hero__subtitle {
+.restaurant-hero__subtitle {
   font-size: 16px;
   margin-bottom: 40px;
   color: getColor('primary-inversed');
@@ -57,7 +57,7 @@
   }
 }
 
-.rest-hero__location {
+.restaurant-hero__location {
   @include respondTo('tritonus') {
     position: absolute;
     top: 64px;

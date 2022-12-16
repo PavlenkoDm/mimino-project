@@ -12,27 +12,42 @@
 .room-triple__tagline {
   text-align: end;
   margin-bottom: 8px;
+
+  @include respondTo('diapente') {
+    margin-right: 17px;
+    margin-bottom: 4px;
+  }
+
+  @include respondTo('diapason') {
+    margin-right: 57px;
+  }
 }
 
 .room-triple__brand {
-  text-align: end;
   margin-bottom: 32px;
-  margin-right: -12.5px;
+  text-align: right;
+  margin-right: -12px;
 
   @include respondTo('diapente') {
     margin-bottom: 62px;
+    margin-right: -3px;
   }
 
   @include respondTo('diapason') {
     margin-bottom: 72px;
+    margin-right: 37px;
   }
 }
 
 .room-triple__title {
+    text-align: right;
 
-  @include respondTo('tritonus') {
-    position: relative;
-    left: 82px;
+  @include respondTo('diapente') {
+    margin-right: 43px;
+  }
+
+  @include respondTo('diapason') {
+    margin-right: 57px;
   }
 }
 
@@ -40,20 +55,22 @@
   max-width: 242px;
   margin-bottom: 32px;
   color: mix(getColor('primary-inversed'), getColor('primary'), 37.3%);
-
-  @include respondTo('tritonus') {
-    position: relative;
-    left: 83px;
-    font-weight: 700;
-  }
-
+  margin-left: 70px; // перевірити (за макетом 98px - 15px падінг контейнеру)
+  
   @include respondTo('diapente') {
     max-width: 400px;
+    margin-right: 38px; // перевірити - неправильне значення
+    margin-left: auto;
+    margin-bottom: 169px;
+  }
+
+  @include respondTo('diapason') {
+    margin-right: 110px;
+    margin-bottom: 188px;
   }
 }
 
 .room-triple__interior {
-  margin-left: auto;
   max-width: 244px;
   box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
   border-radius: 2px;
@@ -66,55 +83,35 @@
   @include respondTo('diapente') {
     max-width: 400px;
     position: absolute;
-    top: -152px;
-    left: 65px;
+    top: -94px;
+    left: 112px;
     box-shadow: 5px 5px 70px 17px rgba(0, 0, 0, 0.25);
   }
 
   @include respondTo('diapason') {
-    top: -153px;
+    top: -95px;
+    left: 180px;
     max-width: 460px;
   }
 }
 
 .button-wrapper {
-  margin-top: -27px;
-  @include respondTo('diapente') {
-    margin-top: 0px;
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-.room-triple__link {
-  display: inline-block;
-  @include buttonSize(
-    $padding-top: 14px,
-    $padding-bottom: 14px,
-    $section-button: true
-  );
-  @include buttonPlace($light-section-button: true);
-  @extend %link;
-  margin-top: 32px;
-  margin-bottom: 16px;
-  margin-left: 74px;
-  text-align: center;
-
-  @include respondTo('diapente') {
-    margin-left: 0;
-    margin-top: 0;
-  }
-
-  @include respondTo('diapason') {
-    // margin-top: 63px;
+  @include respondTo('tritonus') {
+    margin-top: 20px;
   }
 }
 
 .room-triple__btn {
+  margin-left: auto;
+  margin-right: auto;
   @include buttonSize(
     $padding-top: 14px,
     $padding-bottom: 14px,
     $section-button: true
   );
   @include buttonPlace($light-section-button: true);
+
+  & + & {
+    margin-top: 16px;
   }
+}
