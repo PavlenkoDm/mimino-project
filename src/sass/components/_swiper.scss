@@ -14,7 +14,6 @@
 .wrapper-mask {
   position: relative;
   overflow: hidden;
-  margin-right: -15px;
   padding: 60px;
 
   .wrapper-swiper--right & {
@@ -73,17 +72,18 @@
       width: 530px;
     }
   }
-  &-slide {
-    box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
-    border-radius: 2px;
-    visibility: hidden;
-  }
+
   &-wrapper {
     @extend %list;
   }
 }
 
-// .swiper-slide.swiper-slide-prev,
+.swiper .swiper-slide {
+  box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  visibility: hidden;
+}
+
 .swiper-slide-active {
   visibility: visible;
 }
@@ -116,6 +116,10 @@
     @include respondTo('diapente') {
       visibility: visible;
     }
+  }
+
+  .room-hero & {
+    visibility: hidden;
   }
 }
 
@@ -176,10 +180,6 @@
   }
 }
 
-.swiper-button-disabled.swiper-button-prev {
-  opacity: 1;
-}
-
 .swiper__arrows {
   display: flex;
   align-items: center;
@@ -204,7 +204,36 @@
   }
 }
 
-.swiper-slide .image {
+.swiper-hero {
   width: 100%;
   height: 100%;
+}
+
+.swiper-hero-button-next,
+.swiper-hero-button-prev {
+  position: absolute;
+  z-index: 99;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.swiper-hero-button-next {
+  right: 15px;
+  @include respondTo('diapente') {
+    right: 47px;
+  }
+  @include respondTo('diapason') {
+    right: 85px;
+  }
+}
+
+.swiper-hero-button-prev {
+  left: 15px;
+  @include respondTo('diapente') {
+    left: 47px;
+  }
+  @include respondTo('diapason') {
+    left: 85px;
+  }
 }
