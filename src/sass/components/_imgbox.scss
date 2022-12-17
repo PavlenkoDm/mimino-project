@@ -1,0 +1,82 @@
+.imgbox {
+  margin-left: auto;
+  max-width: 244px;
+  box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  overflow: hidden;
+
+  @include respondTo('tritonus') {
+    position: relative; // для встановлення z-index більшого, ніж у декоративного елементу lines
+    margin-bottom: 32px;
+  }
+
+  @include respondTo('diapente') {
+    max-width: 400px;
+    position: absolute;
+    top: -152px;
+    right: 112px;
+    box-shadow: 5px 5px 70px 17px rgba(0, 0, 0, 0.25);
+  }
+
+  @include respondTo('diapason') {
+    top: -153px;
+    right: 180px;
+    max-width: 460px;
+  }
+
+  &--left {
+    margin-left: 0;
+
+    @include respondTo('diapente') {
+      top: -144px;
+      left: 112px;
+    }
+
+    @include respondTo('diapason') {
+      left: 180px;
+    }
+  }
+
+  &--rooms {
+    @include respondTo('diapente') {
+      top: -94px;
+    }
+
+    @include respondTo('diapason') {
+      top: -95px;
+    }
+  }
+
+  &--rooms-left {
+    margin-left: 0;
+    
+    @include respondTo('diapente') {
+      top: -94px;
+      left: 112px;
+    }
+  
+    @include respondTo('diapason') {
+      top: -95px;
+      left: 180px;
+    }
+  }
+}
+
+.imgbox-second {
+  max-width: 200px;
+  box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  overflow: hidden;
+
+  @include respondTo('tritonus') {
+    position: relative; // для встановлення z-index більшого, ніж у декоративного елементу lines
+  }
+
+  @include respondTo('diapente') {
+    max-width: 350px;
+  }
+
+  @include respondTo('diapason') {
+    max-width: 460px;
+  }
+}

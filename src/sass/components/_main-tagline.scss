@@ -4,13 +4,29 @@
   font-weight: 700;
   font-size: 32px;
   line-height: 1.15;
-  color: getColor('primary-inversed');
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 113px;
 
-  @include respondTo('diapente') {
-    margin-bottom: 137px;
-    font-size: 36px;
+  &--white {
+    color: getColor('primary-inversed');
+    letter-spacing: 0.05em;
+    margin-bottom: 113px;
+
+    @include respondTo('diapente') {
+      margin-bottom: 137px;
+      font-size: 36px;
+    }
+  }
+
+  &--black {
+    color: getColor('primary');
+    margin-bottom: 32px;
+
+    @include respondTo('pre-unisonus') {
+      font-size: 24px;
+    }
+
+    @include respondTo('diapente') {
+      margin-bottom: 40px;
+    }
   }
 }

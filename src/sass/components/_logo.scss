@@ -25,6 +25,11 @@
 
     @include respondTo('diapente') {
       font-size: 64px;
+      margin-right: 29px;
+    }
+
+    @include respondTo('diapason') {
+      margin-right: 131px;
     }
   }
 }

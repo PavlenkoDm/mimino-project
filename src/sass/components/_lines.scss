@@ -8,7 +8,7 @@
   height: 100%;
   background-color: rgba(122, 122, 122, 0.4);
   // z-index: -1;
-  &::after{
+  &::after {
     position: absolute;
     content: '';
     top: 0px;
@@ -17,23 +17,23 @@
     height: 100%;
     background-color: rgba(122, 122, 122, 0.4);
   }
-  @include respondTo('diapente'){
+  @include respondTo('diapente') {
     left: 50%;
     transform: translateX(-50%);
-  &::before,
-  &::after{
-    position: absolute;
-    content: '';
-    top: 0;
-    width: 1px;
-    height: 100%;
-    background-color: rgba(122, 122, 122, 0.4);
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      width: 1px;
+      height: 100%;
+      background-color: rgba(122, 122, 122, 0.4);
+    }
+    &::before {
+      left: -23vw;
+    }
+    &::after {
+      right: -23vw;
+    }
   }
-  &::before{
-    left: -23vw;
-  }
-  &::after{
-    right: -23vw;
-  }
-}
 }

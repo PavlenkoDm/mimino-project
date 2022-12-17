@@ -1,6 +1,5 @@
 .footer {
   position: relative;
-  max-width: 414px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 40px;
@@ -8,12 +7,8 @@
   background-color: #0e0c07;
 
   @include respondTo('diapente') {
-    max-width: 1024px;
     padding-top: 80px;
     padding-bottom: 80px;
-  }
-  @include respondTo('diapason') {
-    max-width: 1280px;
   }
 }
 

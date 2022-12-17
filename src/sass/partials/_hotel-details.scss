@@ -2,37 +2,6 @@
   position: relative;
 }
 
-.hotel-details__canvas {
-  @include backgroundImageRetina(
-    $gradient: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    $page: hero,
-    $section: hotel,
-    $part: mobile,
-    $file: hero-mob,
-    $webp-file: '../images/hero/hotel/desktop/hero-desk.webp'
-  );
-  @include respondTo('diapente') {
-    @include backgroundImageRetina(
-      $gradient: linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.76)),
-      $page: hero,
-      $section: hotel,
-      $part: tablet,
-      $file: hero-tab,
-      $webp-file: '../images/hero/hotel/desktop/hero-desk.webp'
-    );
-  }
-  @include respondTo('diapason') {
-    @include backgroundImageRetina(
-      $gradient: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-      $page: hero,
-      $section: hotel,
-      $part: desktop,
-      $file: hero-desk,
-      $webp-file: '../images/hero/hotel/desktop/hero-desk.webp'
-    );
-  }
-}
-
 .hotel-details__container {
   position: relative;
 }
@@ -84,26 +53,3 @@
     margin: 0;
   }
 }
-
-.hotel-details__button {
-  @include buttonSize(
-    $padding-top: 14px,
-    $padding-bottom: 14px,
-    $section-button: true
-  );
-  @include buttonPlace($transparent-button: true);
-
-  & + & {
-    margin-top: 16px;
-  }
-
-  @include respondTo('tritonus') {
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-
-//.hotel-details__slide--img {
-//  height: 270px;
-//  object-fit: cover;
-//}

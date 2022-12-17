@@ -58,6 +58,10 @@
   @include respondTo('tritonus') {
     margin-bottom: 32px;
   }
+
+  @include respondTo('diapente') {
+    position: relative; // для встановлення z-index більшого, ніж у декоративного елементу lines
+  }
 }
 
 .contacts__item {
@@ -91,13 +95,13 @@
 }
 
 .contacts__box {
-  z-index: 1;
+  position: relative; // для встановлення z-index більшого, ніж у декоративного елементу lines
   background-color: getColor('primary-inversed');
   display: flex;
   align-items: center;
   gap: 12px;
   border-radius: 2px;
-  border: 0.5px solid getColor('accent-darker');
+  outline: 0.5px solid getColor('accent-darker');
   @include transition(border-color, border-radius, background-color);
 
   &:hover,
@@ -118,10 +122,18 @@
 .contacts__contact {
   display: flex;
   align-items: center;
+  padding: 9px 8px 7px 8px;
+
+  &--vodafone {
+    padding-right: 0;
+  }
+
+  &--kyivstar {
+    padding-left: 0;
+  }
 }
 
 .contacts__number {
-  padding: 11px 8px 12px 0;
   font-size: 14px;
   line-height: 1.219;
   letter-spacing: 0.02em;
@@ -140,7 +152,6 @@
 
 .contacts__icon {
   fill: getColor('accent-darker');
-  margin-left: 8px;
   margin-right: 8px;
   @include transition(fill);
 
@@ -151,22 +162,23 @@
 }
 
 .contacts__address {
+  position: relative; // для встановлення z-index більшого, ніж у декоративного елементу lines
   max-width: 260px;
   padding: 0;
   gap: 0;
   color: #494848;
   background-color: getColor('primary-inversed');
-  border: 0.5px solid getColor('accent-darker');
-  @include transition(background-color, border);
+  outline: 0.5px solid getColor('accent-darker');
+  border: 0;
+  @include transition(background-color, outline);
 
   @include respondTo('diapente') {
     max-width: 285px;
   }
 
   &:focus,
-  &:hover,
-  &:active {
-    border: 0.5px solid getColor('primary-inversed');
+  &:hover {
+    outline: 0.5px solid getColor('primary-inversed');
     color: getColor('primary-inversed');
     background-color: getColor('accent');
     border-radius: 10px;
@@ -175,8 +187,6 @@
 
 .contacts__point {
   fill: getColor('accent-darker');
-  margin-left: 10px;
-  margin-right: 10px;
   width: 24px;
   height: 24px;
   @include transition(fill);
@@ -189,9 +199,13 @@
 }
 
 .contacts__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   padding-top: 8px;
-  padding-right: 33px;
+  padding-right: 43px;
   padding-bottom: 8px;
+  padding-left: 10px;
   font-size: 16px;
   color: #494848;
   @include transition(color);
@@ -222,12 +236,12 @@
 }
 
 .contacts__map {
+  position: relative; // для встановлення z-index більшого, ніж у декоративного елементу lines
   max-width: 384px;
   max-height: 220px;
   border: 1px solid #bababa;
   box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
   border-radius: 2px;
-  z-index: 1;
 
   @include respondTo('diapente') {
     max-width: 535px;
