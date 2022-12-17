@@ -1,3 +1,7 @@
+.container {
+  outline: 1px dotted red;
+}
+
 .container-swiper {
   display: flex;
   flex-direction: column;
@@ -88,34 +92,32 @@
   visibility: visible;
 }
 
-.swiper .swiper-slide-prev {
-  .wrapper-swiper--right & {
-    visibility: hidden;
-  }
+.wrapper-swiper--right .swiper-slide-prev {
+  visibility: hidden;
+
   @include respondTo('diapente') {
     visibility: hidden;
-  }
-
-  .wrapper-swiper--left & {
-    visibility: visible;
-    @include respondTo('diapente') {
-      visibility: hidden;
-    }
   }
 }
 
-.swiper .swiper-slide-next {
-  .wrapper-swiper--left & {
+.wrapper-swiper--left .swiper-slide-prev {
+  visibility: visible;
+  @include respondTo('diapente') {
     visibility: hidden;
   }
+}
+
+.wrapper-swiper--left .swiper-slide-next {
+  visibility: hidden;
   @include respondTo('diapente') {
     visibility: visible;
   }
-  .wrapper-swiper--right & {
+}
+
+.wrapper-swiper--right .swiper-slide-next {
+  visibility: visible;
+  @include respondTo('diapente') {
     visibility: visible;
-    @include respondTo('diapente') {
-      visibility: visible;
-    }
   }
 }
 
