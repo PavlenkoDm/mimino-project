@@ -62,38 +62,6 @@
   }
 }
 
-.hotel-about__interior-first {
-  box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
-  border-radius: 2px;
-  overflow: hidden;
-
-  @include respondTo('pre-unisonus') {
-    max-width: 63%;
-    margin-bottom: 32px;
-  }
-
-  @include respondTo('unisonus') {
-    max-width: 244px;
-  }
-
-  @include respondTo('tritonus') {
-    margin-bottom: 32px;
-  }
-
-  @include respondTo('diapente') {
-    box-shadow: 5px 5px 70px 17px rgba(0, 0, 0, 0.25);
-    position: absolute;
-    top: -144px;
-    left: 112px;
-    max-width: 400px;
-  }
-
-  @include respondTo('diapason') {
-    left: 180px;
-    max-width: 460px;
-  }
-}
-
 .hotel-about__wrap {
   display: flex;
   align-items: center;
@@ -105,7 +73,7 @@
 }
 
 .hotel-about__descr-second {
-  color: #c79002;
+  color: getColor('accent-darker');
 
   @include respondTo('pre-unisonus') {
     max-width: 42%;
@@ -129,29 +97,6 @@
     bottom: 40px;
     max-width: 311px;
     margin-right: 45px;
-  }
-}
-
-.hotel-about__interior-second {
-  box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
-  border-radius: 2px;
-  z-index: 1;
-  overflow: hidden;
-
-  @include respondTo('pre-unisonus') {
-    max-width: 48%;
-  }
-
-  @include respondTo('unisonus') {
-    max-width: 200px;
-  }
-
-  @include respondTo('diapente') {
-    max-width: 350px;
-  }
-
-  @include respondTo('diapason') {
-    max-width: 460px;
   }
 }
 

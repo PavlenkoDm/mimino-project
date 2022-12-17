@@ -22,7 +22,6 @@
       left: 338px;
       border: 1px solid rgba(186, 186, 186, 0.4);
       filter: blur(0.5px);
-      z-index: -1;
     }
     &::after {
       position: absolute;
@@ -33,7 +32,6 @@
       left: 640px;
       border: 1px solid rgba(186, 186, 186, 0.4);
       filter: blur(0.5px);
-      z-index: -1;
     }
   }
 }
@@ -50,7 +48,6 @@
       left: 942px;
       border: 1px solid rgba(186, 186, 186, 0.4);
       filter: blur(0.5px);
-      z-index: -1;
     }
   }
 }
@@ -106,6 +103,7 @@ $enable-rounded: true;
   margin-bottom: 20px;
 
   @include respondTo('diapente') {
+    position: relative; // для встановлення z-index більшого, ніж у декоративного елементу lines
     margin-bottom: 32px;
     margin-left: auto;
   }

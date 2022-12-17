@@ -7,11 +7,11 @@
   }
 
   @include respondTo('diapente') {
-    grid-template-columns: 511px 239px 274px;
+    grid-template-columns: 464px 239px 274px;
   }
 
   @include respondTo('diapason') {
-    grid-template-columns: 641px 320px 338px;
+    grid-template-columns: 556px 301px 253px;
   }
 }
 

@@ -11,65 +11,66 @@
       Velit officia consequat duis enim velit mollit. Exercitation veniam
       consequat sunt nostrud amet.
     </p>
-    <picture>
-      <source
-        media="(min-width: 1280px)"
-        srcset="
-          ./images/home/hotel-about/desktop/modern-studio-interior-desk.webp    1x,
-          ./images/home/hotel-about/desktop/modern-studio-interior-desk@2x.webp 2x,
-          ./images/home/hotel-about/desktop/modern-studio-interior-desk@3x.webp 3x
-        "
-        type="image/webp"
-      />
-      <source
-        media="(max-width: 1279px)"
-        srcset="
-          ./images/home/hotel-about/tablet/modern-studio-interior-tab.webp    1x,
-          ./images/home/hotel-about/tablet/modern-studio-interior-tab@2x.webp 2x,
-          ./images/home/hotel-about/tablet/modern-studio-interior-tab@3x.webp 3x
-        "
-        type="image/webp"
-      />
-      <source
-        media="(max-width: 1023px)"
-        srcset="
-          ./images/home/hotel-about/mobile/modern-studio-interior-mob.webp    1x,
-          ./images/home/hotel-about/mobile/modern-studio-interior-mob@2x.webp 2x,
-          ./images/home/hotel-about/mobile/modern-studio-interior-mob@3x.webp 3x
-        "
-        type="image/webp"
-      />
-      <source
-        media="(min-width: 1280px)"
-        srcset="
-          ./images/home/hotel-about/desktop/modern-studio-interior-desk.jpg    1x,
-          ./images/home/hotel-about/desktop/modern-studio-interior-desk@2x.jpg 2x,
-          ./images/home/hotel-about/desktop/modern-studio-interior-desk@3x.jpg 3x
-        "
-      />
-      <source
-        media="(max-width: 1279px)"
-        srcset="
-          ./images/home/hotel-about/tablet/modern-studio-interior-tab.jpg    1x,
-          ./images/home/hotel-about/tablet/modern-studio-interior-tab@2x.jpg 2x,
-          ./images/home/hotel-about/tablet/modern-studio-interior-tab@3x.jpg 3x
-        "
-      />
-      <source
-        media="(max-width: 1023px)"
-        srcset="
-          ./images/home/hotel-about/mobile/modern-studio-interior-mob.jpg    1x,
-          ./images/home/hotel-about/mobile/modern-studio-interior-mob@2x.jpg 2x,
-          ./images/home/hotel-about/mobile/modern-studio-interior-mob@3x.jpg 3x
-        "
-      />
-      <img
-        class="room-triple__interior"
-        loading="lazy"
-        src="./images/home/hotel-about/desktop/modern-studio-interior-desk.jpg"
-        alt="Комната з ліжком та диваном"
-      />
-    </picture>
+    <div class="imgbox imgbox--rooms-left">
+      <picture>
+        <source
+          media="(min-width: 1280px)"
+          srcset="
+            ./images/home/hotel-about/desktop/modern-studio-interior-desk.webp    1x,
+            ./images/home/hotel-about/desktop/modern-studio-interior-desk@2x.webp 2x,
+            ./images/home/hotel-about/desktop/modern-studio-interior-desk@3x.webp 3x
+          "
+          type="image/webp"
+        />
+        <source
+          media="(min-width: 1024px)"
+          srcset="
+            ./images/home/hotel-about/tablet/modern-studio-interior-tab.webp    1x,
+            ./images/home/hotel-about/tablet/modern-studio-interior-tab@2x.webp 2x,
+            ./images/home/hotel-about/tablet/modern-studio-interior-tab@3x.webp 3x
+          "
+          type="image/webp"
+        />
+        <source
+          media="(max-width: 1023px)"
+          srcset="
+            ./images/home/hotel-about/mobile/modern-studio-interior-mob.webp    1x,
+            ./images/home/hotel-about/mobile/modern-studio-interior-mob@2x.webp 2x,
+            ./images/home/hotel-about/mobile/modern-studio-interior-mob@3x.webp 3x
+          "
+          type="image/webp"
+        />
+        <source
+          media="(min-width: 1280px)"
+          srcset="
+            ./images/home/hotel-about/desktop/modern-studio-interior-desk.jpg    1x,
+            ./images/home/hotel-about/desktop/modern-studio-interior-desk@2x.jpg 2x,
+            ./images/home/hotel-about/desktop/modern-studio-interior-desk@3x.jpg 3x
+          "
+        />
+        <source
+          media="(min-width: 1024px)"
+          srcset="
+            ./images/home/hotel-about/tablet/modern-studio-interior-tab.jpg    1x,
+            ./images/home/hotel-about/tablet/modern-studio-interior-tab@2x.jpg 2x,
+            ./images/home/hotel-about/tablet/modern-studio-interior-tab@3x.jpg 3x
+          "
+        />
+        <source
+          media="(max-width: 1023px)"
+          srcset="
+            ./images/home/hotel-about/mobile/modern-studio-interior-mob.jpg    1x,
+            ./images/home/hotel-about/mobile/modern-studio-interior-mob@2x.jpg 2x,
+            ./images/home/hotel-about/mobile/modern-studio-interior-mob@3x.jpg 3x
+          "
+        />
+        <img
+          loading="lazy"
+          src="./images/home/hotel-about/desktop/modern-studio-interior-desk.jpg"
+          alt="Комната з ліжком та диваном"
+        />
+      </picture>
+    </div>
     <div class="wrapper-swiper wrapper-swiper--right">
       <div class="container-swiper">
         <div class="wrapper-mask">
@@ -333,11 +334,9 @@
         </div>
       </div>
       <div class="button-wrapper">
-        <button class="button room-triple__btn" href="./room.html">
-          Детальніше
-        </button>
+        <a class="button hotel-button" href="./room.html"> Детальніше </a>
         <button
-          class="button room-triple__btn popup-link"
+          class="button hotel-button popup-link"
           type="button"
           data-popup="popup21"
         >

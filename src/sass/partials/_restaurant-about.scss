@@ -40,53 +40,12 @@
   }
 }
 
-.restaurant-about__interior-first {
-  margin-left: auto;
-  max-width: 244px;
-  box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
-  border-radius: 2px;
-  z-index: 1;
-
-  @include respondTo('tritonus') {
-    margin-bottom: 32px;
-  }
-
-  @include respondTo('diapente') {
-    max-width: 400px;
-    position: absolute;
-    top: -152px;
-    right: 112px;
-    box-shadow: 5px 5px 70px 17px rgba(0, 0, 0, 0.25);
-  }
-
-  @include respondTo('diapason') {
-    top: -153px;
-    right: 180px;
-    max-width: 460px;
-  }
-}
-
 .restaurant-about__wrap {
   display: flex;
   align-items: center;
 
   @include respondTo('tritonus') {
     margin-bottom: 32px;
-  }
-}
-
-.restaurant-about__interior-second {
-  max-width: 200px;
-  box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
-  border-radius: 2px;
-  z-index: 1;
-
-  @include respondTo('diapente') {
-    max-width: 350px;
-  }
-
-  @include respondTo('diapason') {
-    max-width: 460px;
   }
 }
 

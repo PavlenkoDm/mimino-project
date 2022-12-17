@@ -1,0 +1,63 @@
+.hotel-details {
+    @include backgroundImageRetina(
+    $gradient: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    $page: hero,
+    $section: hotel,
+    $part: mobile,
+    $file: hero-mob,
+    $webp-file: '../images/hero/hotel/desktop/hero-desk.webp'
+  );
+  @include respondTo('diapente') {
+    @include backgroundImageRetina(
+      $gradient: linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.76)),
+      $page: hero,
+      $section: hotel,
+      $part: tablet,
+      $file: hero-tab,
+      $webp-file: '../images/hero/hotel/desktop/hero-desk.webp'
+    );
+  }
+  @include respondTo('diapason') {
+    @include backgroundImageRetina(
+      $gradient: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      $page: hero,
+      $section: hotel,
+      $part: desktop,
+      $file: hero-desk,
+      $webp-file: '../images/hero/hotel/desktop/hero-desk.webp'
+    );
+  }
+}
+
+.restaurant-details {
+    @include backgroundImageRetina(
+      $page: home,
+      $section: restaurant-details,
+      $part: mobile,
+      $file: background-mob,
+      $webp-file: '../images/home/restaurant-details/desktop/background-desk.webp'
+    );
+  
+    @include respondTo('diapente') {
+      @include backgroundImageRetina(
+        $gradient: linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.76)),
+        $page: home,
+        $section: restaurant-details,
+        $part: tablet,
+        $file: background-tab,
+        $webp-file:
+          '../images/home/restaurant-details/desktop/background-desk.webp'
+      );
+    }
+    @include respondTo('diapason') {
+      @include backgroundImageRetina(
+        $gradient: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+        $page: home,
+        $section: restaurant-details,
+        $part: desktop,
+        $file: background-desk,
+        $webp-file:
+          '../images/home/restaurant-details/desktop/background-desk.webp'
+      );
+    }
+  }

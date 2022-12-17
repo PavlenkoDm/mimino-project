@@ -10,8 +10,6 @@
   color: scale-color(getColor('primary'), $saturation: 1%, $lightness: 28.5%);
 
   @include respondTo('diapente') {
-    // max-width: 202px;
-    // width: 100%;
     font-size: 64px;
   }
 }
