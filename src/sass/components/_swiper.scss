@@ -84,11 +84,11 @@
   visibility: hidden;
 }
 
-.swiper-slide-active {
+.swiper .swiper-slide-active {
   visibility: visible;
 }
 
-.swiper-slide-prev {
+.swiper .swiper-slide-prev {
   .wrapper-swiper--right & {
     visibility: hidden;
   }
@@ -103,24 +103,24 @@
     }
   }
 }
-.swiper-slide-next {
+
+.swiper .swiper-slide-next {
   .wrapper-swiper--left & {
     visibility: hidden;
   }
   @include respondTo('diapente') {
     visibility: visible;
   }
-
   .wrapper-swiper--right & {
     visibility: visible;
     @include respondTo('diapente') {
       visibility: visible;
     }
   }
+}
 
-  .room-hero & {
-    visibility: hidden;
-  }
+.swiper-hero .swiper-slide-next {
+  visibility: hidden;
 }
 
 //ПЕРЕВИЗНАЧЕНІ СТИЛІ ДЛЯ СТОРІНКИ HOME СЕКЦІЯ HOTEL-DETAILS!!!!!!
