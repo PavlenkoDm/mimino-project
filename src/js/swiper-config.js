@@ -56,12 +56,7 @@ function swiperSlider() {
     detailsSliders.forEach(slider => {
       let arrowLeft = slider.querySelector('.swiper-button-prev');
       let arrowRight = slider.querySelector('.swiper-button-next');
-      swiper = new Swiper(slider.querySelector('.swiper'), {
-        slidesPerView: 2,
-        //initialSlide: 4,
-        spaceBetween: 20,
-        // centeredSlides: true,
-        //freeMode: true,
+      swiper = new Swiper(slider.querySelector('.swiper-triple'), {
         loop: true,
         observer: true,
         observeParents: true,
@@ -71,15 +66,13 @@ function swiperSlider() {
           prevEl: arrowLeft,
         },
         breakpoints: {
-          // when window width is >= 320px
           320: {
             slidesPerView: 1.292,
             spaceBetween: 20,
           },
-          // when window width is >= 480px
           1024: {
-            slidesPerView: 3,
-            spaceBetween: 34,
+            slidesPerView: 2.65,
+            spaceBetween: 86,
           },
         },
       });

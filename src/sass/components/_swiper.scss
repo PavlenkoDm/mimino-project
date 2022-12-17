@@ -1,3 +1,9 @@
+.red {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
 .container {
   outline: 1px dotted red;
 }
@@ -42,6 +48,13 @@
   }
 }
 
+.swiper-triple--left .wrapper-mask {
+  @include respondTo('diapente') {
+    margin-left: -60px;
+    margin-right: 0;
+  }
+}
+
 .swiper {
   overflow: visible;
 
@@ -80,6 +93,24 @@
   &-wrapper {
     @extend %list;
   }
+}
+
+.swiper-triple {
+  width: 835px;
+  overflow: hidden;
+  // background-color: aqua;
+}
+
+.container-swiper-triple {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.swiper-triple .image {
+  height: 100%;
+  width: 100%;
 }
 
 .swiper .swiper-slide {
@@ -123,15 +154,6 @@
 
 .swiper-hero .swiper-slide-next {
   visibility: hidden;
-}
-
-//ПЕРЕВИЗНАЧЕНІ СТИЛІ ДЛЯ СТОРІНКИ HOME СЕКЦІЯ HOTEL-DETAILS!!!!!!
-.hotel-details__swiper-slide.swiper-slide-prev {
-  width: 162px !important;
-}
-
-.hotel-details__swiper-slide.swiper-slide-active {
-  width: 270px !important;
 }
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
