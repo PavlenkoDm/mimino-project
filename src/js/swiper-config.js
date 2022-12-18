@@ -21,7 +21,7 @@ function swiperSlider() {
           //   when window width is >= 320px
           320: {
             // centeredSlides: true,
-            slidesPerView: 1,
+            slidesPerView: 2,
             spaceBetween: 16,
           },
           416: {

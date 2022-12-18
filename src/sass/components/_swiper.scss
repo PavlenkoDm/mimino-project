@@ -86,7 +86,6 @@
   }
   @include respondTo('unisonus') {
     width: 404px;
-    transform: translateX(34px);
   }
 
   @include respondTo('diapente') {
@@ -112,9 +111,25 @@
       width: 530px;
     }
   }
+  .wrapper-swiper--right & {
+    @include respondTo('tritonus') {
+      transform: translateX(31px);
+    }
+  }
+  .wrapper-swiper--left & {
+    @include respondTo('tritonus') {
+      transform: translateX(-200px);
+    }
+  }
 
   &-wrapper {
     @extend %list;
+  }
+}
+
+.wrapper-swiper--left .swiper.swiper--large {
+  @include respondTo('tritonus') {
+    transform: translateX(-220px);
   }
 }
 
@@ -170,38 +185,38 @@
   visibility: hidden;
 }
 
-.swiper .swiper-slide-active {
+.swiper .swiper-slide-active,
+.swiper .swiper-slide-next {
   visibility: visible;
 }
 
-.wrapper-swiper--right .swiper-slide-prev {
-  visibility: hidden;
+// .wrapper-swiper--right .swiper-slide-prev {
+//   visibility: hidden;
 
-  @include respondTo('diapente') {
-    visibility: hidden;
-  }
-}
+//   @include respondTo('diapente') {
+//     visibility: hidden;
+//   }
+// }
+// .wrapper-swiper--right .swiper-slide-next {
+//   visibility: visible;
+//   @include respondTo('diapente') {
+//     visibility: visible;
+//   }
+// }
 
-.wrapper-swiper--left .swiper-slide-prev {
-  visibility: visible;
-  @include respondTo('diapente') {
-    visibility: hidden;
-  }
-}
+// .wrapper-swiper--left .swiper-slide-prev {
+//   visibility: visible;
+//   @include respondTo('diapente') {
+//     visibility: hidden;
+//   }
+// }
 
-.wrapper-swiper--left .swiper-slide-next {
-  visibility: hidden;
-  @include respondTo('diapente') {
-    visibility: visible;
-  }
-}
-
-.wrapper-swiper--right .swiper-slide-next {
-  visibility: visible;
-  @include respondTo('diapente') {
-    visibility: visible;
-  }
-}
+// .wrapper-swiper--left .swiper-slide-next {
+//   visibility: hidden;
+//   @include respondTo('diapente') {
+//     visibility: visible;
+//   }
+// }
 
 .swiper-hero .swiper-slide-next {
   visibility: hidden;
