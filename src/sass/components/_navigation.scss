@@ -45,6 +45,11 @@
   @include respondTo('diapente') {
     display: flex;
     align-items: center;
+    @include transition(color);
+
+    .navigation__wrap:hover & {
+      color: getColor('accent')
+    }
   }
 }
 

@@ -1,20 +1,29 @@
 .container-swiper {
   display: flex;
-  flex-direction: column;
-  margin-top: 0px;
+  // flex-direction: column;
+  // margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 414px;
+  padding-right: 0;
+  padding-left: 0;
 
   @include respondTo('diapente') {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 0px;
+    // margin-top: 0px;
   }
 }
 
 .wrapper-mask {
   position: relative;
-  overflow: hidden;
-  padding: 60px;
+  // overflow: hidden;
+  // margin-right: -15px;
+  // padding: 60px;
+  padding-top: 32px;
+  padding-bottom: 20px;
+  padding-left: 74px;
 
   .wrapper-swiper--right & {
     margin-right: -15px;
@@ -42,48 +51,47 @@
   overflow: visible;
 
   @include respondTo('pre-unisonus') {
-    width: 192px;
+    max-width: 192px;
   }
   @include respondTo('unisonus') {
-    width: 404px;
+    max-width: 404px;
     transform: translateX(34px);
   }
 
   @include respondTo('diapente') {
-    width: 428px;
+    max-width: 428px;
     transform: translateX(0px);
   }
   @include respondTo('diapason') {
-    width: 548px;
+    max-width: 548px;
     transform: translateX(0px);
   }
   &--large {
     @include respondTo('pre-unisonus') {
-      width: 245px;
+      max-width: 245px;
     }
     @include respondTo('unisonus') {
-      width: 506px;
+      max-width: 506px;
     }
 
     @include respondTo('diapente') {
-      width: 428px;
+      max-width: 428px;
     }
     @include respondTo('diapason') {
-      width: 530px;
+      max-width: 530px;
     }
   }
-
+  &-slide {
+    box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    // visibility: hidden;
+  }
   &-wrapper {
     @extend %list;
   }
 }
 
-.swiper .swiper-slide {
-  box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
-  border-radius: 2px;
-  visibility: hidden;
-}
-
+// .swiper-slide.swiper-slide-prev,
 .swiper-slide-active {
   visibility: visible;
 }
@@ -116,10 +124,6 @@
     @include respondTo('diapente') {
       visibility: visible;
     }
-  }
-
-  .room-hero & {
-    visibility: hidden;
   }
 }
 
@@ -168,7 +172,12 @@
 }
 
 .wrapper-swiper {
-  margin-top: -24px;
+  // margin-top: -24px;
+  padding-top: 32px;
+  padding-bottom: 72px;
+  overflow: hidden;
+  position: relative;
+
   @include respondTo('diapente') {
     display: flex;
     flex-direction: row;
@@ -178,6 +187,10 @@
   &--right {
     flex-direction: row-reverse;
   }
+}
+
+.swiper-button-disabled.swiper-button-prev {
+  opacity: 1;
 }
 
 .swiper__arrows {
@@ -204,36 +217,7 @@
   }
 }
 
-.swiper-hero {
+.swiper-slide .image {
   width: 100%;
   height: 100%;
-}
-
-.swiper-hero-button-next,
-.swiper-hero-button-prev {
-  position: absolute;
-  z-index: 99;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-
-.swiper-hero-button-next {
-  right: 15px;
-  @include respondTo('diapente') {
-    right: 47px;
-  }
-  @include respondTo('diapason') {
-    right: 85px;
-  }
-}
-
-.swiper-hero-button-prev {
-  left: 15px;
-  @include respondTo('diapente') {
-    left: 47px;
-  }
-  @include respondTo('diapason') {
-    left: 85px;
-  }
 }
