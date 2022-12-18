@@ -12,7 +12,7 @@
   display: flex;
   flex-direction: column;
   margin-top: 0px;
-
+  position: relative;
   @include respondTo('diapente') {
     display: flex;
     justify-content: space-between;
@@ -271,20 +271,18 @@
   height: 32px;
   gap: 32px;
   position: absolute;
-  bottom: 8px;
-  left: 30px;
-  right: unset;
-
-  @include respondTo('diapente') {
-    right: unset;
-    left: 60px;
-  }
   .wrapper-swiper--right & {
-    left: unset;
-    right: 32px;
-
+    bottom: 10px;
+    right: 15px;
     @include respondTo('diapente') {
-      right: 56px;
+      right: 0px;
+    }
+  }
+  .wrapper-swiper--left & {
+    bottom: 10px;
+    left: 0px;
+    @include respondTo('diapente') {
+      left: 0px;
     }
   }
 }
