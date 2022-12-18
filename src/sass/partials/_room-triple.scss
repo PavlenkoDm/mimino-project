@@ -1,12 +1,5 @@
 .room-triple {
   background-color: #f0ecd6;
-  position: relative;
-}
-
-.room-triple__container {
-  @include respondTo('diapente') {
-    position: relative;
-  }
 }
 
 .room-triple__tagline {
@@ -48,31 +41,5 @@
 
   @include respondTo('diapason') {
     margin-right: 57px;
-  }
-}
-
-.room-triple__text {
-  max-width: 242px;
-  margin-bottom: 32px;
-  color: mix(getColor('primary-inversed'), getColor('primary'), 37.3%);
-  margin-left: 70px; // перевірити (за макетом 98px - 15px падінг контейнеру)
-  
-  @include respondTo('diapente') {
-    max-width: 400px;
-    margin-right: 38px; // перевірити - неправильне значення
-    margin-left: auto;
-    margin-bottom: 169px;
-  }
-
-  @include respondTo('diapason') {
-    margin-right: 110px;
-    margin-bottom: 188px;
-    color: #7a7a7a;
-  }
-}
-
-.button-wrapper {
-  @include respondTo('tritonus') {
-    margin-top: 20px;
   }
 }

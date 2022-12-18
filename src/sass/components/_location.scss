@@ -14,7 +14,7 @@
     @include transition(border, color, background-color);
 
     &:focus, &:hover, &:active {
-      border: 1px dashed getColor('primary-inversed');
+      border: 1px solid getColor('primary-inversed');
       color: getColor('primary-inversed');
       background-color: transparentize(getColor('primary-inversed'), $amount: 0.8);
     }

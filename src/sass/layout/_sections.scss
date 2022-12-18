@@ -1,4 +1,15 @@
+.section {
+  position: relative;
+
+  &__container {
+    @include respondTo('diapente') {
+      position: relative;
+    }
+  }
+}
+
 .section-hero {
+  position: relative;
   padding-top: 181px;
   padding-bottom: 20px;
   margin-left: auto;

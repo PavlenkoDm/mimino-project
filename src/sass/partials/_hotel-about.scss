@@ -1,13 +1,3 @@
-.hotel-about {
-  position: relative;
-}
-
-.hotel-about__container {
-  @include respondTo('diapente') {
-    position: relative;
-  }
-}
-  
 .hotel-about__tagline {
   margin-bottom: 6px;
   text-align: right;

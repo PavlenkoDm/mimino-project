@@ -1,5 +1,4 @@
 .contacts {
-  position: relative;
   padding-top: 36px;
   padding-bottom: 32px;
 
@@ -11,20 +10,6 @@
   @include respondTo('diapason') {
     padding-top: 64px;
     padding-bottom: 74px;
-  }
-}
-
-.contacts__wrapper {
-  @include respondTo('diapente') {
-    display: grid;
-    grid-template-columns: 395px 535px;
-    // display: flex;
-    // gap: 101px;
-  }
-
-  @include respondTo('diapason') {
-    grid-template-columns: 476px 634px;
-    // gap: 108px;
   }
 }
 

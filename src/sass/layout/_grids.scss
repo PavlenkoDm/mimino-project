@@ -33,6 +33,17 @@
   }
 }
 
+.contacts-wrapper {
+  @include respondTo('diapente') {
+    display: grid;
+    grid-template-columns: 395px 535px;
+  }
+
+  @include respondTo('diapason') {
+    grid-template-columns: 476px 634px;
+  }
+}
+
 .grid-contacts {
 
   @include respondTo('tritonus') {

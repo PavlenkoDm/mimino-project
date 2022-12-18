@@ -1,13 +1,8 @@
 .kitchen-about {
-  position: relative;
 
   @include respondTo('diapason') {
     padding-bottom: 32px;
   }
-}
-
-.kitchen-about__container {
-  position: relative;
 }
 
 .kitchen-about__tagline {

@@ -35,12 +35,13 @@
 .header__navigation-wrap {
   @include respondTo('diapente') {
     border: 1px solid mix(transparent, getColor('accent'), 30%);
-    @include transition(border);
+    @include transition(border, background-color);
   
     &:hover,
     &:focus,
     &:active {
-      border: 1px dashed getColor('primary-inversed');
+      border: 1px solid getColor('primary-inversed');
+      background-color: rgba(255, 255, 255, 0.2);
     }
   }
 }
@@ -52,7 +53,12 @@
 }
 
 .header__navigation-icon {
-  color: getColor('accent');
+  fill: getColor('accent');
+  @include transition(fill);
+
+  .header__navigation-wrap:hover & {
+    fill: getColor('primary-inversed');
+  }
 }
 
 .header__navigation-number {

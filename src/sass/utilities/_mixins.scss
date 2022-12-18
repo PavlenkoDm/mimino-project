@@ -95,8 +95,8 @@ $imgdir: '../images/';
   @supports (background: url('#{$webp-file}')) {
     background-image: $gradient,
       url(#{$imgdir} + '/' + #{$page} + '/' + #{$section} + '/' + #{$part} + '/' + #{$file} + '.' + webp);
-
   }
+
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
@@ -110,6 +110,7 @@ $imgdir: '../images/';
       }
     }
   }
+
   @media (min-device-pixel-ratio: 3),
     screen and (min-resolution: 288dpi),
     screen and (min-resolution: 3dppx) {

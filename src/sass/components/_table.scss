@@ -8,3 +8,7 @@ td {
   @extend %marginPaddingReset;
   border-spacing: 0px;
 } 
+
+table {
+  table-layout: fixed;
+}
