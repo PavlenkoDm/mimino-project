@@ -1,5 +1,4 @@
 .amenities {
-  position: relative;
 
   @include respondTo('diapente') {
     padding-top: 48px;
@@ -8,46 +7,10 @@
   @include respondTo('diapason') {
     padding-bottom: 48px;
   }
-}
 
-.amenities__decor {
-  @include respondTo('diapason') {
-    position: relative;
-    &::before {
-      position: absolute;
-      content: '';
-      width: 0;
-      height: calc(100% + 96px);
-      top: -48px;
-      left: 338px;
-      border: 1px solid rgba(186, 186, 186, 0.4);
-      filter: blur(0.5px);
-    }
-    &::after {
-      position: absolute;
-      content: '';
-      width: 0;
-      height: calc(100% + 96px);
-      top: -48px;
-      left: 640px;
-      border: 1px solid rgba(186, 186, 186, 0.4);
-      filter: blur(0.5px);
-    }
-  }
-}
-
-.amenities__decor-second {
-  @include respondTo('diapason') {
-    &::before {
-      position: absolute;
-      content: '';
-      width: 0;
-      height: calc(100% + 96px);
-      top: -48px;
-      bottom: -48px;
-      left: 942px;
-      border: 1px solid rgba(186, 186, 186, 0.4);
-      filter: blur(0.5px);
+  & >.lines {
+    @include respondTo('heptachordium maius') {
+      display: none;
     }
   }
 }
@@ -139,3 +102,45 @@ $enable-rounded: true;
 .amenities__icon {
   @extend %icon;
 }
+
+// .amenities__decor {
+//   @include respondTo('diapason') {
+//     position: relative;
+//     &::before {
+//       position: absolute;
+//       content: '';
+//       width: 0;
+//       height: calc(100% + 96px);
+//       top: -48px;
+//       left: 338px;
+//       border: 1px solid rgba(186, 186, 186, 0.4);
+//       filter: blur(0.5px);
+//     }
+//     &::after {
+//       position: absolute;
+//       content: '';
+//       width: 0;
+//       height: calc(100% + 96px);
+//       top: -48px;
+//       left: 640px;
+//       border: 1px solid rgba(186, 186, 186, 0.4);
+//       filter: blur(0.5px);
+//     }
+//   }
+// }
+
+// .amenities__decor-second {
+//   @include respondTo('diapason') {
+//     &::before {
+//       position: absolute;
+//       content: '';
+//       width: 0;
+//       height: calc(100% + 96px);
+//       top: -48px;
+//       bottom: -48px;
+//       left: 942px;
+//       border: 1px solid rgba(186, 186, 186, 0.4);
+//       filter: blur(0.5px);
+//     }
+//   }
+// }

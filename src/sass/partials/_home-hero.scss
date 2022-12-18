@@ -1,35 +1,3 @@
-.home-hero {
-  position: relative;
-  
-  @include backgroundImageRetina(
-    $page: hero,
-    $section: home,
-    $part: mobile,
-    $file: hero-mob,
-    $webp-file: '../images/hero/home/desktop/hero-desk.webp'
-  );
-
-  @include respondTo('diapente') {
-    @include backgroundImageRetina(
-      $page: hero,
-      $section: home,
-      $part: tablet,
-      $file: hero-tab,
-      $webp-file: '../images/hero/home/desktop/hero-desk.webp'
-    );
-  }
-
-  @include respondTo('diapason') {
-    @include backgroundImageRetina(
-      $page: hero,
-      $section: home,
-      $part: desktop,
-      $file: hero-desk,
-      $webp-file: '../images/hero/home/desktop/hero-desk.webp'
-    );
-  }
-}
-
 .home-hero__title {
   margin-bottom: 24px;
 

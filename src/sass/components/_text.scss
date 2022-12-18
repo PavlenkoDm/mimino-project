@@ -21,3 +21,35 @@
     width: 100%;
   }
 }
+
+.hotel-text {
+  margin-bottom: 32px;
+  max-width: 258px;
+  color: #5f5f5f;
+
+  @include respondTo('diapente') {
+    max-width: 439px;
+    margin-bottom: 176px;
+  }
+  @include respondTo('diapason') {
+    margin-bottom: 188px;
+    color: #7a7a7a;
+    max-width: 400px;
+  }
+
+  &--right {
+    max-width: 242px;
+    margin-left: 70px; // перевірити (за макетом 98px - 15px падінг контейнеру)
+
+    @include respondTo('diapente') {
+      max-width: 400px;
+      margin-right: 38px; // перевірити - неправильне значення
+      margin-left: auto;
+      margin-bottom: 169px;
+    }
+
+    @include respondTo('diapason') {
+      margin-right: 110px;
+    }
+  }
+}

@@ -7,7 +7,6 @@
 
   @include respondTo('tritonus') {
     position: relative; // для встановлення z-index більшого, ніж у декоративного елементу lines
-    margin-bottom: 32px;
   }
 
   @include respondTo('diapente') {
