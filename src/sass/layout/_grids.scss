@@ -1,6 +1,6 @@
 .grid-footer {
   display: grid;
-  grid-template-columns: 264px 150px;
+  grid-template-columns: 264px auto;
 
   @include respondTo('pre-unisonus') {
     grid-template-columns: 63.769% 36.231%;
@@ -48,6 +48,6 @@
 
   @include respondTo('tritonus') {
     display: grid;
-    grid-template-columns: 124px 260px;
+    grid-template-columns: 124px auto;
   }
 }

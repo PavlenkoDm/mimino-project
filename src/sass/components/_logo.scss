@@ -1,13 +1,52 @@
 .logo {
   @extend %link;
+  @extend %marginPaddingReset;
   font-family: $logo-font;
   font-weight: 700;
   letter-spacing: 0.3em;
   line-height: 1.075;
   text-transform: uppercase;
 
+  &--nolink {
+    font-size: 40px;
+
+    @include respondTo('diapente') {
+      font-size: 64px;
+    }
+  }
+
+  &--nolink-rooms {
+    color: scale-color(getColor('primary'), $saturation: 1%, $lightness: 28.5%);
+    margin-bottom: 32px;
+
+    @include respondTo('diapente') {
+      margin-bottom: 62px;
+    }
+  
+    @include respondTo('diapason') {
+      margin-bottom: 72px;
+    }
+  }
+
+  &--nolink-grey {
+    color: scale-color(getColor('primary'), $saturation: 1%, $lightness: 28.5%);
+    margin-bottom: 12px;
+
+    @include respondTo('diapente') {
+      margin-bottom: 24px;
+    }
+  }
+
+  &--nolink-white {
+    color: getColor('primary-inversed');
+    margin-bottom: 12px;
+
+    @include respondTo('diapente') {
+      margin-bottom: 16px;
+    }
+  }
+
   &--header {
-    display: block;
     color: getColor('primary-inversed');
     font-size: 36px;
     margin-right: auto;

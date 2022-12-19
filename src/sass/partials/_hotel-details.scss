@@ -1,19 +1,5 @@
-.hotel-details__brand {
-  color: getColor('primary-inversed');
-  margin-bottom: 12px;
-
-  @include respondTo('tritonus') {
-    text-align: center;
-  }
-
-  @include respondTo('diapente') {
-    margin-bottom: 16px;
-  }
-}
-
 .hotel-details__title {
-  position: relative;
-  left: 186px;
+  margin-left: 186px;
   margin-bottom: 20px;
 
   @include respondTo('diapente') {
@@ -24,8 +10,7 @@
 .hotel-details__text {
   margin-bottom: 48px;
   max-width: 243px;
-  position: relative;
-  left: 17px;
+  margin-left: 17px;
   color: #bababa;
 
   @include respondTo('diapente') {

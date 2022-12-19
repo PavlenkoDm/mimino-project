@@ -1,26 +1,3 @@
-.restaurant-details__wrap-text {
-  position: relative;
-  left: 125px;
-  top: 0;
-
-  @include respondTo('diapente') {
-    left: 231px;
-  }
-
-  @include respondTo('diapason') {
-    left: 253px;
-  }
-}
-
-.restaurant-details__brand {
-  margin-bottom: 12px;
-  color: getColor('primary-inversed');
-
-  @include respondTo('diapente') {
-    margin-bottom: 16px;
-  }
-}
-
 .restaurant-details__title {
   margin-bottom: 20px;
 
@@ -30,7 +7,6 @@
 }
 
 .restaurant-details__text {
-  margin-bottom: 48px;
   max-width: 259px;
   color: scale-color(getColor('primary-inversed'), $blackness: 37%);
 
