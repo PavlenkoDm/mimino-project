@@ -20,24 +20,24 @@
     max-width: 400px;
     width: 100%;
   }
-}
 
-.hotel-text {
-  margin-bottom: 32px;
-  max-width: 258px;
-  color: #5f5f5f;
+  &--rooms {
+    margin-bottom: 32px;
+    max-width: 258px;
+    color: #5f5f5f;
 
-  @include respondTo('diapente') {
-    max-width: 439px;
-    margin-bottom: 176px;
+    @include respondTo('diapente') {
+      max-width: 439px;
+      margin-bottom: 176px;
+    }
+    @include respondTo('diapason') {
+      margin-bottom: 188px;
+      color: #7a7a7a;
+      max-width: 400px;
+    }
   }
-  @include respondTo('diapason') {
-    margin-bottom: 188px;
-    color: #7a7a7a;
-    max-width: 400px;
-  }
 
-  &--right {
+  &--rooms-right {
     max-width: 242px;
     margin-left: 70px; // перевірити (за макетом 98px - 15px падінг контейнеру)
 
@@ -50,6 +50,40 @@
 
     @include respondTo('diapason') {
       margin-right: 110px;
+    }
+  }
+
+  &--about-first {
+    margin-bottom: 28px;
+    max-width: 258px;
+    color: mix(getColor('primary-inversed'), getColor('primary'), 37.3%);
+  
+    @include respondTo('diapente') {
+      max-width: 439px;
+      margin-bottom: 142px;
+    }
+  
+    @include respondTo('diapason') {
+      max-width: 518px;
+      margin-bottom: 162px;
+    }
+  }
+
+  &--about-second {
+    color: getColor('accent-darker');
+    max-width: 163px;
+    margin-left: 20px;
+  
+    @include respondTo('diapente') {
+      margin-top: 7px;
+      max-width: 312px;
+      margin-left: 48px;
+    }
+  
+    @include respondTo('diapason') {
+      margin-bottom: 40px;
+      max-width: 311px;
+      margin-left: 32px;
     }
   }
 }

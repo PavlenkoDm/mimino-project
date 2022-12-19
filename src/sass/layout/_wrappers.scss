@@ -13,3 +13,29 @@
     margin-top: 20px;
   }
 }
+
+.details-contentbox {
+  margin-left: 125px;
+
+  @include respondTo('diapente') {
+    margin-left: 231px;
+  }
+
+  @include respondTo('diapason') {
+    margin-left: 253px;
+  }
+}
+
+.about-contentbox {
+  display: flex;
+  align-items: center;
+
+  @include respondTo('tritonus') {
+    margin-bottom: 32px;
+  }
+
+  &--right {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

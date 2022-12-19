@@ -1,23 +1,11 @@
-.hotel-about__tagline {
-  margin-bottom: 6px;
-  text-align: right;
-}
-
-.hotel-about__brand {
+.hotel-about__logo {
   text-align: right;
   margin-left: auto;
   margin-right: -12.5px;
+  margin-bottom: 16px;
 
   @include respondTo('pre-unisonus') {
     margin-bottom: 4vw;
-  }
-
-  @include respondTo('unisonus') {
-    margin-bottom: 16px;
-  }
-
-  @include respondTo('diapente') {
-    margin-bottom: 24px;
   }
 
   @include respondTo('diapason') {
@@ -27,8 +15,6 @@
 
 .hotel-about__description {
   margin-left: auto;
-  color: mix(getColor('primary-inversed'), getColor('primary'), 37.3%);
-
 
   @include respondTo('pre-unisonus') {
     max-width: 58vw;
@@ -38,32 +24,20 @@
 
   @include respondTo('unisonus') {
     max-width: 242px;
-    margin-bottom: 28px;
   }
 
   @include respondTo('diapente') {
     max-width: 419px;
-    margin-bottom: 142px;
   }
 
   @include respondTo('diapason') {
     max-width: 488px;
-    margin-bottom: 162px;
-  }
-}
-
-.hotel-about__wrap {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-
-  @include respondTo('tritonus') {
-    margin-bottom: 32px;
   }
 }
 
 .hotel-about__descr-second {
-  color: getColor('accent-darker');
+  margin-left: 0;
+  margin-right: 21px;
 
   @include respondTo('pre-unisonus') {
     max-width: 42%;
@@ -71,21 +45,11 @@
     margin-right: 5vw;
   }
 
-  @include respondTo('unisonus') {
-    max-width: 163px;
-    margin-right: 21px;
-  }
-
   @include respondTo('diapente') {
-    position: relative;
-    top: 7px;
-    max-width: 312px;
     margin-right: 48px;
   }
 
   @include respondTo('diapason') {
-    bottom: 40px;
-    max-width: 311px;
     margin-right: 45px;
   }
 }
@@ -101,7 +65,6 @@
     margin-top: -220px;
     margin-left: -88px;
   }
-
 }
 
 .swiper--modified {

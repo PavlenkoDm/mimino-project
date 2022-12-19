@@ -13,15 +13,14 @@
   }
 }
 
-.contacts__brand {
-  margin-bottom: 12px;
-
+.contacts__logo {
   @include respondTo('diapente') {
     margin-bottom: 8px;
   }
 
   @include respondTo('diapason') {
     margin-bottom: 16px;
+    color: #828282;
   }
 }
 
@@ -82,9 +81,6 @@
 .contacts__box {
   position: relative; // для встановлення z-index більшого, ніж у декоративного елементу lines
   background-color: getColor('primary-inversed');
-  display: flex;
-  align-items: center;
-  gap: 12px;
   border-radius: 2px;
   outline: 0.5px solid getColor('accent-darker');
   @include transition(border-color, border-radius, background-color);
@@ -94,6 +90,12 @@
     border-color: getColor('primary-inversed');
     border-radius: 10px;
     background-color: getColor('accent');
+  }
+
+  @include respondTo('unisonus') {
+    display: flex;
+    align-items: center;
+    gap: 12px;
   }
 
   &--first {
@@ -111,10 +113,22 @@
 
   &--vodafone {
     padding-right: 0;
+
+    @include respondTo('pre-unisonus') {
+      padding-right: 8px;
+      padding-bottom: 0;
+      margin-bottom: 4px;
+    }
   }
 
   &--kyivstar {
     padding-left: 0;
+
+    @include respondTo('pre-unisonus') {
+      padding-left: 8px;
+      padding-top: 0;
+      justify-content: flex-end;
+    }
   }
 }
 
@@ -227,6 +241,8 @@
   border: 1px solid #bababa;
   box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
   border-radius: 2px;
+  width: 100%;
+  min-height: 100%;
 
   @include respondTo('diapente') {
     max-width: 535px;

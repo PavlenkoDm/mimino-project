@@ -5,66 +5,6 @@
   }
 }
 
-.kitchen-about__tagline {
-  margin-bottom: 12px;
-
-  @include respondTo('diapente') {
-    margin-bottom: 4px;
-  }
-}
-
-.kitchen-about__brand {
-  margin-bottom: 12px;
-
-  @include respondTo('diapente') {
-    margin-bottom: 24px;
-  }
-}
-
-.kitchen-about__description {
-  margin-bottom: 28px;
-  max-width: 258px;
-  color: mix(getColor('primary-inversed'), getColor('primary'), 37.3%);
-
-  @include respondTo('diapente') {
-    max-width: 439px;
-    margin-bottom: 142px;
-  }
-
-  @include respondTo('diapason') {
-    max-width: 518px;
-    margin-bottom: 162px;
-  }
-}
-
-.kitchen-about__wrap {
-  display: flex;
-  align-items: center;
-
-  @include respondTo('tritonus') {
-    margin-bottom: 32px;
-  }
-}
-
-.kitchen-about__descr-second {
-  color: getColor('accent-darker');
-  max-width: 163px;
-  margin-left: 20px;
-
-  @include respondTo('diapente') {
-    position: relative;
-    top: 7px;
-    max-width: 312px;
-    margin-left: 48px;
-  }
-
-  @include respondTo('diapason') {
-    bottom: 40px;
-    max-width: 311px;
-    margin-left: 32px;
-  }
-}
-
 .kitchen-about__arrow {
   display: flex;
   justify-content: end;
