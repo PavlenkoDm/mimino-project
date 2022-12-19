@@ -86,4 +86,34 @@
       margin-left: 32px;
     }
   }
+
+  &--details {
+      color: scale-color(getColor('primary-inversed'), $blackness: 37%);
+  }
+
+  &--details-left {
+    max-width: 259px;
+
+    @include respondTo('diapente') {
+      margin-bottom: 198px;
+      max-width: 610px;
+    }
+  
+    @include respondTo('diapason') {
+      margin-bottom: 200px;
+    }
+  }
+
+  &--details-right {
+    margin-bottom: 48px;
+    max-width: 243px;
+    margin-left: auto;
+  
+    @include respondTo('diapente') {
+      max-width: 549px;
+      margin-bottom: 40px;
+    }
+  }
+
+
 }

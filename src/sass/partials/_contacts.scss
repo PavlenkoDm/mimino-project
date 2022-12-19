@@ -181,6 +181,7 @@
     color: getColor('primary-inversed');
     background-color: getColor('accent');
     border-radius: 10px;
+    border: none;
   }
 }
 
@@ -188,6 +189,7 @@
   fill: getColor('accent-darker');
   width: 24px;
   height: 24px;
+  margin: 0;
   @include transition(fill);
 
   .contacts__address:hover &,
