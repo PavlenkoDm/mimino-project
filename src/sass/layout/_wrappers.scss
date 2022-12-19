@@ -15,14 +15,29 @@
 }
 
 .details-contentbox {
-  margin-left: 125px;
 
-  @include respondTo('diapente') {
-    margin-left: 231px;
+  &--left {
+    margin-left: 125px;
+
+    @include respondTo('diapente') {
+      margin-left: 231px;
+    }
+  
+    @include respondTo('diapason') {
+      margin-left: 253px;
+    }
   }
 
-  @include respondTo('diapason') {
-    margin-left: 253px;
+  &--right {
+    margin-right: 129px;
+
+    @include respondTo('diapente') {
+      margin-right: 231px;
+    }
+  
+    @include respondTo('diapason') {
+      margin-right: 253px;
+    }
   }
 }
 
