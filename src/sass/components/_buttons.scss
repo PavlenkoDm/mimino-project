@@ -1,12 +1,14 @@
+// Кнопки виклику модалок в героях основних сторінок
 .hero-button {
-    @include buttonSize(
-        $section-button: true,
-        $padding-top: 14px,
-        $padding-bottom: 14px
-      );
-      @include buttonPlace($transparent-button: true);
+  @include buttonSize(
+    $section-button: true,
+    $padding-top: 14px,
+    $padding-bottom: 14px
+  );
+  @include buttonPlace($transparent-button: true);
 }
 
+// Кнопки в секціях номерів сторінки hotel.html
 .hotel-button {
   @extend %link;
   text-align: center;
@@ -25,7 +27,10 @@
   }
 }
 
+// Кнопки виклику модалок та переходу до меню в секціях details на головній сторінці
 .details-button {
+  @extend %link;
+  text-align: center;
   @include buttonSize(
     $padding-top: 14px,
     $padding-bottom: 14px,

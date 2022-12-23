@@ -1,3 +1,4 @@
+// Перша обгортка для контентних картинок у секціях
 .imgbox {
   margin-left: auto;
   max-width: 244px;
@@ -6,7 +7,6 @@
   overflow: hidden;
 
   @include respondTo('tritonus') {
-    margin-bottom: 32px;
     position: relative; // для встановлення z-index більшого, ніж у декоративного елементу lines
   }
 
@@ -24,8 +24,18 @@
     max-width: 460px;
   }
 
+  &--content {
+    @include respondTo('tritonus') {
+      margin-bottom: 32px;
+    }
+  }
+
   &--left {
     margin-left: 0;
+
+    @include respondTo('tritonus') {
+      margin-bottom: 32px;
+    }
 
     @include respondTo('diapente') {
       top: -144px;
@@ -37,13 +47,14 @@
     }
   }
 
+  // Обгортка картинок секцій номерів 
   &--rooms {
     @include respondTo('diapente') {
       top: -94px;
     }
 
     @include respondTo('diapason') {
-      top: -95px;
+      top: -105px;
     }
   }
 
@@ -51,17 +62,18 @@
     margin-left: 0;
     
     @include respondTo('diapente') {
-      top: -94px;
+      top: -96px;
       left: 112px;
     }
   
     @include respondTo('diapason') {
-      top: -95px;
+      top: -105px;
       left: 180px;
     }
   }
 }
 
+// Друга обгортка для контентних картинок у секціях
 .imgbox-second {
   max-width: 200px;
   box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);

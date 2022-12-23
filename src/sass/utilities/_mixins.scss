@@ -14,9 +14,9 @@
   -webkit-transition-property: $props;
   -o-transition-property: $props;
   transition-property: $props;
-  -webkit-transition-duration: 250ms;
-  -o-transition-duration: 250ms;
-  transition-duration: 250ms;
+  -webkit-transition-duration: 700ms;
+  -o-transition-duration: 700ms;
+  transition-duration: 700ms;
   -webkit-transition-timing-function: $timing-function;
   -o-transition-timing-function: $timing-function;
   transition-timing-function: $timing-function;
@@ -123,4 +123,28 @@ $imgdir: '../images/';
       }
     }
   }
+}
+
+// Міксини позиціонування--------------------------------
+@mixin position($position, $args) {
+  @each $o in top right bottom left {
+    $i: index($args, $o);
+   
+    @if $i and $i + 1<= length($args) and type-of(nth($args, $i + 1)) == number  {
+      #{$o}: nth($args, $i + 1);
+    }
+  }
+  position: $position;
+}
+   
+@mixin absolute ($args) {
+  @include position(absolute, $args);
+}
+   
+@mixin fixed ($args) {
+  @include position(fixed, $args);
+}
+   
+@mixin relative ($args) {
+  @include position(relative, $args);
 }

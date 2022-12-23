@@ -16,12 +16,6 @@
   }
 }
 
-.btn-box {
-  @include respondTo('tritonus') {
-    padding-top: 80px;
-    align-self: center;
-  }
-  @include respondTo('diapente') {
-    // padding-bottom: 60px;
-  }
+.hotel-details__arrows {
+  justify-content: flex-end;
 }

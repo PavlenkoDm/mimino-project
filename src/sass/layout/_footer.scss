@@ -5,41 +5,38 @@
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: #0e0c07;
-
-  @include respondTo('diapente') {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
+  max-width: 414px;
 }
 
-.footer__lines {
-  @include respondTo('diapente') {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 1px;
-    min-height: 304px;
-    filter: blur(0.5px);
-    background-color: rgba(122, 122, 122, 0.4);
-    z-index: 2;
-  }
+// .footer__lines {
+//     position: absolute;
+//     top: 0;
+//     left: 70%;
+//     transform: translateX(-50%);
+//     width: 1px;
+//     height: 100%;
+//     filter: blur(0.5px);
+//     background-color: rgba(122, 122, 122, 0.4);
+//     z-index: 2;
 
-  &::after {
-    @include respondTo('diapente') {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: -23vw;
-      width: 1px;
-      min-height: 304px;
-      filter: blur(0.5px);
-      background-color: rgba(122, 122, 122, 0.4);
-      z-index: 2;
-    }
-  }
-}
+//     @include respondTo('diapente') {
+//       left: 50%;
+//     }
+
+//   &::after {
+//     @include respondTo('diapente') {
+//       content: '';
+//       position: absolute;
+//       top: 0;
+//       right: -23vw;
+//       width: 1px;
+//       height: 100%;
+//       filter: blur(0.5px);
+//       background-color: rgba(122, 122, 122, 0.4);
+//       z-index: 2;
+//     }
+//   }
+// }
 
 .footer__logo-wrap {
   display: flex;

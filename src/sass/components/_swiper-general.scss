@@ -1,0 +1,42 @@
+.swiper-wrapper {
+  @extend %list;
+}
+
+.swiper-slide__image {
+  border-radius: 2px;
+  overflow: hidden;
+  background-color: #DADADA;
+
+  &--content {
+    box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.swiper-arrows {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  gap: 32px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: relative;
+  left: unset;
+  right: unset;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  margin-top: 0;
+
+  &:hover,
+  &:focus,
+  &:active {
+    fill: getColor('accent');
+  }
+}

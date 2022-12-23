@@ -1,3 +1,4 @@
+// Головний слоган у перших двох героях
 .main-tagline {
   font-family: $text-times-font;
   @extend %marginPaddingReset;
@@ -5,6 +6,10 @@
   font-size: 32px;
   line-height: 1.15;
   text-transform: uppercase;
+
+  @include respondTo('semiditonus') {
+    font-size: 24px;
+  }
 
   &--white {
     color: getColor('primary-inversed');
@@ -17,13 +22,10 @@
     }
   }
 
+  // Заголовок секції menu сторінки restaurant.html
   &--black {
     color: getColor('primary');
     margin-bottom: 32px;
-
-    @include respondTo('pre-unisonus') {
-      font-size: 24px;
-    }
 
     @include respondTo('diapente') {
       margin-bottom: 40px;
