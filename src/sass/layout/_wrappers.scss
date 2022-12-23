@@ -1,3 +1,4 @@
+// Обгортка кнопок та блока локації у героях основних сторінок
 .hero-wrapper {
   display: flex;
   align-items: center;
@@ -8,13 +9,13 @@
   }
 }
 
-.hotel-buttonbox {
-  @include respondTo('tritonus') {
-    margin-top: 20px;
-  }
-}
-
+// Обгортка текстових елементів секцій details головної сторінки
 .details-contentbox {
+  margin-bottom: 48px;
+
+  @include respondTo('diapente') {
+    margin-bottom: 40px;
+  }
 
   &--left {
     margin-left: 125px;
@@ -41,16 +42,106 @@
   }
 }
 
+// Обгортка кнопок секцій details головної сторінки
+.details-buttonbox {
+  @include respondTo('diapente') {
+    margin-bottom: 56px;
+  }
+}
+
+// Обгортка контенту секцій about головної сторінки та сторінки restaurant.html
 .about-contentbox {
   display: flex;
   align-items: center;
 
-  @include respondTo('tritonus') {
-    margin-bottom: 32px;
-  }
-
   &--right {
     display: flex;
     justify-content: flex-end;
+  }
+}
+
+// Обгортка свайперів та кнопок секцій details головної сторінки
+.details-interactive {
+
+  @include respondTo('diapente') {
+    display: flex;
+    align-items: flex-end;
+    gap: 29px;  
+    // margin-right: 3px;
+  }
+
+  @include respondTo('diapason') {
+    gap: 32px;
+  }
+
+  &--right {
+
+    @include respondTo('tritonus') {
+      margin-right: -15px;
+    }
+
+    @include respondTo('diapente') {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &--left {
+
+    @include respondTo('tritonus') {
+      margin-left: -15px;
+    }
+  }
+}
+
+// Обгортка свайперу, кнопок навігації свайпером та кнопок виклику модалок та переходу на сторінку обраного номеру
+.content-interactive {
+
+  @include respondTo('diapente') {
+    transform: translateY(-80px);
+    margin-bottom: -80px;
+  }
+
+  @include respondTo('diapason') {
+    transform: translateY(-199px);
+    margin-bottom: -199px;
+  }
+
+  &--right {
+
+    @include respondTo('tritonus') {
+      margin-right: -15px;
+    }
+  }
+  
+  &--left {
+    @include respondTo('tritonus') {
+      margin-left: -15px;
+    }
+  }
+}
+
+.rooms-interactive {
+
+  @include respondTo('diapente') {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &--right {
+
+    @include respondTo('tritonus') {
+      margin-right: -15px;
+    }
+
+    @include respondTo('diapente') {
+      flex-direction: row-reverse;
+    }
+  }
+  
+  &--left {
+    @include respondTo('tritonus') {
+      margin-left: -15px;
+    }
   }
 }

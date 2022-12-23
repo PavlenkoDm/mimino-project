@@ -1,3 +1,4 @@
+// Заголовки секцій номерів сторірки hotel.html та підзаголовки секції amenities
 .bookingroom-title {
   @extend %marginPaddingReset;
   font-family: $text-times-font;
@@ -23,6 +24,7 @@
   }
 }
 
+// Заголовки секцій details головної сторінки
 .details-title {
   @extend %marginPaddingReset;
   font-weight: 700;

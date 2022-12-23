@@ -1,19 +1,12 @@
 .room-hero {
   width: 100%;
-  max-width: 414px;
   height: 740px;
   padding: 0;
   overflow: hidden;
-  position: relative;
-  margin: 0 auto;
   text-align: left;
 
   @include respondTo('diapente') {
-    max-width: 1024px;
     height: 720px;
-  }
-  @include respondTo('diapason') {
-    max-width: 1280px;
   }
 }
 
@@ -112,11 +105,6 @@
     border: 1px solid getColor('accent-darker');
   }
 
-  @include respondTo('tritonus') {
-    top: 64px;
-    right: 15px;
-  }
-
   @include respondTo('diapente') {
     bottom: 24px;
     left: 47px;
@@ -147,18 +135,17 @@
 .room-hero__socials {
   z-index: 10;
   position: absolute;
+  bottom: 14px;
+  left: 15px;
+  display: block;
 
-  @include respondTo('tritonus') {
-    bottom: 14px;
-    left: 15px;
-    display: block;
-  }
   @include respondTo('diapente') {
     bottom: 38px;
     left: 372px;
     display: flex;
     gap: 20px;
   }
+
   @include respondTo('diapason') {
     display: none;
   }

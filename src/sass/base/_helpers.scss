@@ -24,11 +24,11 @@ img {
   padding-left: 15px;
   padding-right: 15px;
 
-  @include respondTo('pre-unisonus') {
+  @include respondTo('semiditonus') {
     max-width: 413px;
   }
 
-  @include respondTo('unisonus') {
+  @include respondTo('ditonus') {
     width: 414px;
   }
 

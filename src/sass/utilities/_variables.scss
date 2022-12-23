@@ -1,22 +1,22 @@
 // Точки перелому
 $breakpoints: (
-  'pre-unisonus': (
-    max-width: 413px,
+  'semiditonus': (
+    max-width: 413px
   ),
-  'unisonus': (
-    min-width: 414px,
+  'ditonus': (
+    min-width: 414px
   ),
   'tritonus': (
-    max-width: 1023px,
+    max-width: 1023px
   ),
   'diapente': (
-    min-width: 1024px,
+    min-width: 1024px
   ),
   'heptachordium maius': (
-    max-width: 1279px,
+    max-width: 1279px
   ),
   'diapason': (
-    min-width: 1280px,
+    min-width: 1280px
   ),
 ) !default;
 

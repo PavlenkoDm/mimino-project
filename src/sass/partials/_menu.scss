@@ -54,8 +54,9 @@
       padding-bottom: 11px;
     }
 
-    @include respondTo('pre-unisonus') {
-      width: 190px;
+    @include respondTo('semiditonus') {
+      max-width: 190px;
+      width: 100%;
     }
 
     @include respondTo('diapason') {
@@ -78,8 +79,9 @@
       margin-bottom: 8px;
     }
 
-    @include respondTo('pre-unisonus') {
-      width: 190px;
+    @include respondTo('semiditonus') {
+      max-width: 190px;
+      width: 100%;
     }
 
     @include respondTo('diapente') {
@@ -102,7 +104,7 @@
     padding-left: 25px;
     padding-right: 24px;
 
-    @include respondTo('pre-unisonus') {
+    @include respondTo('semiditonus') {
       font-size: 12px;
       padding-left: 20px;
       padding-right: 20px;
@@ -127,7 +129,7 @@
     width: 62px;
     height: 17px;
 
-    @include respondTo('pre-unisonus') {
+    @include respondTo('semiditonus') {
       font-size: 12px;
     }
   }

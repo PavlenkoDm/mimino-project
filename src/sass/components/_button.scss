@@ -1,3 +1,4 @@
+// Головні стилі кнопок
 .button {
     display: block;
     font-family: inherit;
@@ -15,6 +16,7 @@
         border-color: getColor('accent');
     }
 
+    // Прозорі кнопки меншого розміру
     &--booking {
         @extend %link;
         @include buttonPlace($transparent-button: true);

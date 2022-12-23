@@ -1,3 +1,4 @@
+// Блок навігації
 .navigation {
   @extend %list;
 }
@@ -7,6 +8,7 @@
   align-items: center;
 }
 
+// Посилання навігації по сторінках сайту
 .navigation__department {
   @extend %marginPaddingReset;
   @extend %link;
@@ -30,19 +32,21 @@
   }
 }
 
+// Обгортка посилання на номери телефонів відділів
 .navigation__wrap {
   @include respondTo('diapente') {
     display: flex;
     align-items: center;
-    gap: 16px;
     border-radius: 2px;
   }
 }
 
+// Посилання на контактні номери різних відділов
 .navigation__contact {
   @extend %link;
 
   @include respondTo('diapente') {
+    padding: 9px 8px 7px 8px;
     display: flex;
     align-items: center;
     @include transition(color);
@@ -53,10 +57,10 @@
   }
 }
 
+// Номери телефонів
 .navigation__number {
 
   @include respondTo('diapente') {
-    padding: 11px 8px 12px 0;
     display: block;
     font-size: 14px;
     line-height: 1.219;
@@ -71,11 +75,11 @@
   }
 }
 
+// Іконки телефонів
 .navigation__icon {
   @extend %icon;
 
   @include respondTo('diapente') {
-    margin-left: 8px;
     margin-right: 8px;
   }
 }

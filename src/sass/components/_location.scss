@@ -1,14 +1,9 @@
+// Блок адреси з посиланням на google-мапу
 .location {
     border: 1px solid transparentize($color: getColor('accent'), $amount: 0.3);
     border-radius: 2px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-right: 6px;
     max-width: 210px;
     width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 8px;
     background-color: transparent;
     color: getColor('accent');
     @include transition(border, color, background-color);
@@ -24,8 +19,17 @@
       max-width: 285px;
       gap: 10px;
     }
+
+    .section-hero & {
+      @include respondTo('tritonus') {
+        position: absolute;
+        top: 64px;
+        right: 15px;
+      }
+    }
   }
   
+  // Посилання
   .location__link {
     @extend %link;
     font-family: $text-font-stack;
@@ -34,6 +38,12 @@
     letter-spacing: 0.01em;
     color: #e5e5e5;
     text-align: left;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
     @include transition(color);
 
     @include respondTo('tritonus') {
@@ -51,11 +61,19 @@
     }
   }
   
+  // Іконка
   .location__point {
-    @extend %icon;
     margin-left: 6px;
     width: 20px;
     height: 20px;
+    fill: getColor('accent');
+    @include transition(fill);
+
+    .location:hover &,
+    .location:focus &, 
+    .location:active & {
+      fill: getColor('primary-inversed');
+    }
   
     @include respondTo('diapente') {
       margin-left: 10px;

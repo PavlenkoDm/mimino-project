@@ -4,3 +4,14 @@
     text-transform: lowercase;
   }
 }
+
+.room-luxe__text {
+
+  @include respondTo('diapente') {
+    margin-bottom: 108px;
+  }
+
+  @include respondTo('diapason') {
+    margin-bottom: 120px;
+  }
+}

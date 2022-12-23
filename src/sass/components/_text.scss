@@ -1,3 +1,4 @@
+// Текст документа. Загальні стилі
 .text {
   @extend %marginPaddingReset;
   font-family: $text-font-stack;
@@ -13,6 +14,7 @@
     }
   }
 
+  // Текст сторінки amenities
   &--room {
     font-weight: 700;
     font-size: 16px;
@@ -21,6 +23,7 @@
     width: 100%;
   }
 
+  // Текст сторінки hotel.html
   &--rooms {
     margin-bottom: 32px;
     max-width: 258px;
@@ -28,10 +31,9 @@
 
     @include respondTo('diapente') {
       max-width: 439px;
-      margin-bottom: 176px;
     }
+
     @include respondTo('diapason') {
-      margin-bottom: 188px;
       color: #7a7a7a;
       max-width: 400px;
     }
@@ -45,14 +47,16 @@
       max-width: 400px;
       margin-right: 38px; // перевірити - неправильне значення
       margin-left: auto;
-      margin-bottom: 169px;
+      margin-bottom: 101px;
     }
 
     @include respondTo('diapason') {
       margin-right: 110px;
+      margin-bottom: 120px;
     }
   }
 
+  // Перший текст-опис в секціях about на головній сторінці
   &--about-first {
     margin-bottom: 28px;
     max-width: 258px;
@@ -69,6 +73,7 @@
     }
   }
 
+  // Другий текст-опис в секціях about на головній сторінці
   &--about-second {
     color: getColor('accent-darker');
     max-width: 163px;
@@ -87,6 +92,7 @@
     }
   }
 
+  // Текст секцій details на головній сторінці
   &--details {
       color: scale-color(getColor('primary-inversed'), $blackness: 37%);
   }
@@ -95,25 +101,16 @@
     max-width: 259px;
 
     @include respondTo('diapente') {
-      margin-bottom: 198px;
       max-width: 610px;
-    }
-  
-    @include respondTo('diapason') {
-      margin-bottom: 200px;
     }
   }
 
   &--details-right {
-    margin-bottom: 48px;
     max-width: 243px;
     margin-left: auto;
   
     @include respondTo('diapente') {
       max-width: 549px;
-      margin-bottom: 40px;
     }
   }
-
-
 }
