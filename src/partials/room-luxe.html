@@ -77,7 +77,7 @@
       </picture>
     </div>
     <!-- Свайпер -->
-    <div class="rooms-interactive rooms-interactive--left">
+    <div class="interactive interactive--rooms interactive--left">
       <div class="swiper-content swiper-content--left">
         <ul class="swiper-wrapper">
           <li class="swiper-slide">
@@ -372,7 +372,9 @@
           </li>
         </ul>
         <!-- Кнопки навігації по свайперу -->
-        <div class="swiper-arrows swiper-arrows--left">
+        <div
+          class="swiper-arrows swiper-arrows--left swiper-arrows--rooms-left"
+        >
           <div class="swiper-button-prev">
             <svg width="32" height="32">
               <use href="./images/icons.svg#icon-arrow-left"></use>
@@ -387,16 +389,20 @@
       </div>
       <!-- Кнопки виклику модалок та переходу на сторінку номеру, який обран -->
       <div class="hotel-buttonbox">
-        <a type="button" class="button hotel-button" href="./room.html">
-          Детальніше
-        </a>
-        <button
-          class="button hotel-button popup-link"
-          type="button"
-          data-popup="popup2"
-        >
-          Переглянути ціни
-        </button>
+        <li class="hotel-buttonbox__item">
+          <a type="button" class="button hotel-button" href="./room.html">
+            Детальніше
+          </a>
+        </li>
+        <li class="hotel-buttonbox__item">
+          <button
+            class="button hotel-button popup-link"
+            type="button"
+            data-popup="popup2"
+          >
+            Переглянути ціни
+          </button>
+        </li>
       </div>
     </div>
   </div>

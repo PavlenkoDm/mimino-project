@@ -77,7 +77,6 @@
 
 // Іконки телефонів
 .navigation__icon {
-  @extend %icon;
 
   @include respondTo('diapente') {
     margin-right: 8px;

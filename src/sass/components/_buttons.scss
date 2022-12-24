@@ -21,10 +21,6 @@
     $section-button: true
   );
   @include buttonPlace($light-section-button: true);
-
-  & + & {
-    margin-top: 16px;
-  }
 }
 
 // Кнопки виклику модалок та переходу до меню в секціях details на головній сторінці
@@ -37,10 +33,6 @@
     $section-button: true
   );
   @include buttonPlace($transparent-button: true);
-
-  & + & {
-    margin-top: 16px;
-  }
 
   @include respondTo('tritonus') {
     margin-right: auto;

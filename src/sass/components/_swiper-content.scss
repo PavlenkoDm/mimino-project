@@ -26,10 +26,6 @@
     margin-left: auto;
   }
 
-  &--left {
-    margin-right: auto;
-  }
-
   .rooms-interactive & {
     
     @include respondTo('diapente') {
@@ -56,9 +52,21 @@
     }
   }
 
+  & .swiper-arrows--about-right {
+    @include respondTo('diapente') {
+      justify-content: flex-end;
+    }
+  }
+
   & .swiper-arrows--left {
     @include respondTo('tritonus') {
       margin-left: 15px;
+    }
+  }
+
+  & .swiper-arrows--rooms-left {
+    @include respondTo('diapente') {
+      justify-content: flex-end;
     }
   }
 

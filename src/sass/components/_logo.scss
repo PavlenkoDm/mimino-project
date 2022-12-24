@@ -43,6 +43,7 @@
   // Логотип без посилання в контенті сайту
   &--nolink {
     font-size: 40px;
+    color: scale-color(getColor('primary'), $saturation: 1%, $lightness: 28.5%);
 
     @include respondTo('diapente') {
       font-size: 64px;
@@ -51,7 +52,6 @@
 
   // Логотип без посилання у секціях номерів сторінки hotel.html
   &--nolink-rooms {
-    color: scale-color(getColor('primary'), $saturation: 1%, $lightness: 28.5%);
     margin-bottom: 32px;
 
     @include respondTo('diapente') {
@@ -65,7 +65,6 @@
 
   // Логотип без посилання у секціях about
   &--nolink-grey {
-    color: scale-color(getColor('primary'), $saturation: 1%, $lightness: 28.5%);
     margin-bottom: 12px;
 
     @include respondTo('diapente') {

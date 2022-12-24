@@ -121,6 +121,10 @@
   }
 }
 
+.swiper-hero__arrows {
+  @extend %list;
+}
+
 .swiper-hero-button-next,
 .swiper-hero-button-prev {
   position: absolute;
@@ -128,6 +132,19 @@
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
+  @extend %marginPaddingReset;
+  width: 40px;
+  height: 40px;
+  background-color: transparentize($color: getColor('primary'), $amount: 0.6);
+  fill: getColor('accent');
+  border: none;
+  @include transition(fill);
+
+  &:hover,
+  &:focus,
+  &:active {
+    fill: transparentize($color: getColor('accent'), $amount: 0.3);
+  }
 }
 
 .swiper-hero-button-next {
