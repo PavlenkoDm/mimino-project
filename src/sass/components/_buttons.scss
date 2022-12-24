@@ -1,30 +1,5 @@
-// Кнопки виклику модалок в героях основних сторінок
-.hero-button {
-  @include buttonSize(
-    $section-button: true,
-    $padding-top: 14px,
-    $padding-bottom: 14px
-  );
-  @include buttonPlace($transparent-button: true);
-}
-
-// Кнопки в секціях номерів сторінки hotel.html
-.hotel-button {
-  @extend %link;
-  text-align: center;
-  position: relative; // для встановлення z-index більшого, ніж у декоративного елементу lines
-  margin-left: auto;
-  margin-right: auto;
-  @include buttonSize(
-    $padding-top: 14px,
-    $padding-bottom: 14px,
-    $section-button: true
-  );
-  @include buttonPlace($light-section-button: true);
-}
-
-// Кнопки виклику модалок та переходу до меню в секціях details на головній сторінці
-.details-button {
+// Кнопки виклику модалок
+.activity-button {
   @extend %link;
   text-align: center;
   @include buttonSize(
@@ -32,10 +7,25 @@
     $padding-bottom: 14px,
     $section-button: true
   );
-  @include buttonPlace($transparent-button: true);
 
   @include respondTo('tritonus') {
     margin-right: auto;
     margin-left: auto;
+  }
+
+  &--transparent {
+    @include buttonPlace($transparent-button: true);
+  }
+
+  &--light-rooms {
+    @include buttonPlace($light-rooms-button: true);
+  }
+
+  &--dark-rooms {
+    @include buttonPlace($dark-rooms-button: true);
+  }
+
+  &--menu {
+    @include buttonPlace($menu-button: true);
   }
 }

@@ -47,18 +47,37 @@
 // Міксин визначення деяких стилей кнопок відносно місця їх положення
 @mixin buttonPlace(
   $transparent-button: false,
-  $light-section-button: false,
+  $light-rooms-button: false,
+  $dark-rooms-button: false,
   $menu-button: false
 ) {
   @if $transparent-button {
     background-color: transparentize($color: getColor('primary'), $amount: 0.6);
     border: 2px solid getColor('primary-inversed');
-  } @else if $light-section-button {
+  } @else if $light-rooms-button {
+    border: 2px solid getColor('background');
+    background-color: getColor('primary');
+    @include respondTo('diapente') {
+      border: 2px solid #f0ecd6;
+    }
+    @include respondTo('diapason') {
+      border: 2px solid getColor('primary-inversed');
+    }
+  } @else if $dark-rooms-button {
     border: 2px solid #f0ecd6;
     background-color: getColor('primary');
+    @include respondTo('diapente') {
+      border: 2px solid getColor('primary-inversed');
+    }
   } @else if $menu-button {
     background-color: getColor('primary');
-    border: 2px solid #fffdee;
+    border: 2px solid getColor('background');
+    @include respondTo('diapente') {
+      border: 2px solid #f0ecd6;
+    }
+    @include respondTo('diapason') {
+      border: 2px solid getColor('background');
+    }
   } @else {
     border: 1px solid getColor('accent');
     background-color: getColor('primary');

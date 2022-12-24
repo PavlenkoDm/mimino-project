@@ -8,7 +8,7 @@
   position: relative;
   top: -30px;
   left: 0;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   border-radius: 12px;
@@ -30,6 +30,10 @@
     width: 45px;
     height: 80px;
   }
+}
+
+.up-button__link.btn-up-visible {
+  display: flex;
 }
 
 .up-button__icon {
