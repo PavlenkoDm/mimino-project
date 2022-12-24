@@ -142,12 +142,6 @@
       justify-content: flex-end;
     }
   }
-    
-  &__button {
-    position: relative; // для встановлення z-index більшого, ніж у декоративного елементу lines
-    @include buttonSize($padding-top: 15px, $padding-bottom: 14px, $section-button: true);
-    @include buttonPlace($menu-button: true);
-  }
 
   &__wrapper {
     margin-bottom: 32px;
