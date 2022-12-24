@@ -74,5 +74,11 @@
   & .swiper-button-prev {
     fill: getColor('primary');
     @include transition(fill);
+
+    &:hover,
+    &:focus,
+    &:active {
+      fill: getColor('accent');
+    }
   }
 }

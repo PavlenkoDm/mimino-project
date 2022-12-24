@@ -44,5 +44,11 @@
   & .swiper-button-prev {
     fill: getColor('primary-inversed');
     @include transition(fill);
+
+    &:hover,
+    &:focus,
+    &:active {
+      fill: getColor('accent');
+    }
   }
 }
