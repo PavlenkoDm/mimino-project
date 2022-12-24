@@ -42,30 +42,24 @@
         </div>
       </div>
     </div>
+    <!-- Slide navigation -->
+    <ul class="swiper-hero__arrows">
+      <li>
+        <button class="swiper-hero-button-prev" type="button">
+          <svg width="40" height="40">
+            <use href="./images/icons.svg#icon-arrow-left"></use>
+          </svg>
+        </button>
+      </li>
+      <li>
+        <button class="swiper-hero-button-next" type="button">
+          <svg width="40" height="40">
+            <use href="./images/icons.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
   </div>
-  <!-- Slide navigation -->
-  <ul class="room-hero__arrows">
-    <li>
-      <button
-        class="swiper-hero-button-prev room-hero__swiper-button"
-        type="button"
-      >
-        <svg width="40" height="40">
-          <use href="./images/icons.svg#icon-arrow-left"></use>
-        </svg>
-      </button>
-    </li>
-    <li>
-      <button
-        class="swiper-hero-button-next room-hero__swiper-button"
-        type="button"
-      >
-        <svg width="40" height="40">
-          <use href="./images/icons.svg#icon-arrow-right"></use>
-        </svg>
-      </button>
-    </li>
-  </ul>
   <!-- Location block -->
   <div class="location room-hero__location">
     <a
@@ -106,13 +100,11 @@
     </li>
   </ul>
   <!-- Кнопка виклику модалок -->
-  <div class="room-hero__button-wrap">
-    <button
-      class="button hero-button popup-link"
-      type="button"
-      data-popup="popup2"
-    >
-      Переглянути ціни
-    </button>
-  </div>
+  <button
+    class="button hero-button popup-link room-hero__button"
+    type="button"
+    data-popup="popup2"
+  >
+    Переглянути ціни
+  </button>
 </section>

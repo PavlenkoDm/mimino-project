@@ -1,5 +1,3 @@
-const { Autoplay } = require('swiper');
-
 function swiperSlider() {
   const swiperSliders = document.querySelectorAll('[data-slider="content"]');
   const heroSliders = document.querySelectorAll('[data-slider="hero"]');
@@ -78,7 +76,7 @@ function swiperSlider() {
         },
         breakpoints: {
           320: {
-            centeredSlides: true,
+            // centeredSlides: true,
             slidesPerView: 1,
             spaceBetween: 20,
           },

@@ -187,7 +187,6 @@
   position: relative; // для встановлення z-index більшого, ніж у декоративного елементу lines
   max-width: 260px;
   padding: 0;
-  gap: 0;
   color: #494848;
   background-color: getColor('primary-inversed');
   outline: 0.5px solid getColor('accent-darker');
@@ -258,24 +257,23 @@
 .contacts__map {
   position: relative; // для встановлення z-index більшого, ніж у декоративного елементу lines
   max-width: 384px;
-  max-height: 220px;
   border: 1px solid #bababa;
   box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
   border-radius: 2px;
   width: 100%;
-  min-height: 100%;
+  height: 220px;
 
   @include respondTo('diapente') {
     max-width: 535px;
-    max-height: 412px;
+    height: 412px;
     margin-top: 13px;
     box-shadow: 5px 5px 70px 17px rgba(0, 0, 0, 0.25);
   }
 
   @include respondTo('diapason') {
     max-width: 634px;
-    max-height: 412px;
     margin-top: 8px;
     margin-bottom: 1px;
+    min-height: 100%;
   }
 }

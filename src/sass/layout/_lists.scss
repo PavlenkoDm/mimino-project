@@ -12,9 +12,33 @@
 
   &__item {
     @include respondTo('tritonus') {
-        & + & {
-          margin-top: 24px;
-        }
+      & + & {
+        margin-top: 24px;
       }
+    }
+  }
+}
+
+.details-buttonbox {
+  @extend %list;
+
+  @include respondTo('diapente') {
+    margin-bottom: 56px;
+  }
+
+  &__item {
+    & + & {
+      margin-top: 16px;
+    }
+  }
+}
+
+.hotel-buttonbox {
+  @extend %list;
+
+  &__item {
+    & + & {
+      margin-top: 16px;
+    }
   }
 }

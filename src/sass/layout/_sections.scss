@@ -27,13 +27,11 @@
   @include respondTo('diapente') {
     padding-top: 188px;
     padding-bottom: 15px;
-    max-width: 1024px;
   }
 
   @include respondTo('diapason') {
     padding-top: 164px;
     padding-bottom: 64px;
-    max-width: 1280px;
   }
 }
 
@@ -57,15 +55,9 @@
 .section-details {
   padding-top: 24px;
   padding-bottom: 40px;
-  max-width: 414px;
 
   @include respondTo('diapente') {
-    max-width: 1024px;
     padding-top: 48px;
-  }
-
-  @include respondTo('diapason') {
-    max-width: 1280px;
   }
 }
 

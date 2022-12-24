@@ -9,7 +9,6 @@
     visibility: hidden;
     overflow-y: auto;
     overflow-x: hidden;
-    // transition: all 0.8s ease 0s;
     z-index: 1000;
     @include transition(visibility, opacity, transform);
 }
@@ -38,7 +37,6 @@
     align-items: center;
     justify-content: center;
     padding: 30px 0;
-    // transition: all 0.8s ease 0s;
     @include transition(visibility, opacity, transform);
 }
 
@@ -49,7 +47,6 @@
     padding: 60px 15px;
     border-radius: 2px;
     position: relative;
-    // transition: all 0.8s ease 0s;
     opacity: 0;
     transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
     @include transition(opacity, transform);
@@ -235,7 +232,6 @@ $enable-rounded: false;
 
     @include respondTo('diapente') {
         padding: 17px;
-        line-height: calc(29/24);
     }
 }
 

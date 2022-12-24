@@ -68,38 +68,13 @@
   }
 
   &--accent {
-    color: getColor('primary-inversed');
     text-shadow: black 0.1em 0.1em 0.2em;
-  }
-}
-
-.room-hero__arrows {
-  @extend %list;
-}
-
-.room-hero__swiper-button {
-  @extend %marginPaddingReset;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  background-color: transparentize($color: getColor('primary'), $amount: 0.35);
-  fill: getColor('accent');
-  border: none;
-  @include transition(fill);
-
-  &:hover,
-  &:focus,
-  &:active {
-    fill: transparentize($color: getColor('accent'), $amount: 0.3);
   }
 }
 
 .room-hero__location {
   position: absolute;
   z-index: 10;
-  @include transition(border, background-color);
 
   &:hover {
     border: 1px solid getColor('accent-darker');
@@ -117,18 +92,12 @@
 
 .room-hero__point {
   fill: transparentize($color: getColor('accent'), $amount: 0.3);
-  @include transition(fill);
-
-  .room-hero__location:hover & {
-    fill: getColor('accent');
-  }
 }
 
 .room-hero__link {
-  @include transition(color);
 
   .room-hero__location:hover & {
-    color: getColor('primary');
+    color: getColor('primary-inversed');
   }
 }
 
@@ -137,13 +106,14 @@
   position: absolute;
   bottom: 14px;
   left: 15px;
-  display: block;
+  
+  @include respondTo('tritonus') {
+    display: block;
+  }
 
   @include respondTo('diapente') {
     bottom: 38px;
     left: 372px;
-    display: flex;
-    gap: 20px;
   }
 
   @include respondTo('diapason') {
@@ -159,12 +129,13 @@
   }
 }
 
-.room-hero__button-wrap {
+.room-hero__button {
   position: absolute;
   z-index: 10;
   margin: 0 auto;
   display: flex;
   align-items: center;
+  justify-content: center;
 
   @include respondTo('tritonus') {
     bottom: 40px;
