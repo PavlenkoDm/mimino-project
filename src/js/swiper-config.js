@@ -6,7 +6,7 @@ function swiperSlider() {
     swiperSliders.forEach(slider => {
       let arrowLeft = slider.querySelector('.swiper-button-prev');
       let arrowRight = slider.querySelector('.swiper-button-next');
-      swiper = new Swiper(slider.querySelector('.swiper-content'), {
+      const swiper = new Swiper(slider.querySelector('.swiper-content'), {
         slidesPerView: 1.3,
         //initialSlide: 4,
         //   spaceBetween: 16,
@@ -45,7 +45,7 @@ function swiperSlider() {
   //
   if (heroSliders) {
     heroSliders.forEach(slider => {
-      swiper = new Swiper(slider.querySelector('.swiper-hero'), {
+      const swiper = new Swiper(slider.querySelector('.swiper-hero'), {
         loop: true,
         // slidesPerView: auto,
         centeredSlides: true,
@@ -61,7 +61,7 @@ function swiperSlider() {
     detailsSliders.forEach(slider => {
       let arrowLeft = slider.querySelector('.swiper-button-prev');
       let arrowRight = slider.querySelector('.swiper-button-next');
-      swiper = new Swiper(slider.querySelector('.swiper-details'), {
+      const swiper = new Swiper(slider.querySelector('.swiper-details'), {
         loop: true,
         loopSlides: 6,
         observer: true,
