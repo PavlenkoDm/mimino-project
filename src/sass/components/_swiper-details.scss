@@ -1,19 +1,23 @@
 // Свайпер секцій details головної сторінки
+.swiper-container {
+  @include respondTo('tritonus') {
+    margin-bottom: 32px;
+  }
+}
+
 .swiper-details {
   max-width: 374px;
   width: 100%;
   overflow: hidden;
+  margin-bottom: 16px;
 
   @include respondTo('semiditonus') {
     max-width: 320px;
   }
 
-  @include respondTo('tritonus') {
-    margin-bottom: 32px;
-  }
-
   @include respondTo('diapente') {
     max-width: 662px;
+    margin-bottom: 24px;
   }
 
   @include respondTo('diapason') {
@@ -31,17 +35,15 @@
       margin-right: auto;
     }
   }
+}
 
-  & > .swiper-wrapper {
-    margin-bottom: 16px;
-
-    @include respondTo('diapente') {
-      margin-bottom: 24px;
-    }
+.swiper-details__arrows {
+  @include respondTo('tritonus') {
+    margin-right: 25px;
   }
 
-  & .swiper-button-next,
-  & .swiper-button-prev {
+  & > .swiper-button-next,
+  & > .swiper-button-prev {
     fill: getColor('primary-inversed');
     @include transition(fill);
 
