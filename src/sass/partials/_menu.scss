@@ -79,7 +79,6 @@
   letter-spacing: 0.02em;
   width: 224px;
   padding-top: 4px;
-  // padding-bottom: 4px; // Зробити відступ таким
 
   @include respondTo('semiditonus') {
     max-width: 190px;

@@ -42,10 +42,6 @@
   @include respondTo('tritonus') {
     margin-bottom: 32px;
   }
-
-  @include respondTo('diapente') {
-    position: relative; // для встановлення z-index більшого, ніж у декоративного елементу lines
-  }
 }
 
 .contacts__item {
@@ -83,7 +79,6 @@
 }
 
 .contacts__box {
-  position: relative; // для встановлення z-index більшого, ніж у декоративного елементу lines
   background-color: getColor('primary-inversed');
   border-radius: 2px;
   outline: 0.5px solid getColor('accent-darker');
@@ -184,7 +179,6 @@
 }
 
 .contacts__address {
-  position: relative; // для встановлення z-index більшого, ніж у декоративного елементу lines
   max-width: 260px;
   padding: 0;
   color: #494848;
@@ -255,7 +249,6 @@
 }
 
 .contacts__map {
-  position: relative; // для встановлення z-index більшого, ніж у декоративного елементу lines
   max-width: 384px;
   border: 1px solid #bababa;
   box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);

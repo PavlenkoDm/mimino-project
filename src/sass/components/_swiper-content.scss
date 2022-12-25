@@ -45,6 +45,13 @@
     }
   }
 
+  & .swiper-slide-next {
+    
+    & .swiper-slide__image {
+      background-color: transparentize($color: getColor('primary-inversed'), $amount: 0.4);
+    }
+  }
+
   & .swiper-arrows--right {
     @include respondTo('tritonus') {
       margin-right: 15px;

@@ -17,7 +17,7 @@
   background-color: getColor('accent');
   fill: getColor('accent-darker');
   opacity: 0.5;
-  z-index: 999999; // Вивести наверх над слайдерами
+  z-index: 999; // Вивести наверх над слайдерами
   &:hover,
   &:focus {
     scale: 1;

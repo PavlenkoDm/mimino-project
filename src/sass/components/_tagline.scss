@@ -8,30 +8,19 @@
 
   @include respondTo('diapente') {
     font-size: 32px;
+    margin-bottom: 4px;
   }
 
   &--left {
     margin-bottom: 12px;
-
-    @include respondTo('diapente') {
-      margin-bottom: 4px;
-    }
   }
 
   &--right {
     margin-bottom: 6px;
     text-align: right;
-
-    @include respondTo('diapente') {
-      margin-bottom: 4px;
-    }
   }
 
   &--rooms {
     margin-bottom: 8px;
-
-    @include respondTo('diapente') {
-      margin-bottom: 4px;
-    }
   }
 }

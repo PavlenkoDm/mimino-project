@@ -1,3 +1,4 @@
+import './js/anim-elements';
 import './js/imask';
 import './js/nice-select2';
 import 'swiper/swiper-bundle';
