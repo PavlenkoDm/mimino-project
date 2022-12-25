@@ -41,7 +41,7 @@
 }
 
 .popup__content {
-    background-color: #FFFDEE;
+    background-color: getColor('background');
     color: getColor('primary');
     max-width: 414px;
     padding: 60px 15px;

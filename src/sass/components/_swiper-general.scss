@@ -33,4 +33,37 @@
   width: 32px;
   height: 32px;
   margin-top: 0;
+  @include transition(fill);
+}
+
+.swiper-button-next {
+  &:hover,
+  &:focus,
+  &:active {
+    fill: getColor('accent');
+  }
+
+  &--black {
+    fill: getColor('primary');
+  }
+
+  &--white {
+    fill: getColor('primary-inversed');
+  } 
+}
+ 
+.swiper-button-prev {
+  &:hover,
+  &:focus,
+  &:active {
+    fill: getColor('accent');
+  }
+
+  &--black {
+    fill: getColor('primary');
+  }
+
+  &--white {
+    fill: getColor('primary-inversed');
+  } 
 }
