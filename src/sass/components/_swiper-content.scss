@@ -48,7 +48,9 @@
   & .swiper-slide-next {
     
     & .swiper-slide__image {
-      background-color: transparentize($color: getColor('primary-inversed'), $amount: 0.4);
+      @include respondTo('tritonus') {
+        opacity: 0.6;
+      }
     }
   }
 
@@ -75,17 +77,17 @@
     @include respondTo('diapente') {
       justify-content: flex-end;
     }
-  }
 
-  & .swiper-button-next,
-  & .swiper-button-prev {
-    fill: getColor('primary');
-    @include transition(fill);
-
-    &:hover,
-    &:focus,
-    &:active {
-      fill: getColor('accent');
+    & .swiper-button-next,
+    & .swiper-button-prev {
+      fill: getColor('primary');
+      @include transition(fill);
+  
+      &:hover,
+      &:focus,
+      &:active {
+        fill: getColor('accent');
+      }
     }
   }
 }
