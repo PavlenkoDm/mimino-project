@@ -9,7 +9,6 @@
   max-width: 374px;
   width: 100%;
   overflow: hidden;
-  margin-bottom: 16px;
 
   @include respondTo('semiditonus') {
     max-width: 320px;
@@ -25,12 +24,20 @@
   }
 
   &--right {
+
     @include respondTo('tritonus') {
       margin-left: auto;
+      margin-bottom: 32px;
+    }
+
+    & > .swiper-wrapper {
+      margin-bottom: 16px;
     }
   }
 
   &--left {
+    margin-bottom: 16px;
+
     @include respondTo('tritonus') {
       margin-right: auto;
     }
