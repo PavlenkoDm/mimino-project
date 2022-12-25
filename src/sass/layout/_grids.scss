@@ -18,6 +18,7 @@
 
 // Сітка опису секції amenities
 .grid-amenities {
+
   @include respondTo('diapente') {
     display: grid;
     grid-template-columns: 480px 450px;

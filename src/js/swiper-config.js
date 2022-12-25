@@ -47,6 +47,7 @@ function swiperSlider() {
     heroSliders.forEach(slider => {
       const swiper = new Swiper(slider.querySelector('.swiper-hero'), {
         loop: true,
+        loopSlides: 3,
         // slidesPerView: auto,
         centeredSlides: true,
         navigation: {

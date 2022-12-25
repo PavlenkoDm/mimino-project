@@ -67,7 +67,6 @@ $enable-rounded: true;
   margin-bottom: 20px;
 
   @include respondTo('diapente') {
-    position: relative; // для встановлення z-index більшого, ніж у декоративного елементу lines
     margin-bottom: 32px;
     margin-left: auto;
   }

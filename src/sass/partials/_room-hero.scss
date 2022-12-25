@@ -45,9 +45,25 @@
   text-transform: uppercase;
   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
     0px 18px 23px rgba(0, 0, 0, 0.1);
-    transform: translate(0px, 120%);
-    opacity: 0;
-    @include transition(opacity, transform);
+
+    .slide-hero--luxe.swiper-slide-active &,
+    .slide-hero--triple.swiper-slide-active &,
+    .slide-hero--double.swiper-slide-active & {
+      transform: translate(0px, 0px);
+      opacity: 1;
+      @include transition(opacity, transform);
+    }
+  
+    .slide-hero--luxe.swiper-slide-prev &,
+    .slide-hero--triple.swiper-slide-prev &,
+    .slide-hero--double.swiper-slide-prev &,
+    .slide-hero--luxe.swiper-slide-next &,
+    .slide-hero--triple.swiper-slide-next &,
+    .slide-hero--double.swiper-slide-next &  {
+      transform: translate(0px, 120%);
+      opacity: 0;
+      @include transition(opacity, transform);
+    }
 
   @include respondTo('diapente') {
     font-size: 36px;
@@ -56,11 +72,6 @@
 
   &--transform {
     text-transform: lowercase;
-  }
-
-  &._appeared {
-    transform: translate(0px, 0px);
-    opacity: 1;
   }
 }
 
@@ -81,11 +92,24 @@
     text-shadow: black 0.1em 0.1em 0.2em;
   }
 
-  &._appeared {
+  .slide-hero--luxe.swiper-slide-active &,
+  .slide-hero--triple.swiper-slide-active &,
+  .slide-hero--double.swiper-slide-active & {
     transform: translate(0px, 0px);
     opacity: 1;
     @include transition(opacity, transform);
     transition-delay: 0.4s;
+  }
+
+  .slide-hero--luxe.swiper-slide-prev &,
+  .slide-hero--triple.swiper-slide-prev &,
+  .slide-hero--double.swiper-slide-prev &,
+  .slide-hero--luxe.swiper-slide-next &,
+  .slide-hero--triple.swiper-slide-next &,
+  .slide-hero--double.swiper-slide-next &  {
+    transform: translate(0px, 120%);
+    opacity: 0;
+    @include transition(opacity, transform);
   }
 }
 

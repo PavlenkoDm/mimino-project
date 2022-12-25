@@ -9,7 +9,7 @@ if (animElements.length > 0) {
       const animElement = animElements[i];
       const animElementHeight = animElement.offsetHeight;
       const animElementOffset = offset(animElement).top;
-      const animStart = 4;
+      const animStart = 1;
 
       let animElementPoint = (window.innerHeight - animElementHeight) / animStart;
 
@@ -21,10 +21,10 @@ if (animElements.length > 0) {
         (scrollY > animElementOffset - animElementPoint) &&
         scrollY < (animElementOffset + animElementHeight)
       ) {
-        animElement.classList.add('._appeared');
+        animElement.classList.add('_appeared');
       } else {
         if (!animElement.classList.contains('._anim-nohide')) {
-        animElement.classList.remove('._appeared');
+        animElement.classList.remove('_appeared');
         }
       }
     }
@@ -37,5 +37,5 @@ if (animElements.length > 0) {
   }
   setTimeout(() => {
     animOnScroll();
-  }, 500);
+  }, 300);
 }

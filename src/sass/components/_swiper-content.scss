@@ -50,6 +50,7 @@
     & .swiper-slide__image {
       @include respondTo('tritonus') {
         opacity: 0.6;
+        @include transition(opacity);
       }
     }
   }
@@ -76,18 +77,6 @@
   & .swiper-arrows--rooms-left {
     @include respondTo('diapente') {
       justify-content: flex-end;
-    }
-
-    & .swiper-button-next,
-    & .swiper-button-prev {
-      fill: getColor('primary');
-      @include transition(fill);
-  
-      &:hover,
-      &:focus,
-      &:active {
-        fill: getColor('accent');
-      }
     }
   }
 }
