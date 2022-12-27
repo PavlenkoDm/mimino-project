@@ -52,6 +52,12 @@
   margin-bottom: 16px;
 }
 
+.amenities__margin {
+  @include respondTo('tritonus') {
+    margin-bottom: 16px;
+  }
+}
+
 $enable-rounded: true;
 
 .amenities__button {
