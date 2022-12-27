@@ -47,6 +47,10 @@
   display: flex;
   align-items: center;
 
+  @include respondTo('tritonus') {
+    margin-bottom: 32px;
+  }
+
   &--right {
     display: flex;
     justify-content: flex-end;
@@ -55,7 +59,6 @@
 
 // Перша обгортка для контентних картинок у секціях about і секціях номерів
 .imgbox {
-  margin-left: auto;
   max-width: 244px;
   box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
   border-radius: 2px;
@@ -76,13 +79,13 @@
   }
 
   &--about {
+    margin-left: auto;
     @include respondTo('tritonus') {
       margin-bottom: 32px;
     }
   }
 
   &--left {
-    margin-left: 0;
 
     @include respondTo('tritonus') {
       margin-bottom: 32px;
@@ -100,6 +103,12 @@
 
   // Обгортка картинок секцій номерів
   &--rooms {
+    margin-left: auto;
+
+    @include respondTo('tritonus') {
+      margin-bottom: 32px;
+    }
+
     @include respondTo('diapente') {
       top: -94px;
     }
@@ -110,7 +119,10 @@
   }
 
   &--rooms-left {
-    margin-left: 0;
+
+    @include respondTo('tritonus') {
+      margin-bottom: 32px;
+    }
 
     @include respondTo('diapente') {
       top: -96px;
@@ -155,6 +167,17 @@
     }
   }
 
+  &--about-right {
+
+    @include respondTo('diapente') {
+      margin-right: 13px;
+    }
+
+    @include respondTo('diapason') {
+      margin-right: 0;
+    }
+  }
+
   &--details {
     @include respondTo('diapente') {
       display: flex;
@@ -177,18 +200,24 @@
   }
 
   &--right {
-    @include respondTo('tritonus') {
+    @include respondTo('ditonus') {
       margin-right: -15px;
     }
 
     @include respondTo('diapente') {
+      margin-right: 0;
       flex-direction: row-reverse;
     }
   }
 
   &--left {
-    @include respondTo('tritonus') {
+
+    @include respondTo('ditonus') {
       margin-left: -15px;
+    }
+
+    @include respondTo('diapente') {
+      margin-right: 0;
     }
   }
 }

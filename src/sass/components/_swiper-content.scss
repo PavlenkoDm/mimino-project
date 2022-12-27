@@ -1,21 +1,16 @@
 // Свайпер світлих секцій
 .swiper-content {
-  padding-top: 32px;
   max-width: 330px;
   width: 100%;
   overflow: hidden;
+  box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
 
   @include respondTo('semiditonus') {
     max-width: 200px;
   }
 
-  @include respondTo('tritonus') {
-    padding-bottom: 20px; // додав замість падінгу секції для кращого відображення тіні
-  }
-
   @include respondTo('diapente') {
     max-width: 428px;
-    padding-top: 52px;
   }
 
   @include respondTo('diapason') {
@@ -26,57 +21,19 @@
     margin-left: auto;
   }
 
-  .rooms-interactive & {
-    
-    @include respondTo('diapente') {
-      padding-top: 68px;
-    }
-  }
 
-  & > .swiper-wrapper {
-    margin-bottom: 20px;
-
-    @include respondTo('diapente') {
-      margin-bottom: 32px;
-    }
-
-    @include respondTo('diapason') {
-      margin-bottom: 36px;
-    }
+  & .awiper-slide-active {
+    box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
   }
 
   & .swiper-slide-next {
+    box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
     
     & .swiper-slide__image {
       @include respondTo('tritonus') {
         opacity: 0.6;
         @include transition(opacity);
       }
-    }
-  }
-
-  & .swiper-arrows--right {
-    @include respondTo('tritonus') {
-      margin-right: 15px;
-      justify-content: flex-end;
-    }
-  }
-
-  & .swiper-arrows--about-right {
-    @include respondTo('diapente') {
-      justify-content: flex-end;
-    }
-  }
-
-  & .swiper-arrows--left {
-    @include respondTo('tritonus') {
-      margin-left: 15px;
-    }
-  }
-
-  & .swiper-arrows--rooms-left {
-    @include respondTo('diapente') {
-      justify-content: flex-end;
     }
   }
 }
