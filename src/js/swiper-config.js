@@ -77,11 +77,12 @@ function swiperSlider() {
         },
         breakpoints: {
           320: {
-            // centeredSlides: true,
+            centeredSlides: true,
             slidesPerView: 1,
             spaceBetween: 20,
           },
           414: {
+            centeredSlides: false,
             slidesPerView: 1.325,
             spaceBetween: 20,
           },

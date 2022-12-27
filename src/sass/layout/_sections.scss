@@ -38,7 +38,7 @@
 // Стилі секцій about
 .section-content {
   padding-top: 16px;
-  // padding-bottom: 20px; // прибрав, замість цього додав падінг для свайперу
+  padding-bottom: 20px; 
   background-color: getColor('background');
 
   @include respondTo('diapente') {
