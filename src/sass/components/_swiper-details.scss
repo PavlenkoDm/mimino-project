@@ -2,6 +2,7 @@
 
   // Відступ між елементами управління слайдером та кнпоками виклику модалок
   &--interactive {
+
     @include respondTo('tritonus') {
       margin-bottom: 32px;
     }

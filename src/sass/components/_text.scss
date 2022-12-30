@@ -9,6 +9,10 @@
     font-size: 12px;
     font-weight: 600;
 
+    @include respondTo('semiditonus') {
+      font-size: 10px;
+    }
+
     @include respondTo('diapente') {
       font-size: 16px;
     }
@@ -26,10 +30,6 @@
   // Перший текст-опис в секціях about на головній сторінці
   &--about-first {
     color: lighten(getColor('primary'), 37.25); // #5f5f5f
-
-    @include respondTo('semiditonus') {
-      font-size: 9px;
-    }
 
     &--left {
       max-width: 258px;
@@ -52,7 +52,7 @@
       max-width: 242px;
 
       @include respondTo('semiditonus') {
-        max-width: 42%;
+        max-width: 66vw;
       }
 
       @include respondTo('diapente') {
@@ -119,6 +119,10 @@
   &--details-right {
     max-width: 243px;
     margin-left: auto;
+
+    @include respondTo('semiditonus') {
+      max-width: 55vw;
+    }
 
     @include respondTo('diapente') {
       max-width: 549px;

@@ -1,9 +1,16 @@
 // Зручний скроллінг body догори сторінки
 .up-button {
   position: fixed;
+
+  @include respondTo('semiditonus') {
+    bottom: 15px;
+    right: 30px;
+  }
+
   bottom: 45px;
   right: 85px;
 }
+
 .up-button__link {
   position: relative;
   display: none;
@@ -23,9 +30,15 @@
     scale: 1;
     opacity: 1;
     background-color: getColor('accent');
-    fill: getColor('primary-inversed'); // darken(saturate(getColor('accent'), 11.05), 24.51); // #c79002
-    box-shadow: darken(desaturate(adjust-hue(getColor('accent'), 9), 21.63), 15.29) 2px 0px 15px; // #cdb72b
+    fill: getColor('primary-inversed'); 
+    box-shadow: darken(saturate(getColor('accent'), 11.05), 24.51); // #c79002
   }
+
+  @include respondTo('semiditonus') {
+    width: 25px;
+    height: 60px;
+  }
+
   @include respondTo('diapason') {
     width: 45px;
     height: 80px;

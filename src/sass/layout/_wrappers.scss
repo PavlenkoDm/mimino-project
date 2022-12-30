@@ -13,12 +13,20 @@
 .details-contentbox {
   margin-bottom: 48px;
 
+  @include respondTo('semiditonus') {
+    margin-bottom: 30px;
+  }
+
   @include respondTo('diapente') {
     margin-bottom: 40px;
   }
 
   &--left {
     margin-left: 125px;
+
+    @include respondTo('semiditonus') {
+      margin-left: 31vw;
+    }
 
     @include respondTo('diapente') {
       margin-left: 231px;
@@ -31,6 +39,10 @@
 
   &--right {
     margin-right: 129px;
+
+    @include respondTo('semiditonus') {
+      margin-right: 31vw;
+    }
 
     @include respondTo('diapente') {
       margin-right: 231px;
@@ -73,17 +85,14 @@
     @include respondTo('diapason') {
       margin-bottom: 162px;
     }
-
-    &--right {
-
-      @include respondTo('semiditonus') {
-        margin-right: 5vw;
-      }
-    }
   }
 
   &--second {
     max-width: 163px;
+
+    @include respondTo('semiditonus') {
+      max-width: 130px;
+    }
 
     @include respondTo('diapente') {
       max-width: 312px;
@@ -104,6 +113,10 @@
   
     &--right {
       margin-left: 20px;
+
+      @include respondTo('semiditonus') {
+        margin-left: 12px;
+      }
   
       @include respondTo('diapente') {
         margin-top: 7px;
@@ -136,6 +149,10 @@
   box-shadow: 2px 2px 60px 2px transparentize(getColor('primary'), 0.75); // rgba(0, 0, 0, 0.25)
   border-radius: 2px;
   overflow: hidden;
+
+  @include respondTo('semiditonus') {
+    max-width: 192px;
+  }
 
   @include respondTo('diapente') {
     max-width: 400px;
@@ -214,6 +231,10 @@
   box-shadow: 2px 2px 60px 2px transparentize(getColor('primary'), 0.75); // rgba(0, 0, 0, 0.25)
   border-radius: 2px;
   overflow: hidden;
+
+  @include respondTo('semiditonus') {
+    max-width: 130px;
+  }
 
   @include respondTo('diapente') {
     max-width: 350px;

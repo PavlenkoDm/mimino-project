@@ -79,7 +79,7 @@ function swiperSlider() {
           320: {
             centeredSlides: true,
             slidesPerView: 1,
-            spaceBetween: 20,
+            spaceBetween: 16,
           },
           414: {
             centeredSlides: false,
