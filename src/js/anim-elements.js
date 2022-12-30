@@ -23,7 +23,7 @@ if (animElements.length > 0) {
       ) {
         animElement.classList.add('_appeared');
       } else {
-        if (!animElement.classList.contains('._anim-nohide')) {
+        if (!animElement.classList.contains('_anim-nohide')) {
         animElement.classList.remove('_appeared');
         }
       }
