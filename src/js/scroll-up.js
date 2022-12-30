@@ -28,7 +28,7 @@ $(document).ready(function () {
   });
 });
 window.onscroll = function () {
-  scrollY <= 1300
+  scrollY <= 700
     ? document.getElementById('btn-up').classList.remove('btn-up-visible')
     : document.getElementById('btn-up').classList.add('btn-up-visible');
 };

@@ -22,7 +22,7 @@
   &:hover,
   &:focus,
   &:active {
-    color: getColor('accent-darker');
+    color: darken(saturate(getColor('accent'), 11.05), 24.51); // #c79002
   }
 
   &.header__navigation-link {

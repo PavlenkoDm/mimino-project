@@ -15,13 +15,6 @@
         background-color: getColor('primary-inversed');
         border-color: getColor('accent');
     }
-
-    // Прозорі кнопки меншого розміру
-    &--booking {
-        @extend %link;
-        @include buttonPlace($transparent-button: true);
-        @include buttonSize($booking-room: true, $padding-top: 15px, $padding-bottom: 13px);
-    }
 }
 
 // Кнопка оформлення бронювання модалок та секції amenities сторінки room.html
@@ -49,6 +42,7 @@
 
 // Кнопки виклику модалок та переходу на сторінку room.html
 .activity-button {
+  @extend .button;
     @extend %link;
     text-align: center;
     @include buttonSize(
@@ -61,19 +55,29 @@
       margin-right: auto;
       margin-left: auto;
     }
+
+    // Прозорі кнопки меншого розміру
+    &--smaller {
+      @include buttonPlace($transparent-button: true);
+      @include buttonSize($booking-room: true, $padding-top: 15px, $padding-bottom: 13px);
+    }
   
+    // Прозорі кнопки
     &--transparent {
       @include buttonPlace($transparent-button: true);
     }
   
+    // Кнопки світлих секцій сторінки hotel.html
     &--light-rooms {
       @include buttonPlace($light-rooms-button: true);
     }
   
+    // Кнопки темнішої секції сторінки hotel.html
     &--dark-rooms {
       @include buttonPlace($dark-rooms-button: true);
     }
   
+    // Кнопка секції menu
     &--menu {
       @include buttonPlace($menu-button: true);
 

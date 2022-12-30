@@ -1,18 +1,20 @@
-<section
-  class="kitchen-about section section-content lines"
-  data-slider="content"
->
+<section class="kitchen-about section-content lines" data-slider="content">
   <div class="container section__container">
     <h2 class="visually-hidden" lang="en">About our kitchen</h2>
     <p class="tagline tagline--left" lang="en">Amet minim mollit non</p>
     <h3 class="logo logo--nolink logo--nolink-grey" lang="en">MIMIHO</h3>
-    <p class="text text--main text--about-first" lang="en">
-      Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-      Velit officia consequat duis enim velit mollit. Exercitation veniam
-      consequat sunt nostrud amet.
-    </p>
+    <div class="animated-text animated-text--first _anim-elements _anim-nohide">
+      <p
+        class="text text--main text--about-first text--about-first--left animation-left"
+        lang="en"
+      >
+        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+        sint. Velit officia consequat duis enim velit mollit. Exercitation
+        veniam consequat sunt nostrud amet.
+      </p>
+    </div>
     <!-- Обгортка картинки -->
-    <div class="imgbox imgbox--about animate__animated animate__fadeInRight">
+    <div class="imgbox imgbox--about">
       <picture>
         <source
           srcset="
@@ -73,7 +75,7 @@
       </picture>
     </div>
     <!-- Блок контенту -->
-    <div class="about-contentbox animate__animated animate__fadeInLeft">
+    <div class="about-contentbox">
       <div class="imgbox-second">
         <picture>
           <source
@@ -134,11 +136,15 @@
           />
         </picture>
       </div>
-      <p class="text text--main text--about-second" lang="en">
-        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-        sint. Velit officia consequat duis enim velit mollit. Exercitation
-        veniam consequat sunt nostrud amet.
-      </p>
+      <div
+        class="animated-text animated-text--second animated-text--second--right _anim-elements"
+      >
+        <p class="text text--main text--about-second animation-right" lang="en">
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+          sint. Velit officia consequat duis enim velit mollit. Exercitation
+          veniam consequat sunt nostrud amet.
+        </p>
+      </div>
     </div>
     <!-- Свайпер -->
     <div
@@ -436,7 +442,7 @@
         </div>
         <!-- Блок навігації по свайперу -->
         <div
-          class="swiper-arrows swiper-arrows--light-right swiper-arrows--light-section"
+          class="swiper-arrows swiper-arrows--light swiper-arrows--light--right"
         >
           <div class="swiper-button-prev swiper-button-prev--black">
             <svg width="32" height="32">

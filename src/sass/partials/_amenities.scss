@@ -1,3 +1,4 @@
+// Стилі секції
 .amenities {
   @include respondTo('diapente') {
     padding-top: 48px;
@@ -12,6 +13,7 @@
   }
 }
 
+// Обгортка контенту секції
 .amenities__description {
   margin-bottom: 32px;
 
@@ -20,6 +22,7 @@
   }
 }
 
+// Заголовок секції
 .amenities-title {
   @extend %marginPaddingReset;
   font-family: $text-times-font;
@@ -30,6 +33,7 @@
   margin-bottom: 16px;
 }
 
+// Окремі блоки контенту
 .amenities__article {
   &:not(:last-child) {
     margin-bottom: 32px;
@@ -40,6 +44,7 @@
   overflow: hidden;
 }
 
+// Опис під заголовком секції
 .amenities__specification {
   margin-bottom: 32px;
 
@@ -48,16 +53,19 @@
   }
 }
 
+// Підзаголовки окремих блоків опису
 .amenities__subtitle {
   margin-bottom: 16px;
 }
 
+// Відступ між внутрішніми абзацами у блоках опису
 .amenities__margin {
   @include respondTo('tritonus') {
     margin-bottom: 16px;
   }
 }
 
+// Стилі кнопки бронювання
 $enable-rounded: true;
 
 .amenities__button {
@@ -78,6 +86,7 @@ $enable-rounded: true;
   }
 }
 
+// Посилання для повернення до сторінку hotel.html
 .amenities__return {
   @extend %link;
   display: flex;
@@ -89,7 +98,8 @@ $enable-rounded: true;
   font-size: 16px;
   line-height: 1.219;
   letter-spacing: 0.02em;
-  color: getColor('accent-darker');
+  color: darken(saturate(getColor('accent'), 11.05), 24.51); // #c79002
+  @include transition(fill, color);
 
   @include respondTo('diapente') {
     font-size: 20px;
@@ -102,9 +112,9 @@ $enable-rounded: true;
     color: getColor('accent');
     fill: transparent;
   }
-  @include transition(fill, color);
 }
 
+// Іконка посилання повернення на сторінку hotel.html
 .amenities__icon {
   @extend %icon;
 }

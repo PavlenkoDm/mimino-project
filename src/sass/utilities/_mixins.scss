@@ -52,19 +52,19 @@
   $menu-button: false
 ) {
   @if $transparent-button {
-    background-color: transparentize($color: getColor('primary'), $amount: 0.6);
+    background-color: transparentize(getColor('primary'), 0.6);
     border: 2px solid getColor('primary-inversed');
   } @else if $light-rooms-button {
     border: 2px solid getColor('background');
     background-color: getColor('primary');
     @include respondTo('diapente') {
-      border: 2px solid #f0ecd6;
+      border: 2px solid darken(saturate(adjust-hue(getColor('primary-inversed'), 51), 46.43), 10.98); // #f0ecd6
     }
     @include respondTo('diapason') {
       border: 2px solid getColor('primary-inversed');
     }
   } @else if $dark-rooms-button {
-    border: 2px solid #f0ecd6;
+    border: 2px solid darken(saturate(adjust-hue(getColor('primary-inversed'), 51), 46.43), 10.98); // #f0ecd6
     background-color: getColor('primary');
     @include respondTo('diapente') {
       border: 2px solid getColor('primary-inversed');
@@ -73,7 +73,7 @@
     background-color: getColor('primary');
     border: 2px solid getColor('background');
     @include respondTo('diapente') {
-      border: 2px solid #f0ecd6;
+      border: 2px solid darken(saturate(adjust-hue(getColor('primary-inversed'), 51), 46.43), 10.98); // #f0ecd6
     }
     @include respondTo('diapason') {
       border: 2px solid getColor('background');
@@ -95,9 +95,9 @@
 }
 
 // Міксин вибору фонового зображення
-$imgdir: '../images/';
+$imgdir: '../images/'; // (rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65))
 @mixin backgroundImageRetina(
-  $gradient: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+  $gradient: linear-gradient(transparentize(getColor('primary'), 0.635), transparentize(getColor('primary'), 0.35)),
   $page,
   $section,
   $part,

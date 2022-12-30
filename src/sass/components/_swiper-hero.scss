@@ -1,7 +1,4 @@
-.swiper-hero .swiper-slide-next {
-  visibility: hidden;
-}
-
+// Свайпер секції room-hero
 .slide-hero {
   padding-top: 471px;
   padding-bottom: 165px;
@@ -16,13 +13,14 @@
     padding-top: 524px;
   }
 
+  // Слайд "Двохмісного номеру люкс"
   &--luxe {
     @include respondTo('tritonus') {
       padding-bottom: 133px;
     }
 
     @include backgroundImageRetina(
-      $gradient: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+      $gradient: linear-gradient(transparentize(getColor('primary-inversed'), 0.99), transparentize(getColor('primary-inversed'), 0.99)),
       $page: swiper,
       $section: room,
       $part: mobile,
@@ -32,7 +30,7 @@
 
     @include respondTo('diapente') {
       @include backgroundImageRetina(
-        $gradient: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+        $gradient: linear-gradient(transparentize(getColor('primary-inversed'), 0.99), transparentize(getColor('primary-inversed'), 0.99)),
         $page: swiper,
         $section: room,
         $part: tablet,
@@ -43,7 +41,7 @@
 
     @include respondTo('diapason') {
       @include backgroundImageRetina(
-        $gradient: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+        $gradient: linear-gradient(transparentize(getColor('primary-inversed'), 0.99), transparentize(getColor('primary-inversed'), 0.99)),
         $page: swiper,
         $section: room,
         $part: desktop,
@@ -53,9 +51,10 @@
     }
   }
 
+  // Слайд трьохмісного номеру
   &--triple {
     @include backgroundImageRetina(
-      $gradient: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+      $gradient: linear-gradient(transparentize(getColor('primary-inversed'), 0.99), transparentize(getColor('primary-inversed'), 0.99)),
       $page: swiper,
       $section: room,
       $part: mobile,
@@ -65,7 +64,7 @@
 
     @include respondTo('diapente') {
       @include backgroundImageRetina(
-        $gradient: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+        $gradient: linear-gradient(transparentize(getColor('primary-inversed'), 0.99), transparentize(getColor('primary-inversed'), 0.99)),
         $page: swiper,
         $section: room,
         $part: tablet,
@@ -76,7 +75,7 @@
 
     @include respondTo('diapason') {
       @include backgroundImageRetina(
-        $gradient: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+        $gradient: linear-gradient(transparentize(getColor('primary-inversed'), 0.99), transparentize(getColor('primary-inversed'), 0.99)),
         $page: swiper,
         $section: room,
         $part: desktop,
@@ -86,9 +85,10 @@
     }
   }
 
+  // Слайд двохмісного номеру
   &--double {
     @include backgroundImageRetina(
-      $gradient: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+      $gradient: linear-gradient(transparentize(getColor('primary-inversed'), 0.99), transparentize(getColor('primary-inversed'), 0.99)),
       $page: swiper,
       $section: room,
       $part: mobile,
@@ -98,7 +98,7 @@
 
     @include respondTo('diapente') {
       @include backgroundImageRetina(
-        $gradient: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+        $gradient: linear-gradient(transparentize(getColor('primary-inversed'), 0.99), transparentize(getColor('primary-inversed'), 0.99)),
         $page: swiper,
         $section: room,
         $part: tablet,
@@ -109,7 +109,7 @@
 
     @include respondTo('diapason') {
       @include backgroundImageRetina(
-        $gradient: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+        $gradient: linear-gradient(transparentize(getColor('primary-inversed'), 0.99), transparentize(getColor('primary-inversed'), 0.99)),
         $page: swiper,
         $section: room,
         $part: desktop,
@@ -120,6 +120,7 @@
   }
 }
 
+// Стилі кнопок навігації свайпером
 .swiper-hero__arrows {
   @extend %list;
 }
@@ -134,7 +135,7 @@
   @extend %marginPaddingReset;
   width: 40px;
   height: 40px;
-  background-color: transparentize($color: getColor('primary'), $amount: 0.6);
+  background-color: transparentize(getColor('primary'), 0.6); // rgba(0, 0, 0, 0.6)
   fill: getColor('accent');
   border: none;
   @include transition(fill);
@@ -142,7 +143,7 @@
   &:hover,
   &:focus,
   &:active {
-    fill: transparentize($color: getColor('accent'), $amount: 0.3);
+    fill: transparentize(getColor('accent'), 0.3); // rgba(243, 198, 83, 0.7)
   }
 }
 
