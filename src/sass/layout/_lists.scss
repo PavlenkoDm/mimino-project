@@ -1,3 +1,4 @@
+// Список кнопок секцій hero
 .hero-buttons {
   @extend %list;
 
@@ -19,6 +20,7 @@
   }
 }
 
+// Список кнопок темних секцій головної сторінки
 .details-buttonbox {
   @extend %list;
 
@@ -33,6 +35,7 @@
   }
 }
 
+// Список кнопок секцій номерів
 .hotel-buttonbox {
   @extend %list;
 

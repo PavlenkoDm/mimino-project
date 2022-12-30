@@ -57,10 +57,83 @@
   }
 }
 
+// Контейнери для анімованого тексту секцій about та rooms
+.animated-text {
+  &--first {
+    margin-bottom: 28px;
+
+    @include respondTo('semiditonus') {
+      margin-bottom: 7vw;
+    }
+
+    @include respondTo('diapente') {
+      margin-bottom: 142px;
+    }
+
+    @include respondTo('diapason') {
+      margin-bottom: 162px;
+    }
+
+    &--right {
+
+      @include respondTo('semiditonus') {
+        margin-right: 5vw;
+      }
+    }
+  }
+
+  &--second {
+    max-width: 163px;
+
+    @include respondTo('diapente') {
+      max-width: 312px;
+    }
+
+    &--left {
+      margin-right: 21px;
+  
+      @include respondTo('diapente') {
+        margin-right: 48px;
+      }
+  
+      @include respondTo('diapason') {
+        margin-bottom: 56px;
+        margin-right: 45px;
+      }
+    }
+  
+    &--right {
+      margin-left: 20px;
+  
+      @include respondTo('diapente') {
+        margin-top: 7px;
+        margin-left: 48px;
+      }
+  
+      @include respondTo('diapason') {
+        margin-bottom: 68px;
+        margin-left: 32px;
+      }
+    }
+  }
+
+  &--rooms {
+    margin-bottom: 32px;
+
+    @include respondTo('diapente') {
+      margin-bottom: 176px;
+    }
+
+    @include respondTo('diapason') {
+      margin-bottom: 188px;
+    }
+  }
+}
+
 // Перша обгортка для контентних картинок у секціях about і секціях номерів
 .imgbox {
   max-width: 244px;
-  box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 2px 60px 2px transparentize(getColor('primary'), 0.75); // rgba(0, 0, 0, 0.25)
   border-radius: 2px;
   overflow: hidden;
 
@@ -69,7 +142,7 @@
     position: absolute;
     top: -152px;
     right: 112px;
-    box-shadow: 5px 5px 70px 17px rgba(0, 0, 0, 0.25);
+    box-shadow: 5px 5px 70px 17px transparentize(getColor('primary'), 0.75); // rgba(0, 0, 0, 0.25)
   }
 
   @include respondTo('diapason') {
@@ -78,6 +151,7 @@
     max-width: 460px;
   }
 
+  // Обгортка картинок світлих секцій
   &--about {
     margin-left: auto;
     @include respondTo('tritonus') {
@@ -86,7 +160,6 @@
   }
 
   &--left {
-
     @include respondTo('tritonus') {
       margin-bottom: 32px;
     }
@@ -119,7 +192,6 @@
   }
 
   &--rooms-left {
-
     @include respondTo('tritonus') {
       margin-bottom: 32px;
     }
@@ -139,10 +211,10 @@
 // Друга обгортка для контентних картинок у секціях
 .imgbox-second {
   max-width: 200px;
-  box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 2px 60px 2px transparentize(getColor('primary'), 0.75); // rgba(0, 0, 0, 0.25)
   border-radius: 2px;
   overflow: hidden;
-  
+
   @include respondTo('diapente') {
     max-width: 350px;
   }
@@ -154,21 +226,19 @@
 
 // Обгортка свайперу та кнопок секцій about, details та секцій номерів
 .interactive {
-
   &--about {
     @include respondTo('diapente') {
-      transform: translateY(-80px);
-      margin-bottom: -80px;
+      transform: translateY(-28px);
+      margin-bottom: -28px;
     }
-  
+
     @include respondTo('diapason') {
-      transform: translateY(-199px);
-      margin-bottom: -199px;
+      transform: translateY(-147px);
+      margin-bottom: -147px;
     }
   }
 
   &--about-right {
-
     @include respondTo('diapente') {
       margin-right: 13px;
     }
@@ -211,7 +281,6 @@
   }
 
   &--left {
-
     @include respondTo('ditonus') {
       margin-left: -15px;
     }

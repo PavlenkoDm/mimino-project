@@ -21,14 +21,4 @@
       font-size: 36px;
     }
   }
-
-  // Заголовок секції menu сторінки restaurant.html
-  &--black {
-    color: getColor('primary');
-    margin-bottom: 32px;
-
-    @include respondTo('diapente') {
-      margin-bottom: 40px;
-    }
-  }
 }

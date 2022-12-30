@@ -2,29 +2,29 @@
 .up-button {
   position: fixed;
   bottom: 45px;
-  right: 45px;
+  right: 85px;
 }
 .up-button__link {
   position: relative;
-  top: -30px;
-  left: 0;
   display: none;
   justify-content: center;
   align-items: center;
   border-radius: 12px;
   width: 30px;
   height: 70px;
-  background-color: getColor('accent');
-  fill: getColor('accent-darker');
+  background-color: darken(saturate(getColor('accent'), 11.05), 24.51); // #c79002
+  fill: getColor('accent');
   opacity: 0.5;
   z-index: 999; // Вивести наверх над слайдерами
+  @include transition(background-color, fill, opacity, box-shadow);
+
   &:hover,
   &:focus {
     scale: 1;
     opacity: 1;
     background-color: getColor('accent');
-    fill: getColor('accent-darker');
-    box-shadow: rgb(205, 183, 43) 2px 0px 15px;
+    fill: getColor('primary-inversed'); // darken(saturate(getColor('accent'), 11.05), 24.51); // #c79002
+    box-shadow: darken(desaturate(adjust-hue(getColor('accent'), 9), 21.63), 15.29) 2px 0px 15px; // #cdb72b
   }
   @include respondTo('diapason') {
     width: 45px;

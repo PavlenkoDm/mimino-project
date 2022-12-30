@@ -21,6 +21,13 @@
     @include respondTo('diapente') {
       font-size: 40px;
     }
+
+    .restaurant & {
+
+      @include respondTo('tritonus') {
+        color: darken(saturate(adjust-hue(getColor('primary-inversed'), 53), 80.95), 4.12) // #fdfbec;
+      }
+    }
   }
 
   // Лого в футері
@@ -43,7 +50,7 @@
   // Логотип без посилання в контенті сайту
   &--nolink {
     font-size: 40px;
-    color: scale-color(getColor('primary'), $saturation: 1%, $lightness: 28.5%);
+    color: lighten(saturate(getColor('primary'), 0.69), 28.43); // #494848
 
     @include respondTo('diapente') {
       font-size: 64px;

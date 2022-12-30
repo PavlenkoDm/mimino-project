@@ -1,6 +1,6 @@
-// Свайпер секцій details головної сторінки
 .swiper-container {
 
+  // Відступ між елементами управління слайдером та кнпоками виклику модалок
   &--interactive {
     @include respondTo('tritonus') {
       margin-bottom: 32px;
@@ -8,6 +8,7 @@
   }
 }
 
+// Свайпер секцій details головної сторінки
 .swiper-details {
   max-width: 374px;
   width: 100%;

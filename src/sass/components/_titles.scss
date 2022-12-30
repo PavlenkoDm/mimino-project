@@ -21,6 +21,18 @@
         font-size: 36px;
         margin-bottom: 24px;
     }
+
+    &--right {
+      text-align: right;
+
+      @include respondTo('diapente') {
+        margin-right: 43px;
+      }
+
+      @include respondTo('diapason') {
+        margin-right: 47px;
+      }
+    }
   }
 }
 

@@ -18,83 +18,94 @@
   &--room {
     font-weight: 700;
     font-size: 16px;
-    color: mix(white, getColor('primary'), 48%);
+    color: lighten(getColor('primary'), 47.84); // #7a7a7a
     max-width: 400px;
     width: 100%;
   }
 
-  // Текст сторінки hotel.html
-  &--rooms {
-    margin-bottom: 32px;
-    max-width: 258px;
-    color: #5f5f5f;
-
-    @include respondTo('diapente') {
-      max-width: 439px;
-    }
-
-    @include respondTo('diapason') {
-      color: #7a7a7a;
-      max-width: 400px;
-    }
-  }
-
-  &--rooms-right {
-    max-width: 242px;
-    margin-left: 70px; // перевірити (за макетом 98px - 15px падінг контейнеру)
-
-    @include respondTo('diapente') {
-      max-width: 400px;
-      margin-right: 38px; // перевірити - неправильне значення
-      margin-left: auto;
-      margin-bottom: 101px;
-    }
-
-    @include respondTo('diapason') {
-      margin-right: 110px;
-      margin-bottom: 120px;
-    }
-  }
-
   // Перший текст-опис в секціях about на головній сторінці
   &--about-first {
-    margin-bottom: 28px;
-    max-width: 258px;
-    color: mix(getColor('primary-inversed'), getColor('primary'), 37.3%);
-  
-    @include respondTo('diapente') {
-      max-width: 439px;
-      margin-bottom: 142px;
+    color: lighten(getColor('primary'), 37.25); // #5f5f5f
+
+    @include respondTo('semiditonus') {
+      font-size: 9px;
     }
+
+    &--left {
+      max-width: 258px;
+
+      @include respondTo('semiditonus') {
+        max-width: 58vw;
+      }
   
-    @include respondTo('diapason') {
-      max-width: 518px;
-      margin-bottom: 162px;
+      @include respondTo('diapente') {
+        max-width: 439px;
+      }
+  
+      @include respondTo('diapason') {
+        max-width: 518px;
+      }
+    }
+
+    &--right {
+      margin-left: auto;
+      max-width: 242px;
+
+      @include respondTo('semiditonus') {
+        max-width: 42%;
+      }
+
+      @include respondTo('diapente') {
+        max-width: 419px;
+      }
+
+      @include respondTo('diapason') {
+        max-width: 488px;
+      }
     }
   }
 
   // Другий текст-опис в секціях about на головній сторінці
   &--about-second {
-    color: getColor('accent-darker');
-    max-width: 163px;
-    margin-left: 20px;
-  
-    @include respondTo('diapente') {
-      margin-top: 7px;
-      max-width: 312px;
-      margin-left: 48px;
-    }
-  
+    color: darken(saturate(getColor('accent'), 11.05), 24.51); // #c79002
+  }
+
+  // Текст сторінки hotel.html
+  &--rooms {
+    color: lighten(getColor('primary'), 37.25); // #5f5f5f;
+
     @include respondTo('diapason') {
-      margin-bottom: 40px;
-      max-width: 311px;
-      margin-left: 32px;
+      color: lighten(getColor('primary'), 47.84); // #7a7a7a;
+    }
+
+    &--left {
+      @extend .text--about-first--left;
+
+      @include respondTo('diapason') {
+        max-width: 400px;
+      }
+    }
+
+    &--right {
+      max-width: 242px;
+      margin-right: 73px; // не за макетом, має бути 59px
+      margin-left: auto;
+
+      @include respondTo('diapente') {
+        font-weight: 700;
+        max-width: 400px;
+        margin-right: 35px;
+
+        @include respondTo('diapason') {
+          margin-right: 118px; // не за макетом, має бути 110px
+        }
+      }
     }
   }
 
   // Текст секцій details на головній сторінці
   &--details {
-      color: scale-color(getColor('primary-inversed'), $blackness: 37%);
+    color: darken(getColor('primary-inversed'), 27.06); //#bababa
   }
 
   &--details-left {
@@ -108,7 +119,7 @@
   &--details-right {
     max-width: 243px;
     margin-left: auto;
-  
+
     @include respondTo('diapente') {
       max-width: 549px;
     }

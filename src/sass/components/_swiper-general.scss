@@ -1,25 +1,26 @@
 .swiper-wrapper {
   @extend %list;
-  box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
 }
 
 .swiper-slide__image {
   border-radius: 2px;
   overflow: hidden;
-  background-color: #dadada;
+  background-color: darken(getColor('primary-inversed'), 14.51); // #dadada
 
   &--content {
-    box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
+    box-shadow: 2px 2px 60px 2px transparentize(getColor('primary'), 0.75); // rgba(0, 0, 0, 0.25)
   }
 }
 
+// Загальні стилі кнопок навігації слайдером
 .swiper-arrows {
   display: flex;
   align-items: center;
   height: 32px;
   gap: 32px;
 
-  &--light-section {
+  // Кнопки світлих секцій
+  &--light {
     margin-top: 20px;
 
     @include respondTo('diapente') {
@@ -29,60 +30,63 @@
     @include respondTo('diapason') {
       margin-top: 40px;
     }
+
+    // Розташовані справа
+    &--right {
+      justify-content: flex-end;
+
+      @include respondTo('tritonus') {
+        margin-right: 15px;
+      }
+
+      @include respondTo('diapente') {
+        margin-right: 13px;
+      }
+    }
+
+    // Розташовані зліва
+    &--left {
+      @include respondTo('tritonus') {
+        margin-left: 15px;
+      }
+    }
   }
 
-  &--dark-section {
+  // Кнопки темних секцій
+  &--dark {
     margin-top: 16px;
 
     @include respondTo('diapente') {
       margin-top: 24px;
     }
-  }
 
-  &--dark-right {
+    // Розташовані зліва на слайдері, який здвинутий вправо
+    &--dark-right {
+      @include respondTo('semiditonus') {
+        // margin-left: 0;
+      }
 
-    @include respondTo('semiditonus') {
-      // margin-left: 0;
+      @include respondTo('ditonus') {
+        margin-left: 25px;
+      }
+
+      @include respondTo('diapente') {
+        margin-left: 0;
+      }
     }
 
-    @include respondTo('ditonus') {
-      margin-left: 25px;
-    }
-
-    @include respondTo('diapente') {
-      margin-left: 0;
-    }
-  }
-
+    // Розташовані справа на слайдері, який здвинутий вліво
     &--dark-left {
       justify-content: flex-end;
-        
+
       @include respondTo('tritonus') {
         margin-right: 25px;
       }
     }
-
-  &--light-right {
-    justify-content: flex-end;
-
-    @include respondTo('tritonus') {
-      margin-right: 15px;
-    }
-
-    @include respondTo('diapente') {
-      margin-right: 13px;
-    }
   }
 
-  &--light-left {
-
-    @include respondTo('tritonus') {
-      margin-left: 15px;
-    }
-  }
-
+  // Кнопки секцій номерів
   &--rooms-left {
-
     @include respondTo('tritonus') {
       margin-left: 15px;
     }
@@ -93,7 +97,6 @@
   }
 
   &--rooms-right {
-
     @include respondTo('tritonus') {
       margin-right: 15px;
       justify-content: flex-end;
@@ -101,11 +104,13 @@
   }
 }
 
+// Скидування дефолтних стилей свайперу
 .swiper-button-next::after,
 .swiper-button-prev::after {
   display: none;
 }
 
+// Перевизначення дефолтних стилей свайперу
 .swiper-button-next,
 .swiper-button-prev {
   position: relative;
@@ -131,9 +136,9 @@
 
   &--white {
     fill: getColor('primary-inversed');
-  } 
+  }
 }
- 
+
 .swiper-button-prev {
   &:hover,
   &:focus,
@@ -147,5 +152,5 @@
 
   &--white {
     fill: getColor('primary-inversed');
-  } 
+  }
 }

@@ -43,7 +43,7 @@
     font-size: 16px;
     line-height: 1.219;
     letter-spacing: 0.02em;
-    color: mix(transparent, getColor('accent'), 30%);
+    color: transparentize(getColor('accent'), 0.3); // rgba(243, 198, 83, 0.7)
     @include transition(color);
 
     &:hover,
@@ -63,6 +63,7 @@
     }
   }
 
+  // Іконки соцмереж
   &__icon {
     @extend %icon;
 

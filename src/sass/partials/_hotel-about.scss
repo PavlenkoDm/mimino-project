@@ -1,3 +1,4 @@
+// Стилі блоку logo
 .hotel-about__logo {
   text-align: right;
   margin-left: auto;
@@ -9,44 +10,6 @@
   }
 
   @include respondTo('diapason') {
-    color: #828282;
-  }
-}
-
-.hotel-about__description {
-  margin-left: auto;
-  max-width: 242px;
-
-  @include respondTo('semiditonus') {
-    max-width: 58vw;
-    margin-bottom: 7vw;
-    font-size: 9px;
-  }
-
-  @include respondTo('diapente') {
-    max-width: 419px;
-  }
-
-  @include respondTo('diapason') {
-    max-width: 488px;
-  }
-}
-
-.hotel-about__descr-second {
-  margin-left: 0;
-  margin-right: 21px;
-
-  @include respondTo('semiditonus') {
-    max-width: 42%;
-    font-size: 9px;
-    margin-right: 5vw;
-  }
-
-  @include respondTo('diapente') {
-    margin-right: 48px;
-  }
-
-  @include respondTo('diapason') {
-    margin-right: 45px;
+    color: darken(getColor('primary-inversed'), 49.02); // #828282;
   }
 }

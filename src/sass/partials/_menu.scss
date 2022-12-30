@@ -1,10 +1,14 @@
+// Стилі секції
 .menufood {
   margin: 0 auto;
   padding-top: 32px;
   padding-bottom: 32px;
 
   @include respondTo('diapente') {
-    background-color: #f0ecd6;
+    background-color: darken(
+      saturate(adjust-hue(getColor('primary-inversed'), 51), 46.43),
+      10.98
+    ); // #f0ecd6;
     padding-top: 58px;
     padding-bottom: 40px;
 
@@ -14,6 +18,18 @@
   }
 }
 
+// Заголовок секції menu
+.menufood__title {
+  @extend .main-tagline;
+  color: getColor('primary');
+  margin-bottom: 32px;
+
+  @include respondTo('diapente') {
+    margin-bottom: 40px;
+  }
+}
+
+// Обгортка таблиці меню
 .menufood__wrapper {
   margin-bottom: 32px;
 
@@ -29,6 +45,7 @@
   }
 }
 
+// Блоки меню
 .menufood__menu {
   table-layout: fixed;
   border-spacing: 0 4px;
@@ -56,6 +73,7 @@
   }
 }
 
+// Підзаголовки кожної підтаблиці
 .menufood__subtitle {
   font-family: $text-times-font;
   font-weight: 700;
@@ -71,6 +89,7 @@
   }
 }
 
+// Назва блюд, десертів та напоїв
 .menufood__dish {
   text-align: left;
   font-weight: 500;
@@ -95,6 +114,7 @@
     padding-top: 8px;
   }
 
+  // Десерти
   &--dessert {
     width: 254px;
 
@@ -107,6 +127,7 @@
     }
   }
 
+  // Напої
   &--after {
     width: 242px;
 
@@ -120,6 +141,7 @@
   }
 }
 
+// Вага блюд
 .menufood__weight {
   font-weight: 300;
   font-size: 14px;
@@ -143,6 +165,7 @@
     width: 156px;
   }
 
+  // Вага салатів
   &--salads {
     @include respondTo('diapente') {
       width: 143px;
@@ -153,6 +176,7 @@
     }
   }
 
+  // Вага десертів
   &--dessert {
     text-align: left;
     width: 70px;
@@ -166,6 +190,7 @@
     }
   }
 
+  // Грамаж напоїв
   &--after {
     text-align: left;
     width: 83px;
@@ -176,6 +201,7 @@
   }
 }
 
+// Ціна блюд
 .menufood__price {
   vertical-align: center;
   text-align: right;
@@ -193,6 +219,7 @@
   }
 }
 
+// Опис блюд
 .menufood__text {
   font-weight: 400;
   font-size: 10px;

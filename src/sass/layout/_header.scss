@@ -11,12 +11,14 @@
   }
 }
 
+// Блок навігації сайтом у хедері
 .header__navigation {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+// Список навігаційних елементів
 .header__navigation-list {
   display: flex;
   gap: 20px;
@@ -30,6 +32,7 @@
   }
 }
 
+// Елементи списку навігації сайтом
 .header__navigation-item {
   gap: 6px;
   @include respondTo('diapente') {
@@ -37,6 +40,7 @@
   }
 }
 
+// Посилання на інші дві сторінки сайту
 .header__department {
 
   @include respondTo('semiditonus') {
@@ -44,21 +48,23 @@
   }
 }
 
+// Обгортка для блоку з номерами телефонів
 .header__navigation-wrap {
   
   @include respondTo('diapente') {
-    border: 1px solid mix(transparent, getColor('accent'), 30%);
+    border: 1px solid transparentize(getColor('accent'), 0.3); // rgba(243, 198, 83, 0.7)
     @include transition(border, background-color);
   
     &:hover,
     &:focus,
     &:active {
       border: 1px solid getColor('primary-inversed');
-      background-color: rgba(255, 255, 255, 0.2);
+      background-color: transparentize(getColor('primary-inversed'), 0.8); // rgba(255, 255, 255, 0.2);
     }
   }
 }
 
+// Іконки телефонів у хедері
 .header__navigation-icon {
   fill: getColor('accent');
   @include transition(fill);
@@ -68,6 +74,7 @@
   }
 }
 
+// Номера телефонів
 .header__navigation-number {
 
   @include respondTo('tritonus') {
