@@ -13,7 +13,7 @@
     margin-right: auto;
 
     @include respondTo('semiditonus') {
-      font-size: 72px;
+      font-size: 64px;
       margin-right: -20px;
     }
   
